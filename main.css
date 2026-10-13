@@ -175,7 +175,7 @@ main {
     z-index: 10;
 }
 .why:hover .hidden-text {
-    max-height: 200px;
+    max-height: 350px;
     opacity: 1;
     padding: 0 15px 20px 15px;
 }
