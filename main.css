@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+	background-image: url(https://www.spampavac.by/files/downloads/arnamient-1.png);
+	padding: 20px;
+}
+.body{
+	background-color: #F5F5F5;
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 7px;
+}
+.nav {
+    display: flex;
+    justify-content: justify-content;
+    align-items: center;
+    width: 100%;
+    margin: 0px auto;
+    padding: 15px 30px;
+    background: linear-gradient(90deg,rgba(178, 34, 34) 23%, rgba(220, 20, 60) 68%);
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+.nav::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+.nav::after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+.nav-img_and_p{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-nav{
+	width: 25px;
+	height: 25px;
+	border-radius: 3px;
+}
+.nav p {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+.nav .brand {
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    letter-spacing: 1px;
+	margin-left: 30px;
+}
+.nav .authors {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.nav .author1, .nav .author2{
+	margin-right: 30px;
+}
+.logo {
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+.logo:hover {
+    transform: rotate(180deg) scale(1.1);
+}
+main {
+    width: 100%;
+    margin: auto;
+}
+.a1, .a2{
+	color: #444;
+}
+.title {
+    margin: 100px 0 0 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 0.6s steps(38, end) forwards;
+    animation-delay: 0.2s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: 100%;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+.box {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 130px 0 130px 0;
+    gap: 20px;
+    align-items: flex-start;
+}
+.why {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid lightgrey;
+    border-radius: 5px;
+    background-color: lightgrey;
+    width: 30%;
+    flex-shrink: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, background-color 0.4s ease;
+    cursor: pointer;
+    position: relative;
+}
+.why h2 {
+    padding: 25px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.4s ease;
+}
+.hidden-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+.hidden-text p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    text-align: left;
+}
+.why:hover {
+    background-color: #f0f0f0;
+    border-color: #ff1919;
+    box-shadow: #b51212;
+    transform: scale(1.08) translateY(-5px);
+    z-index: 10;
+}
+.why:hover .hidden-text {
+    max-height: 200px;
+    opacity: 1;
+    padding: 0 15px 20px 15px;
+}
+.why:hover h2 {
+    color: #e01d1d;
+}
+.button{
+	background-color: lightgrey;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 0 auto;
+	width: max-content;
+    padding: 15px 30px;
+    background: linear-gradient(90deg,rgba(178, 34, 34) 23%, rgba(220, 20, 60) 68%);
+}
+.button_a{
+	font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    letter-spacing: 1px;
+}
+.button:hover{
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+footer{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 170px auto 0 auto;
+    padding: 15px 30px;
+    background: white;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+.footer-palace{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 65%;
+	margin-right: 50px;
+}
+.img-footer{
+	width: 50px;
+	height: 50px;
+	border-radius: 3px;
+	margin-left: 30px;
+	margin-right: 10px;
+}
+.authors-footer{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+.palace{
+	font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #228B22;
+    position: relative;
+    z-index: 1;
+}
+.author1-footer, .author2-footer, .author3-footer{
+	font-size: 16px;
+    opacity: 0.9;
+    font-style: italic;
+	letter-spacing: 0.5px;
+    color: #228B22;
+    position: relative;
+    z-index: 1;
+}
+.author1-footer, .author2-footer{
+	margin-right: 30px;
+}
+.nav{
+	animation: typingg 0.6s steps(38, end);
+    animation-delay: 0.2s;
+}
+@keyframes typingg {
+    from { right: 50%; }
+    to { right: 0; }
+}
+.why{
+	animation: typinggg 0.6s steps(38, end);
+    animation-delay: 0.2s;
+}
+@keyframes typinggg {
+    from { left: 100%; }
+    to { left: 0; }
+}
+footer{
+	animation: typingggg 0.6s steps(38, end);
+    animation-delay: 0.2s;
+}
+@keyframes typingggg {
+    from { right: 50%; }
+    to { right: 0; }
+}

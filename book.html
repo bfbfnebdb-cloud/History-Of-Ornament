@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Книга на столе — История орнамента</title>
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<div class="workspace">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <h2>Содержание</h2>
+      <div class="sidebar-topics" id="toc"></div>
+    </div>
+  </aside>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <div class="book-area">
+    <div class="book" id="book">
+      <div class="book-base">
+        <div class="base-left" id="baseLeft"></div>
+        <div class="base-right" id="baseRight"></div>
+      </div>
+      <div class="book-spine"></div>
+      <div class="sheet left-sheet" id="leftSheet">
+        <div class="face front" id="leftFront"></div>
+        <div class="face back" id="leftBack"></div>
+      </div>
+      <div class="sheet right-sheet" id="rightSheet">
+        <div class="face front" id="rightFront"></div>
+        <div class="face back" id="rightBack"></div>
+      </div>
+    </div>
+    <div class="mobile-book" id="mobileBook">
+      <div class="m-base" id="mBase"></div>
+      <div class="m-sheet" id="mSheet">
+        <div class="m-face front" id="mFront"></div>
+        <div class="m-face back" id="mBack"></div>
+      </div>
+    </div>
+    <div class="book-cover" id="bookCover">
+      <div class="cover cover-left">
+        <div class="cover-inner"></div>
+      </div>
+      <div class="cover cover-right">
+        <div class="cover-inner">
+          <div class="cover-emblem">❖</div>
+          <div class="cover-ornament"></div>
+          <div class="cover-title">ИСТОРИЯ<br>ОРНАМЕНТА</div>
+          <div class="cover-ornament"></div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="nav-btn" id="prevBtn">← Назад</button>
+      <div class="page-indicator" id="indicator"></div>
+      <button class="nav-btn" id="nextBtn">Вперёд →</button>
+    </div>
+  </div>
+</div>
+<div class="museum-modal" id="museumModal">
+  <div class="museum-modal-content">
+    <button class="museum-modal-close" id="museumModalClose">×</button>
+    <div id="museumModalBody"></div>
+  </div>
+</div>
+<script src="book.js"></script>
+</body>
+</html>
