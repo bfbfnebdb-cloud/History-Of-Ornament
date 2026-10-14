@@ -731,8 +731,8 @@ body {
   text-shadow: 0 2px 4px rgba(192, 57, 43, 0.2);
 }
 .museum-photo {
-  width: 300px;
-  margin-left: 23%;
+  width: 80%;
+  margin-left: 10.5%;
 }
 .ornament-now {
   margin-left: 8px;
@@ -1665,9 +1665,6 @@ body {
   }
   .book-area {
     padding: 56px 10px 10px;
-  }
-  .museum-photo{
-    margin-left: 17%;
   }
   .book {
     width: 100%;
