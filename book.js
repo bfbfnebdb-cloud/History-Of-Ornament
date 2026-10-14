@@ -78,10 +78,10 @@ const PAGE_CONTENT = {
 <p>Ткачиха ногой нажимает на педали — <em>«поножи»</em>. При этом одна часть нитов опускается, другая поднимается, а в образовавшийся между нитями основы <strong>зев</strong> пробрасывается челнок с уточной нитью. Бердо плотно прибивает новый ряд утка к предыдущему.</p>
 `,
 "2-5": `<div class="important-note">
+<h1>Процесс ткачества</h1>
 <p>Именно в момент ткачества рождался орнамент — тот самый, что превращал обычное льняное полотно в послание рода, в оберег, в молитву, вплетённую в нити.</p>
 </div>
 <p>Каждое движение ткачихи было выверено поколениями: ритм педалей, бросок челнока, удар берда — всё складывалось в неспешную, почти священную работу, в которой время казалось остановившимся.</p>
-<div class="ornament-divider">◆ ◇ ◆</div>
 `,
 "2-6": `
 <h1>Белорусский рушник</h1>
@@ -203,7 +203,7 @@ const PAGE_CONTENT = {
 <p class="drop-cap">Каждая линия и ромб в белорусском орнаменте когда-то нес в себе сакральный смысл: защиту, плодородие, связь с природой и предками.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Если раньше орнамент украшал фасады лишь этнографических музеев, то сегодня он выходит на улицы спальных районов. Белорусские муралисты и художники используют традиционные «рупы», «ромбы» и «кресты» как основу для масштабных уличных росписей.</p>
-<img width="170px" class="ornament-now" src="img/5363878433303241690.jpg"><img class="ornament-now" width="170px" src="img/5363878433303241692.jpg"><img class="ornament-now" width="170px" src="img/5363878433303241689.jpg">
+<img class="ornament-now" src="img/5363878433303241690.jpg"><img class="ornament-now" src="img/5363878433303241692.jpg"><img class="ornament-now" width="170px" src="img/5363878433303241689.jpg">
 <p>Геометрическая строгость белорусского узора идеально ложится на архитектуру: строгие линии и ритмичные повторы превращают глухие бетонные стены в динамичные арт-объекты.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Сейчас орнамент стал использоваться <strong>повсеместно</strong>: в искусстве, в архитектуре, в декоре. Они дополняет друг друга.</p>`,
@@ -229,21 +229,18 @@ const BOOK_CONFIG = {
 2:{title:"История ткачества",pages:6,pageNames:{1:"Истоки",2:"Станки",3:"Материал",4:"Процесс",5:"Процесс",6:"Рушник"}},
 3:{title:"Белорусский орнамент",pages:6,pageNames:{1:"Сущность",2:"Функции",3:"Типология",4:"Мотивы",5:"Символика",6:"Где используется орнамент щас?",}},
 };
-
 const allPages = [];
-Object.keys(BOOK_CONFIG).forEach((topicId) => {
-const topic = BOOK_CONFIG[topicId];
-for (let p = 1; p <= topic.pages; p++) {
-const customName = topic.pageNames && topic.pageNames[p];
-allPages.push({
-topic: String(topicId),
-page: p,
-key: `${topicId}-${p}`,
-title: customName ? `${topic.title} — ${customName}` : `${topic.title} — Стр. ${p}`,
-customName: customName || null,
-noSpine: topic.noSpine || false,
-});
-}
+Object.keys(BOOK_CONFIG).forEach((topicId)=>{
+  const topic = BOOK_CONFIG[topicId];
+  for(let p=1; p<=topic.pages; p++){
+    const customName = topic.pageNames && topic.pageNames[p];
+    allPages.push({
+      topic: String(topicId), page: p, key: `${topicId}-${p}`,
+      title: customName ? `${topic.title} — ${customName}` : `${topic.title} — Стр. ${p}`,
+      customName: customName || null,
+      noSpine: topic.noSpine || false
+    });
+  }
 });
 
 let currentIndex = 0;
@@ -251,451 +248,459 @@ let isAnimating = false;
 const pageCache = {};
 
 function loadPage(pageData){
-if(pageCache[pageData.key]!==undefined)return Promise.resolve(pageCache[pageData.key]);
-let html=PAGE_CONTENT[pageData.key]||`<h1>${pageData.title}</h1><p>Содержимое страницы в разработке.</p>`;
-pageCache[pageData.key]=html;
-return Promise.resolve(html);
+  if(pageCache[pageData.key] !== undefined) return Promise.resolve(pageCache[pageData.key]);
+  let html = PAGE_CONTENT[pageData.key] || `<h1>${pageData.title}</h1><p>Содержимое в разработке.</p>`;
+  pageCache[pageData.key] = html;
+  return Promise.resolve(html);
 }
 
 function buildTOC(){
-const toc=document.getElementById("toc");
-if(!toc)return;
-const topicKeys=Object.keys(BOOK_CONFIG);
-topicKeys.forEach((topicId,idx)=>{
-const topic=BOOK_CONFIG[topicId];
-const item=document.createElement("div");
-item.className="topic-item";
-const title=document.createElement("div");
-title.className="topic-title";
-title.innerHTML=`<span class="topic-label">${topic.title}</span>`;
-item.appendChild(title);
-const list=document.createElement("ul");
-list.className="pages-list";
-const topicPages=allPages.filter((p)=>p.topic===String(topicId));
-topicPages.forEach((pg)=>{
-const li=document.createElement("li");
-li.textContent=pg.customName||`Страница ${pg.page}`;
-li.dataset.index=String(allPages.indexOf(pg));
-li.addEventListener("click",async(e)=>{
-e.stopPropagation();
-const targetIndex=parseInt(li.dataset.index);
-await animatedJumpToPage(targetIndex);
-if(window.innerWidth<=900)closeSidebar();
-});
-list.appendChild(li);
-});
-item.appendChild(list);
-toc.appendChild(item);
-if(idx<topicKeys.length-1){
-const divider=document.createElement("div");
-divider.className="topic-divider";
-toc.appendChild(divider);
-}
-});
+  const toc = document.getElementById("toc");
+  if(!toc) return;
+  const topicKeys = Object.keys(BOOK_CONFIG);
+  topicKeys.forEach((topicId, idx)=>{
+    const topic = BOOK_CONFIG[topicId];
+    const item = document.createElement("div");
+    item.className = "topic-item";
+    const title = document.createElement("div");
+    title.className = "topic-title";
+    title.innerHTML = `<span class="topic-label">${topic.title}</span>`;
+    item.appendChild(title);
+    const list = document.createElement("ul");
+    list.className = "pages-list";
+    const topicPages = allPages.filter(p=>p.topic===String(topicId));
+    topicPages.forEach(pg=>{
+      const li = document.createElement("li");
+      li.textContent = pg.customName || `Страница ${pg.page}`;
+      li.dataset.index = String(allPages.indexOf(pg));
+      li.addEventListener("click", async (e)=>{
+        e.stopPropagation();
+        const targetIndex = parseInt(li.dataset.index);
+        await animatedJumpToPage(targetIndex);
+        if(window.innerWidth <= 900) closeSidebar();
+      });
+      list.appendChild(li);
+    });
+    item.appendChild(list);
+    toc.appendChild(item);
+    if(idx < topicKeys.length - 1){
+      const divider = document.createElement("div");
+      divider.className = "topic-divider";
+      toc.appendChild(divider);
+    }
+  });
 }
 
-function setPageContent(el,html,pageNumber){
-if(!el)return;
-if(html==="MAP"){
-el.innerHTML=`
-<div class="map-container">
-<h1>Карта музеев</h1>
-<p class="map-subtitle">Нажмите на район, чтобы узнать о музее</p>
-${buildMapSVG()}
-</div>
-${pageNumber?`<div class="page-number">— ${pageNumber} —</div>`:""}
-`;
-bindMapRegions(el);
-}else{
-el.innerHTML=html+(pageNumber?`<div class="page-number">— ${pageNumber} —</div>`:"");
-}
+function setPageContent(el, html, pageNumber){
+  if(!el) return;
+  if(html === "MAP"){
+    el.innerHTML = `<div class="map-container"><h1>Карта музеев</h1><p class="map-subtitle">Нажмите на район</p>${buildMapSVG()}</div>${pageNumber?`<div class="page-number">— ${pageNumber} —</div>`:""}`;
+    bindMapRegions(el);
+  } else {
+    el.innerHTML = html + (pageNumber ? `<div class="page-number">— ${pageNumber} —</div>` : "");
+  }
 }
 
 function bindMapRegions(container){
-const regions=container.querySelectorAll(".region");
-regions.forEach((r)=>{
-r.addEventListener("click",(e)=>{
-e.stopPropagation();
-const museumKey=r.dataset.museum;
-if(museumKey&&MUSEUMS[museumKey])openMuseumModal(museumKey);
-});
-});
+  container.querySelectorAll(".region").forEach(r=>{
+    r.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      const key = r.dataset.museum;
+      if(key && MUSEUMS[key]) openMuseumModal(key);
+    });
+  });
 }
 
 function openMuseumModal(key){
-const museum=MUSEUMS[key];
-const modal=document.getElementById("museumModal");
-const body=document.getElementById("museumModalBody");
-body.innerHTML=`
-<h2>${museum.name}</h2>
-<div class="museum-location">${museum.location}</div>
-<div class="museum-ornament">◆ ◇ ◆</div>
-${museum.text}
-`;
-modal.classList.add("active");
+  const museum = MUSEUMS[key];
+  const body = document.getElementById("museumModalBody");
+  body.innerHTML = `<h2>${museum.name}</h2><div class="museum-location">${museum.location}</div><div class="museum-ornament">◆ ◇ ◆</div>${museum.text}`;
+  document.getElementById("museumModal").classList.add("active");
 }
-
 function closeMuseumModal(){
-document.getElementById("museumModal").classList.remove("active");
+  document.getElementById("museumModal").classList.remove("active");
 }
-
-document.getElementById("museumModalClose").addEventListener("click",closeMuseumModal);
-document.getElementById("museumModal").addEventListener("click",(e)=>{
-if(e.target.id==="museumModal")closeMuseumModal();
+document.getElementById("museumModalClose").addEventListener("click", closeMuseumModal);
+document.getElementById("museumModal").addEventListener("click", (e)=>{
+  if(e.target.id === "museumModal") closeMuseumModal();
 });
 
 function isMobileView(){
-return window.matchMedia("(max-width:560px)").matches;
+  return window.matchMedia("(max-width:560px)").matches;
 }
 
 function updateSidebarState(){
-document.querySelectorAll(".pages-list li").forEach((li)=>{
-const idx=parseInt(li.dataset.index);
-const isActive=isMobileView()
-?idx===currentIndex
-:idx===currentIndex||idx===currentIndex+1;
-li.classList.toggle("active",isActive);
-});
+  document.querySelectorAll(".pages-list li").forEach(li=>{
+    const idx = parseInt(li.dataset.index);
+    const isActive = isMobileView()
+      ? idx === currentIndex
+      : idx === currentIndex || idx === currentIndex + 1;
+    li.classList.toggle("active", isActive);
+  });
 }
 
 function canGoForward(){
-return currentIndex+(isMobileView()?1:2)<allPages.length;
+  return currentIndex + (isMobileView() ? 1 : 2) < allPages.length;
 }
-
 function canGoBackward(){
-return currentIndex>0;
+  return currentIndex > 0;
 }
 
 function updateButtons(){
-const prevBtn=document.getElementById("prevBtn");
-const nextBtn=document.getElementById("nextBtn");
-if(prevBtn)prevBtn.disabled=!canGoBackward();
-if(nextBtn)nextBtn.disabled=!canGoForward();
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  if(prevBtn) prevBtn.disabled = !canGoBackward();
+  if(nextBtn) nextBtn.disabled = !canGoForward();
 }
 
 function updateIndicator(){
-const indicator=document.getElementById("indicator");
-if(!indicator)return;
-if(isMobileView()){
-indicator.textContent=`Страница ${currentIndex+1} из ${allPages.length}`;
-}else{
-const rightPage=allPages[currentIndex+1];
-indicator.textContent=`Страницы ${currentIndex+1}${rightPage?"–"+(currentIndex+2):""} из ${allPages.length}`;
-}
+  const indicator = document.getElementById("indicator");
+  if(!indicator) return;
+  if(isMobileView()){
+    indicator.textContent = `Страница ${currentIndex+1} из ${allPages.length}`;
+  } else {
+    const rightPage = allPages[currentIndex+1];
+    indicator.textContent = `Страницы ${currentIndex+1}${rightPage ? "–"+(currentIndex+2) : ""} из ${allPages.length}`;
+  }
 }
 
 function shouldHideSpine(){
-if(isMobileView())return false;
-const leftPage=allPages[currentIndex];
-const rightPage=allPages[currentIndex+1];
-if(leftPage&&rightPage&&leftPage.noSpine&&rightPage.noSpine&&leftPage.topic===rightPage.topic)return true;
-return false;
+  if(isMobileView()) return false;
+  const leftPage = allPages[currentIndex];
+  const rightPage = allPages[currentIndex+1];
+  if(leftPage && rightPage && leftPage.noSpine && rightPage.noSpine && leftPage.topic === rightPage.topic) return true;
+  return false;
 }
 
 function updateSpineVisibility(){
-const bookEl=document.getElementById("book");
-if(!bookEl)return;
-if(shouldHideSpine())bookEl.classList.add("no-spine");
-else bookEl.classList.remove("no-spine");
+  const bookEl = document.getElementById("book");
+  if(!bookEl) return;
+  if(shouldHideSpine()) bookEl.classList.add("no-spine");
+  else bookEl.classList.remove("no-spine");
 }
 
 async function renderDesktopSpread(){
-const leftPage=allPages[currentIndex];
-const rightPage=allPages[currentIndex+1];
-const baseLeft=document.getElementById("baseLeft");
-const baseRight=document.getElementById("baseRight");
-const leftFront=document.getElementById("leftFront");
-const rightFront=document.getElementById("rightFront");
-const[leftHTML,rightHTML]=await Promise.all([
-leftPage?loadPage(leftPage):Promise.resolve(""),
-rightPage?loadPage(rightPage):Promise.resolve(""),
-]);
-setPageContent(baseLeft,leftHTML,currentIndex+1);
-if(rightPage)setPageContent(baseRight,rightHTML,currentIndex+2);
-else if(baseRight)baseRight.innerHTML='<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
-setPageContent(leftFront,leftHTML,currentIndex+1);
-if(rightPage)setPageContent(rightFront,rightHTML,currentIndex+2);
-else if(rightFront)rightFront.innerHTML='<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
-updateSpineVisibility();
+  const leftPage = allPages[currentIndex];
+  const rightPage = allPages[currentIndex+1];
+  const baseLeft = document.getElementById("baseLeft");
+  const baseRight = document.getElementById("baseRight");
+  const leftFront = document.getElementById("leftFront");
+  const rightFront = document.getElementById("rightFront");
+  const [leftHTML, rightHTML] = await Promise.all([
+    leftPage ? loadPage(leftPage) : Promise.resolve(""),
+    rightPage ? loadPage(rightPage) : Promise.resolve("")
+  ]);
+  setPageContent(baseLeft, leftHTML, currentIndex+1);
+  if(rightPage) setPageContent(baseRight, rightHTML, currentIndex+2);
+  else if(baseRight) baseRight.innerHTML = '<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
+  setPageContent(leftFront, leftHTML, currentIndex+1);
+  if(rightPage) setPageContent(rightFront, rightHTML, currentIndex+2);
+  else if(rightFront) rightFront.innerHTML = '<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
+  updateSpineVisibility();
 }
 
 async function renderMobilePage(pageIdx){
-const page=allPages[pageIdx];
-const mBase=document.getElementById("mBase");
-const mFront=document.getElementById("mFront");
-const mBack=document.getElementById("mBack");
-const html=page?await loadPage(page):"";
-setPageContent(mBase,html,pageIdx+1);
+  const page = allPages[pageIdx];
+  const mBase = document.getElementById("mBase");
+  const mFront = document.getElementById("mFront");
+  const html = page ? await loadPage(page) : "";
+  setPageContent(mBase, html, pageIdx+1);
+  setPageContent(mFront, html, pageIdx+1);
 }
 
 async function renderSpread(){
-if(isMobileView())await renderMobilePage(currentIndex);
-else await renderDesktopSpread();
-updateIndicator();
-updateButtons();
-updateSidebarState();
+  if(isMobileView()) await renderMobilePage(currentIndex);
+  else await renderDesktopSpread();
+  updateIndicator();
+  updateButtons();
+  updateSidebarState();
 }
 
-const DESKTOP_FLIP_MS=480;
-const MOBILE_FLIP_MS=520;
+const DESKTOP_FLIP_MS = 480;
+const MOBILE_FLIP_MS = 520;
 
 async function animateDesktopFlip(direction){
-const leftSheet=document.getElementById("leftSheet");
-const rightSheet=document.getElementById("rightSheet");
-const leftBack=document.getElementById("leftBack");
-const rightBack=document.getElementById("rightBack");
-leftSheet.classList.remove("flipping");
-rightSheet.classList.remove("flipping");
-void leftSheet.offsetWidth;
-if(direction==="right"){
-const nextIndex=currentIndex+2;
-const nextLeftPage=allPages[nextIndex];
-const preload=nextLeftPage?loadPage(nextLeftPage):Promise.resolve("");
-leftSheet.style.opacity="0";
-rightSheet.style.opacity="1";
-rightSheet.classList.add("flipping");
-const html=await preload;
-if(nextLeftPage)setPageContent(rightBack,html,nextIndex+1);
-else if(rightBack)rightBack.innerHTML="";
-await new Promise((r)=>setTimeout(r,DESKTOP_FLIP_MS+20));
-currentIndex=nextIndex<allPages.length?nextIndex:currentIndex;
-rightSheet.classList.remove("flipping");
-leftSheet.style.opacity="1";
-rightSheet.style.opacity="1";
-}else{
-const prevIndex=Math.max(0,currentIndex-2);
-const prevRightPage=allPages[prevIndex+1];
-const preload=prevRightPage?loadPage(prevRightPage):Promise.resolve("");
-rightSheet.style.opacity="0";
-leftSheet.style.opacity="1";
-leftSheet.classList.add("flipping");
-const html=await preload;
-if(prevRightPage)setPageContent(leftBack,html,prevIndex+2);
-else if(leftBack)leftBack.innerHTML="";
-await new Promise((r)=>setTimeout(r,DESKTOP_FLIP_MS+20));
-currentIndex=prevIndex;
-leftSheet.classList.remove("flipping");
-leftSheet.style.opacity="1";
-rightSheet.style.opacity="1";
-}
-await renderSpread();
+  const leftSheet = document.getElementById("leftSheet");
+  const rightSheet = document.getElementById("rightSheet");
+  const leftBack = document.getElementById("leftBack");
+  const rightBack = document.getElementById("rightBack");
+  leftSheet.classList.remove("flipping");
+  rightSheet.classList.remove("flipping");
+  void leftSheet.offsetWidth;
+  if(direction === "right"){
+    const nextIndex = currentIndex + 2;
+    const nextLeftPage = allPages[nextIndex];
+    const preload = nextLeftPage ? loadPage(nextLeftPage) : Promise.resolve("");
+    leftSheet.style.opacity = "0";
+    rightSheet.style.opacity = "1";
+    rightSheet.classList.add("flipping");
+    const html = await preload;
+    if(nextLeftPage) setPageContent(rightBack, html, nextIndex+1);
+    else if(rightBack) rightBack.innerHTML = "";
+    await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+    currentIndex = nextIndex < allPages.length ? nextIndex : currentIndex;
+    rightSheet.classList.remove("flipping");
+    leftSheet.style.opacity = "1";
+    rightSheet.style.opacity = "1";
+  } else {
+    const prevIndex = Math.max(0, currentIndex - 2);
+    const prevRightPage = allPages[prevIndex+1];
+    const preload = prevRightPage ? loadPage(prevRightPage) : Promise.resolve("");
+    rightSheet.style.opacity = "0";
+    leftSheet.style.opacity = "1";
+    leftSheet.classList.add("flipping");
+    const html = await preload;
+    if(prevRightPage) setPageContent(leftBack, html, prevIndex+2);
+    else if(leftBack) leftBack.innerHTML = "";
+    await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+    currentIndex = prevIndex;
+    leftSheet.classList.remove("flipping");
+    leftSheet.style.opacity = "1";
+    rightSheet.style.opacity = "1";
+  }
+  await renderSpread();
 }
 
+/* ===== МОБИЛЬНАЯ АНИМАЦИЯ ПЕРЕЛИСТЫВАНИЯ ===== */
 async function animateMobileFlip(direction){
-const mSheet=document.getElementById("mSheet");
-const mBase=document.getElementById("mBase");
-const mBack=document.getElementById("mBack");
-if(direction==="right"){
-const nextIndex=currentIndex+1;
-const nextPage=allPages[nextIndex];
-const preload=nextPage?loadPage(nextPage):Promise.resolve("");
-const html=await preload;
-if(nextPage)setPageContent(mBase,html,nextIndex+1);
-mSheet.classList.remove("flip-backward");
-void mSheet.offsetWidth;
-mSheet.classList.add("flip-forward");
-await new Promise((r)=>setTimeout(r,MOBILE_FLIP_MS+20));
-currentIndex=nextIndex;
-mSheet.classList.remove("flip-forward");
-mSheet.style.transform="";
-}else{
-const prevIndex=currentIndex-1;
-const prevPage=allPages[prevIndex];
-const preload=prevPage?loadPage(prevPage):Promise.resolve("");
-const html=await preload;
-if(prevPage){
-setPageContent(mBack,html,prevIndex+1);
-setPageContent(mBase,html,prevIndex+1);
-}
-mSheet.classList.remove("flip-forward");
-void mSheet.offsetWidth;
-mSheet.classList.add("flip-backward");
-await new Promise((r)=>setTimeout(r,MOBILE_FLIP_MS+20));
-currentIndex=prevIndex;
-mSheet.classList.remove("flip-backward");
-mSheet.style.transform="";
-}
-await renderSpread();
+  const mSheet = document.getElementById("mSheet");
+  const mBase = document.getElementById("mBase");
+  const mFront = document.getElementById("mFront");
+  const mBack = document.getElementById("mBack");
+
+  if(direction === "right"){
+    // Перелистывание вперёд: текущая страница уходит влево, показывая back с новой страницей
+    const nextIndex = currentIndex + 1;
+    const nextPage = allPages[nextIndex];
+    const nextHTML = nextPage ? await loadPage(nextPage) : "";
+
+    // Готовим back листа — там будет следующая страница
+    setPageContent(mBack, nextHTML, nextIndex+1);
+    // База остаётся с текущей страницей (видна будет после анимации как "предыдущая")
+    // Но нам нужно, чтобы после перелистывания база показывала новую страницу
+    // Поэтому на базе оставляем текущую, а после анимации обновим
+
+    mSheet.classList.remove("flip-backward");
+    mSheet.style.transform = "";
+    void mSheet.offsetWidth;
+    mSheet.classList.add("flip-forward");
+
+    await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS + 20));
+
+    // Обновляем currentIndex и базу
+    currentIndex = nextIndex;
+    mSheet.classList.remove("flip-forward");
+    mSheet.style.transform = "";
+    // Сбрасываем лист — front показывает текущую (новую) страницу
+    setPageContent(mFront, nextHTML, nextIndex+1);
+    setPageContent(mBase, nextHTML, nextIndex+1);
+  } else {
+    // Перелистывание назад: лист поворачивается справа налево, показывая back с предыдущей страницей
+    const prevIndex = currentIndex - 1;
+    const prevPage = allPages[prevIndex];
+    const prevHTML = prevPage ? await loadPage(prevPage) : "";
+
+    // Готовим back листа — там будет предыдущая страница
+    setPageContent(mBack, prevHTML, prevIndex+1);
+    // База остаётся с текущей страницей
+
+    mSheet.classList.remove("flip-forward");
+    mSheet.style.transform = "";
+    void mSheet.offsetWidth;
+    mSheet.classList.add("flip-backward");
+
+    await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS + 20));
+
+    currentIndex = prevIndex;
+    mSheet.classList.remove("flip-backward");
+    mSheet.style.transform = "";
+    setPageContent(mFront, prevHTML, prevIndex+1);
+    setPageContent(mBase, prevHTML, prevIndex+1);
+  }
+  await renderSpread();
 }
 
 async function animateFlip(direction){
-if(isAnimating)return;
-if(direction==="right"&&!canGoForward())return;
-if(direction==="left"&&!canGoBackward())return;
-isAnimating=true;
-if(isMobileView())await animateMobileFlip(direction);
-else await animateDesktopFlip(direction);
-isAnimating=false;
+  if(isAnimating) return;
+  if(direction === "right" && !canGoForward()) return;
+  if(direction === "left" && !canGoBackward()) return;
+  isAnimating = true;
+  if(isMobileView()) await animateMobileFlip(direction);
+  else await animateDesktopFlip(direction);
+  isAnimating = false;
 }
 
 async function animatedJumpToPage(targetIndex){
-if(isAnimating)return;
-if(targetIndex<0||targetIndex>=allPages.length)return;
-const mobile=isMobileView();
-const effectiveTarget=mobile?targetIndex:targetIndex%2===0?targetIndex:targetIndex-1;
-if(effectiveTarget===currentIndex)return;
-isAnimating=true;
-const direction=effectiveTarget>currentIndex?"right":"left";
-const targetPage=allPages[effectiveTarget];
-const targetHTMLPromise=targetPage?loadPage(targetPage):Promise.resolve("");
-const targetRightPage=allPages[effectiveTarget+1];
-const targetRightHTMLPromise=targetRightPage?loadPage(targetRightPage):Promise.resolve("");
-if(mobile){
-const mSheet=document.getElementById("mSheet");
-const mBase=document.getElementById("mBase");
-const mBack=document.getElementById("mBack");
-const targetHTML=await targetHTMLPromise;
-if(direction==="right"){
-setPageContent(mBase,targetHTML,effectiveTarget+1);
-mSheet.classList.remove("flip-backward");
-void mSheet.offsetWidth;
-mSheet.classList.add("flip-forward");
-await new Promise((r)=>setTimeout(r,MOBILE_FLIP_MS+20));
-mSheet.classList.remove("flip-forward");
-mSheet.style.transform="";
-}else{
-const currentHTML=allPages[currentIndex]?await loadPage(allPages[currentIndex]):"";
-setPageContent(mBack,currentHTML,currentIndex+1);
-setPageContent(mBase,targetHTML,effectiveTarget+1);
-mSheet.classList.remove("flip-forward");
-void mSheet.offsetWidth;
-mSheet.classList.add("flip-backward");
-await new Promise((r)=>setTimeout(r,MOBILE_FLIP_MS+20));
-mSheet.classList.remove("flip-backward");
-mSheet.style.transform="";
-}
-currentIndex=effectiveTarget;
-}else{
-const leftSheet=document.getElementById("leftSheet");
-const rightSheet=document.getElementById("rightSheet");
-const leftBack=document.getElementById("leftBack");
-const rightBack=document.getElementById("rightBack");
-leftSheet.classList.remove("flipping");
-rightSheet.classList.remove("flipping");
-void leftSheet.offsetWidth;
-const[targetHTML,targetRightHTML]=await Promise.all([targetHTMLPromise,targetRightHTMLPromise]);
-if(direction==="right"){
-if(targetPage)setPageContent(rightBack,targetHTML,effectiveTarget+1);
-else if(rightBack)rightBack.innerHTML="";
-leftSheet.style.opacity="0";
-rightSheet.style.opacity="1";
-rightSheet.classList.add("flipping");
-await new Promise((r)=>setTimeout(r,DESKTOP_FLIP_MS+20));
-rightSheet.classList.remove("flipping");
-leftSheet.style.opacity="1";
-rightSheet.style.opacity="1";
-}else{
-if(targetRightPage)setPageContent(leftBack,targetRightHTML,effectiveTarget+2);
-else if(targetPage&&!targetRightPage){
-if(leftBack)leftBack.innerHTML='<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
-}else if(leftBack)leftBack.innerHTML="";
-rightSheet.style.opacity="0";
-leftSheet.style.opacity="1";
-leftSheet.classList.add("flipping");
-await new Promise((r)=>setTimeout(r,DESKTOP_FLIP_MS+20));
-leftSheet.classList.remove("flipping");
-leftSheet.style.opacity="1";
-rightSheet.style.opacity="1";
-}
-currentIndex=effectiveTarget;
-}
-await renderSpread();
-isAnimating=false;
+  if(isAnimating) return;
+  if(targetIndex < 0 || targetIndex >= allPages.length) return;
+  const mobile = isMobileView();
+  const effectiveTarget = mobile ? targetIndex : (targetIndex % 2 === 0 ? targetIndex : targetIndex - 1);
+  if(effectiveTarget === currentIndex) return;
+  isAnimating = true;
+  const direction = effectiveTarget > currentIndex ? "right" : "left";
+
+  if(mobile){
+    const mSheet = document.getElementById("mSheet");
+    const mFront = document.getElementById("mFront");
+    const mBack = document.getElementById("mBack");
+    const targetPage = allPages[effectiveTarget];
+    const targetHTML = targetPage ? await loadPage(targetPage) : "";
+
+    if(direction === "right"){
+      setPageContent(mBack, targetHTML, effectiveTarget+1);
+      mSheet.classList.remove("flip-backward");
+      mSheet.style.transform = "";
+      void mSheet.offsetWidth;
+      mSheet.classList.add("flip-forward");
+      await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS+20));
+      mSheet.classList.remove("flip-forward");
+      mSheet.style.transform = "";
+    } else {
+      setPageContent(mBack, targetHTML, effectiveTarget+1);
+      mSheet.classList.remove("flip-forward");
+      mSheet.style.transform = "";
+      void mSheet.offsetWidth;
+      mSheet.classList.add("flip-backward");
+      await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS+20));
+      mSheet.classList.remove("flip-backward");
+      mSheet.style.transform = "";
+    }
+    currentIndex = effectiveTarget;
+    setPageContent(mFront, targetHTML, effectiveTarget+1);
+    setPageContent(document.getElementById("mBase"), targetHTML, effectiveTarget+1);
+  } else {
+    const leftSheet = document.getElementById("leftSheet");
+    const rightSheet = document.getElementById("rightSheet");
+    const leftBack = document.getElementById("leftBack");
+    const rightBack = document.getElementById("rightBack");
+    leftSheet.classList.remove("flipping");
+    rightSheet.classList.remove("flipping");
+    void leftSheet.offsetWidth;
+    const targetPage = allPages[effectiveTarget];
+    const targetRightPage = allPages[effectiveTarget+1];
+    const [targetHTML, targetRightHTML] = await Promise.all([
+      targetPage ? loadPage(targetPage) : Promise.resolve(""),
+      targetRightPage ? loadPage(targetRightPage) : Promise.resolve("")
+    ]);
+    if(direction === "right"){
+      if(targetPage) setPageContent(rightBack, targetHTML, effectiveTarget+1);
+      else if(rightBack) rightBack.innerHTML = "";
+      leftSheet.style.opacity = "0";
+      rightSheet.style.opacity = "1";
+      rightSheet.classList.add("flipping");
+      await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+      rightSheet.classList.remove("flipping");
+      leftSheet.style.opacity = "1";
+      rightSheet.style.opacity = "1";
+    } else {
+      if(targetRightPage) setPageContent(leftBack, targetRightHTML, effectiveTarget+2);
+      else if(leftBack) leftBack.innerHTML = "";
+      rightSheet.style.opacity = "0";
+      leftSheet.style.opacity = "1";
+      leftSheet.classList.add("flipping");
+      await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+      leftSheet.classList.remove("flipping");
+      leftSheet.style.opacity = "1";
+      rightSheet.style.opacity = "1";
+    }
+    currentIndex = effectiveTarget;
+  }
+  await renderSpread();
+  isAnimating = false;
 }
 
-document.getElementById("prevBtn").addEventListener("click",async()=>{
-if(canGoBackward()&&!isAnimating)await animateFlip("left");
+document.getElementById("prevBtn").addEventListener("click", async ()=>{
+  if(canGoBackward() && !isAnimating) await animateFlip("left");
 });
-document.getElementById("nextBtn").addEventListener("click",async()=>{
-if(canGoForward()&&!isAnimating)await animateFlip("right");
-});
-
-document.addEventListener("keydown",(e)=>{
-if(e.key==="ArrowLeft")document.getElementById("prevBtn").click();
-if(e.key==="ArrowRight")document.getElementById("nextBtn").click();
-if(e.key==="Escape"){
-closeSidebar();
-closeMuseumModal();
-}
+document.getElementById("nextBtn").addEventListener("click", async ()=>{
+  if(canGoForward() && !isAnimating) await animateFlip("right");
 });
 
-let touchStartX=0,touchStartY=0,touchStartTime=0;
-const mobileBookEl=document.getElementById("mobileBook");
+document.addEventListener("keydown", (e)=>{
+  if(e.key === "ArrowLeft") document.getElementById("prevBtn").click();
+  if(e.key === "ArrowRight") document.getElementById("nextBtn").click();
+  if(e.key === "Escape"){
+    closeSidebar();
+    closeMuseumModal();
+  }
+});
+
+let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
+const mobileBookEl = document.getElementById("mobileBook");
 if(mobileBookEl){
-mobileBookEl.addEventListener("touchstart",(e)=>{
-touchStartX=e.touches[0].clientX;
-touchStartY=e.touches[0].clientY;
-touchStartTime=Date.now();
-},{passive:true});
-mobileBookEl.addEventListener("touchend",(e)=>{
-const dx=e.changedTouches[0].clientX-touchStartX;
-const dy=e.changedTouches[0].clientY-touchStartY;
-const dt=Date.now()-touchStartTime;
-const absDx=Math.abs(dx),absDy=Math.abs(dy);
-if(absDx>40&&absDx>absDy*1.5&&dt<600){
-if(dx<0&&canGoForward()&&!isAnimating)animateFlip("right");
-else if(dx>0&&canGoBackward()&&!isAnimating)animateFlip("left");
-}
-},{passive:true});
+  mobileBookEl.addEventListener("touchstart", (e)=>{
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchStartTime = Date.now();
+  }, {passive:true});
+  mobileBookEl.addEventListener("touchend", (e)=>{
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    const dt = Date.now() - touchStartTime;
+    const absDx = Math.abs(dx), absDy = Math.abs(dy);
+    if(absDx > 40 && absDx > absDy * 1.5 && dt < 600){
+      if(dx < 0 && canGoForward() && !isAnimating) animateFlip("right");
+      else if(dx > 0 && canGoBackward() && !isAnimating) animateFlip("left");
+    }
+  }, {passive:true});
 }
 
-const sidebarToggle=document.getElementById("sidebarToggle");
-const sidebar=document.getElementById("sidebar");
-const sidebarOverlay=document.getElementById("sidebarOverlay");
-
+const sidebarToggle = document.getElementById("sidebarToggle");
+const sidebar = document.getElementById("sidebar");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
 function openSidebar(){
-sidebar.classList.add("open");
-sidebarToggle.classList.add("active");
-sidebarOverlay.classList.add("visible");
+  sidebar.classList.add("open");
+  sidebarToggle.classList.add("active");
+  sidebarOverlay.classList.add("visible");
 }
 function closeSidebar(){
-sidebar.classList.remove("open");
-sidebarToggle.classList.remove("active");
-sidebarOverlay.classList.remove("visible");
+  sidebar.classList.remove("open");
+  sidebarToggle.classList.remove("active");
+  sidebarOverlay.classList.remove("visible");
 }
-sidebarToggle.addEventListener("click",()=>{
-if(sidebar.classList.contains("open"))closeSidebar();
-else openSidebar();
+sidebarToggle.addEventListener("click", ()=>{
+  if(sidebar.classList.contains("open")) closeSidebar();
+  else openSidebar();
 });
-sidebarOverlay.addEventListener("click",closeSidebar);
+sidebarOverlay.addEventListener("click", closeSidebar);
 
 let resizeTimer;
-window.addEventListener("resize",()=>{
-clearTimeout(resizeTimer);
-resizeTimer=setTimeout(()=>{
-renderSpread();
-if(window.innerWidth>900)closeSidebar();
-},200);
+window.addEventListener("resize", ()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(()=>{
+    renderSpread();
+    if(window.innerWidth > 900) closeSidebar();
+  }, 200);
 });
 
 (function initCoverAnimation(){
-if(window.matchMedia("(max-width:560px)").matches){
-const cover=document.getElementById("bookCover");
-const book=document.getElementById("book");
-if(cover)cover.classList.add("done");
-if(book)book.classList.add("cover-opened");
-return;
-}
-const cover=document.getElementById("bookCover");
-const book=document.getElementById("book");
-if(!cover||!book)return;
-book.classList.add("cover-closed");
-function startOpening(){
-setTimeout(()=>cover.classList.add("phase-appear"),100);
-setTimeout(()=>cover.classList.add("phase-breathe"),600);
-setTimeout(()=>{
-cover.classList.remove("phase-breathe");
-cover.classList.add("phase-open");
-},1000);
-setTimeout(()=>{
-book.classList.remove("cover-closed");
-book.classList.add("cover-opened");
-},1900);
-setTimeout(()=>cover.classList.add("phase-fade"),2200);
-setTimeout(()=>cover.classList.add("done"),2700);
-}
-if(document.readyState==="complete")startOpening();
-else window.addEventListener("load",startOpening);
+  if(window.matchMedia("(max-width:560px)").matches){
+    const cover = document.getElementById("bookCover");
+    const book = document.getElementById("book");
+    if(cover) cover.classList.add("done");
+    if(book) book.classList.add("cover-opened");
+    return;
+  }
+  const cover = document.getElementById("bookCover");
+  const book = document.getElementById("book");
+  if(!cover || !book) return;
+  book.classList.add("cover-closed");
+  function startOpening(){
+    setTimeout(()=>cover.classList.add("phase-appear"), 100);
+    setTimeout(()=>cover.classList.add("phase-breathe"), 600);
+    setTimeout(()=>{
+      cover.classList.remove("phase-breathe");
+      cover.classList.add("phase-open");
+    }, 1000);
+    setTimeout(()=>{
+      book.classList.remove("cover-closed");
+      book.classList.add("cover-opened");
+    }, 1900);
+    setTimeout(()=>cover.classList.add("phase-fade"), 2200);
+    setTimeout(()=>cover.classList.add("done"), 2700);
+  }
+  if(document.readyState === "complete") startOpening();
+  else window.addEventListener("load", startOpening);
 })();
 
 buildTOC();
