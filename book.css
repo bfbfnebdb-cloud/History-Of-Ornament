@@ -50,10 +50,10 @@ body {
   height: 100vh;
 }
 .sidebar::before {
-  content: "";
+  content: " ";
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><g fill='%23c0392b' opacity='0.08'><path d='M30 5 L35 10 L30 15 L25 10 Z M30 12 L33 15 L30 18 L27 15 Z'/><path d='M10 30 L15 35 L10 40 L5 35 Z'/><path d='M50 30 L55 35 L50 40 L45 35 Z'/><path d='M30 45 L35 50 L30 55 L25 50 Z'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' > <g fill='%23c0392b' opacity='0.08' > <path d='M30 5 L35 10 L30 15 L25 10 Z M30 12 L33 15 L30 18 L27 15 Z'/ > <path d='M10 30 L15 35 L10 40 L5 35 Z'/ > <path d='M50 30 L55 35 L50 40 L45 35 Z'/ > <path d='M30 45 L35 50 L30 55 L25 50 Z'/ > </g > </svg > ");
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
@@ -141,7 +141,7 @@ body {
 .topic-divider {
   height: 4px;
   margin: 4px 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='6' viewBox='0 0 100 6'><g fill='%23c0392b' opacity='0.3'><path d='M0 3 L3 0 L6 3 L9 0 L12 3 L15 0 L18 3 L21 0 L24 3 L27 0 L30 3 L33 0 L36 3 L39 0 L42 3 L45 0 L48 3 L51 0 L54 3 L57 0 L60 3 L63 0 L66 3 L69 0 L72 3 L75 0 L78 3 L81 0 L84 3 L87 0 L90 3 L93 0 L96 3 L100 3 L100 6 L0 6 Z'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='100' height='6' viewBox='0 0 100 6' > <g fill='%23c0392b' opacity='0.3' > <path d='M0 3 L3 0 L6 3 L9 0 L12 3 L15 0 L18 3 L21 0 L24 3 L27 0 L30 3 L33 0 L36 3 L39 0 L42 3 L45 0 L48 3 L51 0 L54 3 L57 0 L60 3 L63 0 L66 3 L69 0 L72 3 L75 0 L78 3 L81 0 L84 3 L 87 0 L90 3 L93 0 L96 3 L100 3 L100 6 L0 6 Z'/ > </g > </svg > ");
   background-repeat: repeat-x;
   background-size: 100px 6px;
   pointer-events: none;
@@ -286,13 +286,13 @@ body {
   overflow-wrap: break-word;
 }
 .page-content::before {
-  content: "";
+  content: " ";
   position: absolute;
   top: -4px;
   left: 0;
   right: 0;
   height: 18px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='28' viewBox='0 0 80 28'><g fill='%23c0392b' opacity='0.35'><path d='M40 4 L44 8 L40 12 L36 8 Z'/><path d='M40 16 L44 20 L40 24 L36 20 Z'/><path d='M10 10 L14 14 L10 18 L6 14 Z'/><path d='M70 10 L74 14 L70 18 L66 14 Z'/><circle cx='25' cy='14' r='1.5'/><circle cx='55' cy='14' r='1.5'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='80' height='28' viewBox='0 0 80 28' > <g fill='%23c0392b' opacity='0.35' > <path d='M40 4 L44 8 L40 12 L36 8 Z'/ > <path d='M40 16 L44 20 L40 24 L36 20 Z'/ > <path d='M10 10 L14 14 L10 18 L6 14 Z'/ > <path d='M70 10 L74 14 L70 18 L66 14 Z'/ > <circle cx='25' cy='14' r='1.5'/ > <circle cx='55' cy='14' r='1.5'/ > </g > </svg > ");
   background-repeat: repeat-x;
   background-size: 80px 18px;
   background-position: center;
@@ -313,7 +313,7 @@ body {
   text-transform: none;
 }
 .page-content h1::before {
-  content: "❖";
+  content: "❖ ";
   display: block;
   color: #c0392b;
   font-size: 11px;
@@ -321,14 +321,14 @@ body {
   opacity: 0.7;
 }
 .page-content h1::after {
-  content: "";
+  content: " ";
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
   height: 10px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='20' viewBox='0 0 200 20'><g fill='%23c0392b'><path d='M100 4 L106 10 L100 16 L94 10 Z' opacity='0.8'/><path d='M60 8 L64 12 L60 16 L56 12 Z' opacity='0.5'/><path d='M140 8 L144 12 L140 16 L136 12 Z' opacity='0.5'/><path d='M20 10 L24 14 L20 18 L16 14 Z' opacity='0.3'/><path d='M180 10 L184 14 L180 18 L176 14 Z' opacity='0.3'/><line x1='0' y1='10' x2='90' y2='10' stroke='%23c0392b' stroke-width='0.5' opacity='0.4'/><line x1='110' y1='10' x2='200' y2='10' stroke='%23c0392b' stroke-width='0.5' opacity='0.4'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='200' height='20' viewBox='0 0 200 20' > <g fill='%23c0392b' > <path d='M100 4 L106 10 L100 16 L94 10 Z' opacity='0.8'/ > <path d='M60 8 L64 12 L60 16 L56 12 Z' opacity='0.5'/ > <path d='M140 8 L144 12 L140 16 L136 12 Z' opacity='0.5'/ > <path d='M20 10 L24 14 L20 18 L16 14 Z' opacity='0.3'/ > <path d='M180 10 L184 14 L180 18 L176 14 Z' opacity='0.3'/ > <line x1='0' y1='10' x2='90' y2='10' stroke='%23c0392b' stroke-width='0.5' opacity='0.4'/ > <line x1='110' y1='10' x2='200' y2='10' stroke='%23c0392b' stroke-width='0.5' opacity='0.4'/ > </g > </svg > ");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -347,19 +347,19 @@ body {
   font-style: italic;
 }
 .page-content h2::before {
-  content: "";
+  content: " ";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 14px;
   height: 14px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'><g fill='%23c0392b'><path d='M11 2 L14 5 L11 8 L8 5 Z'/><path d='M11 14 L14 17 L11 20 L8 17 Z'/><path d='M2 11 L5 8 L8 11 L5 14 Z'/><path d='M14 11 L17 8 L20 11 L17 14 Z'/><circle cx='11' cy='11' r='1.5' fill='%23d4af37'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22' > <g fill='%23c0392b' > <path d='M11 2 L14 5 L11 8 L8 5 Z'/ > <path d='M11 14 L14 17 L11 20 L8 17 Z'/ > <path d='M2 11 L5 8 L8 11 L5 14 Z'/ > <path d='M14 11 L17 8 L20 11 L17 14 Z'/ > <circle cx='11' cy='11' r='1.5' fill='%23d4af37'/ > </g > </svg > ");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .page-content h2::after {
-  content: "";
+  content: " ";
   position: absolute;
   bottom: -1px;
   left: 20px;
@@ -415,7 +415,7 @@ body {
 }
 .page-content .ornament-divider::before,
 .page-content .ornament-divider::after {
-  content: "";
+  content: " ";
   position: absolute;
   top: 50%;
   width: 30%;
@@ -449,7 +449,7 @@ body {
 }
 .page-content .ornament-banner::before,
 .page-content .ornament-banner::after {
-  content: "❦";
+  content: "❦ ";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -494,7 +494,7 @@ body {
   line-height: 1.35;
 }
 .page-content blockquote::before {
-  content: "❝";
+  content: "❝ ";
   position: absolute;
   top: -5px;
   left: 5px;
@@ -504,13 +504,13 @@ body {
   font-family: "Playfair Display", Georgia, serif;
 }
 .page-content blockquote::after {
-  content: "";
+  content: " ";
   position: absolute;
   bottom: 2px;
   right: 5px;
   width: 20px;
   height: 7px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 12'><g fill='%23c0392b' opacity='0.5'><path d='M15 2 L18 6 L15 10 L12 6 Z'/><path d='M5 6 L8 9 L5 12 L2 9 Z'/><path d='M25 6 L28 9 L25 12 L22 9 Z'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 12' > <g fill='%23c0392b' opacity='0.5' > <path d='M15 2 L18 6 L15 10 L12 6 Z'/ > <path d='M5 6 L8 9 L5 12 L2 9 Z'/ > <path d='M25 6 L28 9 L25 12 L22 9 Z'/ > </g > </svg > ");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -528,13 +528,13 @@ body {
   box-shadow: 0 2px 8px rgba(192, 57, 43, 0.06);
 }
 .page-content .highlight-box::before {
-  content: "";
+  content: " ";
   position: absolute;
   top: -1px;
   left: -1px;
   right: -1px;
   bottom: -1px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='%23c0392b' opacity='0.5'><path d='M0 0 L6 0 L0 6 Z'/><path d='M24 0 L18 0 L24 6 Z'/><path d='M0 24 L6 24 L0 18 Z'/><path d='M24 24 L18 24 L24 18 Z'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' > <g fill='%23c0392b' opacity='0.5' > <path d='M0 0 L6 0 L0 6 Z'/ > <path d='M24 0 L18 0 L24 6 Z'/ > <path d='M0 24 L6 24 L0 18 Z'/ > <path d='M24 24 L18 24 L24 18 Z'/ > </g > </svg > ");
   background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position:
@@ -610,7 +610,7 @@ body {
   margin-bottom: 0;
 }
 .page-content .timeline-item::before {
-  content: "";
+  content: " ";
   position: absolute;
   left: -25px;
   top: 5px;
@@ -673,14 +673,14 @@ body {
   transform: translateX(2px);
 }
 .page-content .type-list li::before {
-  content: "";
+  content: " ";
   position: absolute;
   left: 5px;
   top: 50%;
   transform: translateY(-50%);
   width: 12px;
   height: 12px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><g fill='%23c0392b'><path d='M10 3 L13 6 L10 9 L7 6 Z'/><path d='M10 11 L13 14 L10 17 L7 14 Z'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' > <g fill='%23c0392b' > <path d='M10 3 L13 6 L10 9 L7 6 Z'/ > <path d='M10 11 L13 14 L10 17 L7 14 Z'/ > </g > </svg > ");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -709,7 +709,7 @@ body {
   overflow: hidden;
 }
 .page-content .symbol-card::before {
-  content: "";
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -837,7 +837,7 @@ body {
   font-weight: 500;
 }
 .page-content .side-note::before {
-  content: "✦";
+  content: "✦ ";
   position: absolute;
   top: -7px;
   left: 7px;
@@ -869,7 +869,7 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 .page-content .definition::before {
-  content: "ТЕРМИН";
+  content: "ТЕРМИН ";
   position: absolute;
   top: -6px;
   left: 8px;
@@ -912,7 +912,7 @@ body {
   position: relative;
 }
 .page-content .important-note::before {
-  content: "❗";
+  content: "❗ ";
   position: absolute;
   left: 7px;
   top: 50%;
@@ -971,7 +971,7 @@ body {
 }
 .page-number::before,
 .page-number::after {
-  content: "◆";
+  content: "◆ ";
   color: #c0392b;
   opacity: 0.4;
   font-size: 7px;
@@ -1113,7 +1113,7 @@ body {
   }
 }
 .museum-modal-content::before {
-  content: "";
+  content: " ";
   position: absolute;
   top: 10px;
   left: 10px;
@@ -1220,7 +1220,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
   width: 0;
   height: 0;
@@ -1249,6 +1249,24 @@ body {
   100% {
     transform: rotateY(180deg);
   }
+}
+/* ===== Блюр содержимого страниц во время перелистывания ===== */
+.sheet.flipping .face {
+  filter: blur(10px);
+  transition: filter 0.15s ease-out;
+}
+.sheet:not(.flipping) .face {
+  filter: blur(0);
+  transition: filter 0.3s ease-out;
+}
+.mobile-book .m-sheet.flip-forward .m-face,
+.mobile-book .m-sheet.flip-backward .m-face {
+  filter: blur(10px);
+  transition: filter 0.15s ease-out;
+}
+.mobile-book .m-sheet:not(.flip-forward):not(.flip-backward) .m-face {
+  filter: blur(0);
+  transition: filter 0.3s ease-out;
 }
 /* ===== Mobile ===== */
 .mobile-book {
@@ -1282,6 +1300,7 @@ body {
   overflow: hidden;
   padding: 26px 16px;
   background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+  transition: filter 0.25s ease;
 }
 .mobile-book .m-sheet .m-face.front {
   background: linear-gradient(to left, #ececec 0%, #fff 12%, #fff 100%);
@@ -1435,7 +1454,7 @@ body {
   overflow: hidden;
 }
 .cover-inner::before {
-  content: "";
+  content: " ";
   position: absolute;
   inset: 0;
   background-image:
@@ -1456,7 +1475,7 @@ body {
   pointer-events: none;
 }
 .cover-inner::after {
-  content: "";
+  content: " ";
   position: absolute;
   top: 24px;
   left: 24px;
@@ -1513,7 +1532,7 @@ body {
   margin: 16px 0;
 }
 .cover-ornament::before {
-  content: "❦";
+  content: "❦ ";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1525,7 +1544,7 @@ body {
     0 1px 3px rgba(0, 0, 0, 0.8);
 }
 .cover-ornament::after {
-  content: "";
+  content: " ";
   position: absolute;
   left: 0;
   right: 0;
@@ -1662,7 +1681,6 @@ body {
   }
   .sidebar.open {
     transform: translateX(0);
-    z-index: 1000;
   }
   .book-area {
     padding: 56px 10px 10px;
@@ -1678,7 +1696,7 @@ body {
   .ornament-now {
     width: 29%;
   }
-  .mobile-book .m-sheet .m-face.back{
+  .mobile-book .m-sheet .m-face.back {
     display: none;
   }
   .face,
