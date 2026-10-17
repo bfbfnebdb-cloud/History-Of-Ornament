@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 @import url("https://cdn.jsdelivr.net/fontsource/css/cormorant-garamond@latest/cyrillic-400-normal.css");
 @import url("https://cdn.jsdelivr.net/fontsource/css/cormorant-garamond@latest/cyrillic-600-normal.css");
 @import url("https://cdn.jsdelivr.net/fontsource/css/cormorant-garamond@latest/cyrillic-700-normal.css");
@@ -29,6 +30,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+h1{
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 .workspace {
   display: flex;
@@ -79,6 +85,15 @@ body {
   font-weight: 700;
   flex-shrink: 0;
 }
+.left-book-text-after-image{
+  margin-left: 2.5%;
+  margin-top: 2%;
+}
+.book-image-block{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 .sidebar-topics {
   flex: 1;
   overflow: hidden;
@@ -92,6 +107,10 @@ body {
 }
 .topic-item:hover {
   background: rgba(52, 152, 219, 0.06);
+}
+.book-image{
+  width: 45%;
+  margin-left: 4.5%;
 }
 .topic-title {
   display: flex;
@@ -134,9 +153,9 @@ body {
 }
 .pages-list li.active {
   background: rgba(52, 152, 219, 0.12);
-  color: #2980b9;
+  color: #b32c15;
   font-weight: 600;
-  border-left-color: #3498db;
+  border-left-color: #b32c15;
 }
 .topic-divider {
   height: 4px;
@@ -692,6 +711,9 @@ body {
   font-size: 11.5px;
   font-weight: 700;
 }
+strong{
+  color: #b32c15;
+}
 .page-content .symbol-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1191,7 +1213,7 @@ body {
   font-family: "Playfair Display", "Georgia", serif;
   background: linear-gradient(135deg, #fff, #ecf0f1);
   color: #2c3e50;
-  border: 1px solid #bdc3c7;
+  border: 1px solid #b32c15;
   padding: 7px 18px;
   font-size: 12px;
   border-radius: 30px;
