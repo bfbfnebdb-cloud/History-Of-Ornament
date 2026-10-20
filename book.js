@@ -34,8 +34,8 @@ const PAGE_CONTENT = {
 </div>
 <div class="timeline-item">
 <span class="timeline-date">II тыс. до н. э.</span><br>
-<div class="image-block"><img class="book-image" style="margin-left: 20%;" src="img/stanok.jpg"></div>
-<div class="image-block"><img class="book-image" style="margin-left: 20%;" src="img/stanok-2.jpg"></div>
+<div class="image-block"><img class="book-image" style="margin-left: 15%;" src="img/stanok.jpg"></div>
+<div class="image-block"><img class="book-image" style="margin-left: 25%;" src="img/stanok-2.jpg"></div>
 <div class="fact-box">
 <div class="fact-text"><strong>Горизонтальный станок</strong> — конструкция, появившаяся во II тысячелетии до н. э. и претерпевшая лишь незначительные изменения, сохранилась до наших дней как образец инженерного совершенства.</div>
 </div>
@@ -111,13 +111,13 @@ const PAGE_CONTENT = {
 <p>«Баба» — повитуха — принимала младенца, обернув руки куском нового полотна, чтобы тот «не жил с голыми руками». В знак траура вывешивали рушник с узкими полосами узора — каймами. Во время бедствий, засухи, эпидемий всем селом ткали особое льняное полотенце — <strong>«обыденник»</strong>, которое должно было умилостивить высшие силы.</p>
 <blockquote>Самыми нарядными, щедро украшенными и яркими были свадебные рушники.</blockquote>
 <div class="image-block">
-  <img class="book-image" style="width: 23%; margin-left: 20%;" src="img/rushnik-1.jpg">
+  <img class="book-image" style="width: 23%; margin-left: 15%;" src="img/rushnik-1.jpg">
 </div>
 <div class="image-block">
-  <img class="book-image" style="width: 23%; margin-left: 20%;" src="img/rushnik-2.jpg">
+  <img class="book-image" style="width: 23%; margin-left: 23%;" src="img/rushnik-2.jpg">
 </div>
 <div class="highlight-box">
-<h4 style="margin-top: 55px;">Символика</h4>
+<h4 style="margin-top: 65px;">Символика</h4>
 <p style="margin:0;text-indent:0">Каждый элемент орнамента на рушнике — ромб, розетка, крест, солярный знак — нёс свой обереговый смысл.</p>
 </div>
 `,
@@ -230,13 +230,13 @@ const PAGE_CONTENT = {
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Если раньше орнамент украшал фасады лишь этнографических музеев, то сегодня он выходит на улицы спальных районов. Белорусские муралисты и художники используют традиционные «рупы», «ромбы» и «кресты» как основу для масштабных уличных росписей.</p>
 <div class="image-block">
-  <img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241690.jpg">
+  <img class="book-image" style="width: 20%; margin-left: 5%;" src="img/5363878433303241690.jpg">
 </div>
 <div class="image-block">
   <img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241692.jpg">
 </div>
 <div class="image-block">
-  <img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241689.jpg">
+  <img class="book-image" style="width: 20%; margin-left: 9%;" src="img/5363878433303241689.jpg">
 </div>
 <p style="margin-top: 45px;">Геометрическая строгость белорусского узора идеально ложится на архитектуру: строгие линии и ритмичные повторы превращают глухие бетонные стены в динамичные арт-объекты.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
