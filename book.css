@@ -58,6 +58,7 @@ h1{
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background: url(https://www.spampavac.by/files/downloads/arnamient-1.png) repeat-x 0 100%;
 }
 /* ===== Sidebar ===== */
 .sidebar {
@@ -202,7 +203,6 @@ h1{
   pointer-events: none;
   flex-shrink: 0;
 }
-/* ===== Book Area ===== */
 .book-area {
   flex: 1;
   display: flex;
@@ -213,6 +213,7 @@ h1{
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background: url(https://www.spampavac.by/files/downloads/arnamient-1.png) repeat-x 100% 0;
 }
 .book {
   display: flex;
@@ -1241,6 +1242,8 @@ strong{
   gap: 16px;
   margin-top: 8px;
   flex-shrink: 0;
+  border-color: white;
+  border-radius: 13px;
 }
 .nav-btn {
   font-family: "Playfair Display", "Georgia", serif;
