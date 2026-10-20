@@ -1745,6 +1745,10 @@ strong{
     max-width: 900px;
     height: min(680px, calc(100vh - 90px));
   }
+  .book-image, .book-image-text{
+    width: 25%;
+    margin-left: 14%;
+  }
   .mobile-book .m-sheet .m-face.back {
     display: none;
   }
