@@ -139,17 +139,14 @@ h1{
 .book-image:hover{
   transition: 0.7s;
   transform: scale(1.8);
-  z-index: 10000;
 }
 .book-image-text:hover{
   transition: 0.7s;
   transform: scale(1.8);
-  z-index: 10000;
 }
 .symbol-of-ornament:hover{
   transition: 0.7s;
   transform: scale(1.8);
-  z-index: 10000;
 }
 .topic-title {
   display: flex;
@@ -795,10 +792,6 @@ strong{
   width: 80%;
   margin-left: 10.5%;
   position: relative;
-}
-.ornament-now {
-  margin-left: 8px;
-  width: 170px;
 }
 .symbol-card {
   margin-bottom: 20px;
@@ -1751,9 +1744,6 @@ strong{
     width: 100%;
     max-width: 900px;
     height: min(680px, calc(100vh - 90px));
-  }
-  .ornament-now {
-    width: 29%;
   }
   .mobile-book .m-sheet .m-face.back {
     display: none;
