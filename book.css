@@ -139,14 +139,17 @@ h1{
 .book-image:hover{
   transition: 0.7s;
   transform: scale(1.8);
+  z-index: 10000;
 }
 .book-image-text:hover{
   transition: 0.7s;
   transform: scale(1.8);
+  z-index: 10000;
 }
 .symbol-of-ornament:hover{
   transition: 0.7s;
   transform: scale(1.8);
+  z-index: 10000;
 }
 .topic-title {
   display: flex;
