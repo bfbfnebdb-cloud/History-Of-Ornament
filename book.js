@@ -175,21 +175,21 @@ const PAGE_CONTENT = {
 <p>В отличие от культур, склонных к натуралистичному копированию, белорусские мастера сводили растительные мотивы (листья, цветы, плоды) к строгой стилизации. Зооморфные образы животных и антропоморфные фигуры также подчинялись законам симметрии и геометризации.</p>
 <div class="symbol-grid">
 <div class="symbol-card">
-<div class="symbol-icon"><div class="image-block image-block-mobile"><img class="symbol-of-ornament" src="img/romb.png"></div></div>
+<div class="symbol-icon"><div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/romb.png"></div></div>
 <div class="ornament">
 <h4>Ромб</h4>
 <p>Земля, плодородие, засеянное поле</p>
 </div>
 </div>
 <div class="symbol-card">
-<div class="symbol-icon"><div class="image-block image-block-mobile"><img class="symbol-of-ornament" src="img/cross.jpg"></div></div>
+<div class="symbol-icon"><div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/cross.jpg"></div></div>
 <div class="ornament">
 <h4>Крест</h4>
 <p>Четыре стороны света, солярный цикл</p>
 </div>
 </div>
 <div class="symbol-card">
-<div class="symbol-icon"><div class="image-block image-block-mobile"><img class="symbol-of-ornament" src="img/spiral.png"></div></div>
+<div class="symbol-icon"><div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/spiral.png"></div></div>
 <div class="ornament">
 <h4>Спираль</h4>
 <p id="spiral">Движение времени, развитие жизни</p>
