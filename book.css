@@ -1748,9 +1748,7 @@ strong{
   .book-image{
     width: 25%;
     margin-left: 14%;
-  }
-  .book-image-text{
-    width: 25%;
+    margin-top: 15px;
   }
   .image-block{
     height: 80px;
@@ -1783,6 +1781,15 @@ strong{
   }
   .page-content .two-col {
     grid-template-columns: 1fr;
+  }
+  .symbol-of-ornament{
+    width: 50px;
+  }
+  .ornament-image-block{
+    margin-left: 15px;
+  }
+  .left-book-text-after-image{
+    margin-left: 25%;
   }
 }
 /* =============================================
