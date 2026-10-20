@@ -34,7 +34,8 @@ const PAGE_CONTENT = {
 </div>
 <div class="timeline-item">
 <span class="timeline-date">II тыс. до н. э.</span><br>
-<img class="book-image" src="img/stanok.jpg"><img class="book-image" src="img/stanok-2.jpg">
+<div class="image-block"><img class="book-image" style="margin-left: 20%;" src="img/stanok.jpg"></div>
+<div class="image-block"><img class="book-image" style="margin-left: 20%;" src="img/stanok-2.jpg"></div>
 <div class="fact-box">
 <div class="fact-text"><strong>Горизонтальный станок</strong> — конструкция, появившаяся во II тысячелетии до н. э. и претерпевшая лишь незначительные изменения, сохранилась до наших дней как образец инженерного совершенства.</div>
 </div>
@@ -43,7 +44,11 @@ const PAGE_CONTENT = {
 <h1>Подготовка материала<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Основным сырьём для изготовления тканей в домашних условиях у белорусов издавна был лён. В конце лета его выдёргивали из земли вместе с корнями и расстилали на земле «мокнуть».</p>
   <div>
-    <div class="book-image-block"><img width="45%" height="15%" src="img/threads.jpg"><p class="left-book-text-after-image" class="drop-cap">По прошествии одного-полутора месяцев стебли собирали, оббивали головки с семенами при помощи валька — <em>«праніка»</em>, <em>«пральніка»</em>, — после чего высушивали и мяли на мялке — <em>«мяліцы»</em>, <em>«церніцы»</em>.</p></div>
+    <div class="book-image-block">
+    <div class="image-block">
+      <img class="book-image-text" src="img/threads.jpg">
+    </div>
+    <p class="left-book-text-after-image" class="drop-cap">По прошествии одного-полутора месяцев стебли собирали, оббивали головки с семенами при помощи валька — <em>«праніка»</em>, <em>«пральніка»</em>, — после чего высушивали и мяли на мялке — <em>«мяліцы»</em>, <em>«церніцы»</em>.</p></div>
   </div>
 </div>
 <p>Чтобы очистить волокно от мелких кусочков костры, использовали похожее на меч или лопату деревянное <strong>трепало</strong> — <em>«трапло»</em>, <em>«трапушку»</em>, — которым терпеливо выбивали из льна все лишние частицы.</p>
@@ -54,7 +59,9 @@ const PAGE_CONTENT = {
 <h4>Приспособления прядения:</h4>
   <div>
     <div class="book-image-block">
-      <img width="35%" height="28%" src="img/skalnya.jpg">
+      <div class="image-block">
+        <img class="book-image-text" src="img/skalnya.jpg">
+      </div>
       <p class="left-book-text-after-image" text-indent:0"><strong>Прялка</strong> (<em>«прасніца»</em>), <strong>Скальня</strong>, <strong>веретено</strong> и <strong>самопрялка</strong> (<em>«калаўрот»</em>). Для лучшего скручивания нитей пряха смачивала волокно слюной, отчего пряжа становилась влажной и требовала просушки — для этого применяли <strong>мотовило</strong> (<em>«вітушка»</em>).</p>
     </div>
   </div>
@@ -72,7 +79,12 @@ const PAGE_CONTENT = {
 <div class="col">
 <h4>Зев</h4>
 <p>Пространство между поднятыми и опущенными нитями, в которое пробрасывается челнок с уточной нитью.</p>
-<img style="margin-left: 4.5%;" width="30%" src="img/berdo.jpg"><img style="margin-left: 4.5%;" width="53.2%" src="img/samopryalka.jpg">
+<div class="image-block">
+  <img class="book-image" style="width: 15%; margin-left: 20%;" src="img/berdo.jpg">
+</div>
+<div class="image-block">
+  <img class="book-image" style="margin-left: 20%;" src="img/samopryalka.jpg">
+</div>
 </div>
 </div>
 <p>Заправка кросен производится <strong>вдвоём</strong> и требует высокого мастерства.</p> 
@@ -82,7 +94,9 @@ const PAGE_CONTENT = {
   <h1>Процесс ткачества<h2 class="emblem-hr">sdjqertiop</h2></h1>
   <blockquote>Собственно ткать или, как говорили в старину, «затыкать кросны», — намного проще.</blockquote>
     <div class="book-image-block">
-      <img width="40%" height="10%" src="img/ornament.jpg">
+      <div class="image-block">
+        <img class="book-image-text" src="img/ornament.jpg">
+      </div>
       <p class="left-book-text-after-image">Ткачиха ногой нажимает на педали — <em>«поножи»</em>. При этом одна часть нитов опускается, другая поднимается, а в образовавшийся между нитями основы <strong>зев</strong> пробрасывается челнок с уточной нитью. Бердо плотно прибивает новый ряд утка к предыдущему.</p>
     </div>
   <p>Именно в момент ткачества рождался орнамент — тот самый, что превращал обычное льняное полотно в послание рода, в оберег, в молитву, вплетённую в нити.</p>
@@ -96,9 +110,14 @@ const PAGE_CONTENT = {
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>«Баба» — повитуха — принимала младенца, обернув руки куском нового полотна, чтобы тот «не жил с голыми руками». В знак траура вывешивали рушник с узкими полосами узора — каймами. Во время бедствий, засухи, эпидемий всем селом ткали особое льняное полотенце — <strong>«обыденник»</strong>, которое должно было умилостивить высшие силы.</p>
 <blockquote>Самыми нарядными, щедро украшенными и яркими были свадебные рушники.</blockquote>
-<img width="25%" style="margin-left: 16%;" src="img/rushnik-1.jpg"><img width="25%" style="margin-left: 16%;" src="img/rushnik-2.jpg">
+<div class="image-block">
+  <img class="book-image" style="width: 23%; margin-left: 20%;" src="img/rushnik-1.jpg">
+</div>
+<div class="image-block">
+  <img class="book-image" style="width: 23%; margin-left: 20%;" src="img/rushnik-2.jpg">
+</div>
 <div class="highlight-box">
-<h4>Символика</h4>
+<h4 style="margin-top: 55px;">Символика</h4>
 <p style="margin:0;text-indent:0">Каждый элемент орнамента на рушнике — ромб, розетка, крест, солярный знак — нёс свой обереговый смысл.</p>
 </div>
 `,
@@ -156,21 +175,21 @@ const PAGE_CONTENT = {
 <p>В отличие от культур, склонных к натуралистичному копированию, белорусские мастера сводили растительные мотивы (листья, цветы, плоды) к строгой стилизации. Зооморфные образы животных и антропоморфные фигуры также подчинялись законам симметрии и геометризации.</p>
 <div class="symbol-grid">
 <div class="symbol-card">
-<div class="symbol-icon"><img class="symbol-of-ornament" src="img/romb.png"></div>
+<div class="symbol-icon"><div class="image-block"><img class="symbol-of-ornament" src="img/romb.png"></div></div>
 <div class="ornament">
 <h4>Ромб</h4>
 <p>Земля, плодородие, засеянное поле</p>
 </div>
 </div>
 <div class="symbol-card">
-<div class="symbol-icon"><img class="symbol-of-ornament" src="img/cross.jpg"></div>
+<div class="symbol-icon"><div class="image-block"><img class="symbol-of-ornament" src="img/cross.jpg"></div></div>
 <div class="ornament">
 <h4>Крест</h4>
 <p>Четыре стороны света, солярный цикл</p>
 </div>
 </div>
 <div class="symbol-card">
-<div class="symbol-icon"><img class="symbol-of-ornament" src="img/spiral.png"></div>
+<div class="symbol-icon"><div class="image-block"><img class="symbol-of-ornament" src="img/spiral.png"></div></div>
 <div class="ornament">
 <h4>Спираль</h4>
 <p id="spiral">Движение времени, развитие жизни</p>
@@ -210,8 +229,16 @@ const PAGE_CONTENT = {
 <p class="drop-cap">Каждая линия и ромб в белорусском орнаменте когда-то нес в себе сакральный смысл: защиту, плодородие, связь с природой и предками.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Если раньше орнамент украшал фасады лишь этнографических музеев, то сегодня он выходит на улицы спальных районов. Белорусские муралисты и художники используют традиционные «рупы», «ромбы» и «кресты» как основу для масштабных уличных росписей.</p>
-<img class="ornament-now" src="img/5363878433303241690.jpg"><img class="ornament-now" src="img/5363878433303241692.jpg"><img class="ornament-now" width="170px" src="img/5363878433303241689.jpg">
-<p>Геометрическая строгость белорусского узора идеально ложится на архитектуру: строгие линии и ритмичные повторы превращают глухие бетонные стены в динамичные арт-объекты.</p>
+<div class="image-block">
+  <img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241690.jpg">
+</div>
+<div class="image-block">
+  <img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241692.jpg">
+</div>
+<div class="image-block">
+  <img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241689.jpg">
+</div>
+<p style="margin-top: 45px;">Геометрическая строгость белорусского узора идеально ложится на архитектуру: строгие линии и ритмичные повторы превращают глухие бетонные стены в динамичные арт-объекты.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Сейчас орнамент стал использоваться <strong>повсеместно</strong>: в искусстве, в архитектуре, в декоре. Они дополняет друг друга.</p>`,
 };

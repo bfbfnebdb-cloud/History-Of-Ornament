@@ -21,7 +21,17 @@
   font-style: normal;
   color: #b32c15;
 }
-
+.image-block{
+  position: static;
+  width: 30%;
+  height: 130px;
+  display: inline-block;
+}
+img{
+  border-radius: 2px;
+  box-shadow: 0px 0px 23px -8px black;
+  position: absolute;
+}
 html,
 body {
   overflow: hidden;
@@ -94,7 +104,7 @@ h1{
   flex-shrink: 0;
 }
 .left-book-text-after-image{
-  margin-left: 2.5%;
+  margin-left: 23%;
   margin-top: 2%;
 }
 .book-image-block{
@@ -117,8 +127,27 @@ h1{
   background: rgba(52, 152, 219, 0.06);
 }
 .book-image{
-  width: 45%;
-  margin-left: 4.5%;
+  width: 25%;
+  margin-left: 10%;
+  position: absolute;
+  transition: 0.7s;
+}
+.book-image-text{
+  width: 25%;
+  position: absolute;
+  transition: 0.7s;
+}
+.book-image:hover{
+  transition: 0.7s;
+  transform: scale(1.8);
+}
+.book-image-text:hover{
+  transition: 0.7s;
+  transform: scale(1.8);
+}
+.symbol-of-ornament:hover{
+  transition: 0.7s;
+  transform: scale(1.8);
 }
 .topic-title {
   display: flex;
@@ -772,15 +801,15 @@ strong{
   margin-bottom: 20px;
 }
 .symbol-icon {
-  padding-left: 500px;
-  margin-top: 25px;
+  padding-left: 80%;
 }
 .symbol-of-ornament {
   width: 75px;
   object-fit: contain;
+  transition: 0.7s;
 }
 .ornament {
-  margin-top: -35px;
+  margin-top: -100px;
 }
 .page-content .symbol-card h4 {
   font-family: "Playfair Display", "Georgia", serif;
@@ -1719,9 +1748,6 @@ strong{
     width: 100%;
     max-width: 900px;
     height: min(680px, calc(100vh - 90px));
-  }
-  .symbol-icon {
-    padding-left: 80%;
   }
   .ornament-now {
     width: 29%;

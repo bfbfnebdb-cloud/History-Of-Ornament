@@ -125,6 +125,7 @@ main {
   padding: 130px 0 130px 0;
   gap: 20px;
   align-items: flex-start;
+  height: 400px;
 }
 .why {
   display: flex;
@@ -322,6 +323,7 @@ footer {
     padding: 60px 0;
     gap: 20px;
     align-items: center;
+    height: 450px;
   }
   .why {
     width: 100%;
