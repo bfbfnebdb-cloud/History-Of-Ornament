@@ -495,7 +495,6 @@ async function animateDesktopFlip(direction){
   await renderSpread();
 }
 
-/* ===== МОБИЛЬНАЯ АНИМАЦИЯ ПЕРЕЛИСТЫВАНИЯ ===== */
 async function animateMobileFlip(direction){
   const mSheet = document.getElementById("mSheet");
   const mBase = document.getElementById("mBase");
@@ -503,16 +502,11 @@ async function animateMobileFlip(direction){
   const mBack = document.getElementById("mBack");
 
   if(direction === "right"){
-    // Перелистывание вперёд: текущая страница уходит влево, показывая back с новой страницей
     const nextIndex = currentIndex + 1;
     const nextPage = allPages[nextIndex];
     const nextHTML = nextPage ? await loadPage(nextPage) : "";
 
-    // Готовим back листа — там будет следующая страница
     setPageContent(mBack, nextHTML, nextIndex+1);
-    // База остаётся с текущей страницей (видна будет после анимации как "предыдущая")
-    // Но нам нужно, чтобы после перелистывания база показывала новую страницу
-    // Поэтому на базе оставляем текущую, а после анимации обновим
 
     mSheet.classList.remove("flip-backward");
     mSheet.style.transform = "";
@@ -521,22 +515,17 @@ async function animateMobileFlip(direction){
 
     await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS + 20));
 
-    // Обновляем currentIndex и базу
     currentIndex = nextIndex;
     mSheet.classList.remove("flip-forward");
     mSheet.style.transform = "";
-    // Сбрасываем лист — front показывает текущую (новую) страницу
     setPageContent(mFront, nextHTML, nextIndex+1);
     setPageContent(mBase, nextHTML, nextIndex+1);
   } else {
-    // Перелистывание назад: лист поворачивается справа налево, показывая back с предыдущей страницей
     const prevIndex = currentIndex - 1;
     const prevPage = allPages[prevIndex];
     const prevHTML = prevPage ? await loadPage(prevPage) : "";
 
-    // Готовим back листа — там будет предыдущая страница
     setPageContent(mBack, prevHTML, prevIndex+1);
-    // База остаётся с текущей страницей
 
     mSheet.classList.remove("flip-forward");
     mSheet.style.transform = "";
