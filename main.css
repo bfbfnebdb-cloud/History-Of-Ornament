@@ -270,8 +270,6 @@ footer {
   from { right: 50%; }
   to { right: 0; }
 }
-
-/* ===== АДАПТИВ ДЛЯ ЭКРАНОВ ≤ 900px ===== */
 @media (max-width: 900px) {
   body {
     padding: 10px;
@@ -280,8 +278,6 @@ footer {
     max-width: 100%;
     padding: 8px;
   }
-
-  /* Навигация */
   .nav {
     flex-direction: column;
     align-items: center;
@@ -306,8 +302,6 @@ footer {
   .nav .author1, .nav .author2 {
     margin-right: 10px;
   }
-
-  /* Заголовок */
   .title {
     font-size: 26px;
     margin: 50px 0 0 0;
@@ -315,8 +309,6 @@ footer {
     line-height: 1.3;
     padding: 0 15px;
   }
-
-  /* Блок с карточками */
   .box {
     width: 90%;
     flex-direction: column;
@@ -333,16 +325,12 @@ footer {
     font-size: 17px;
     padding: 20px 15px;
   }
-
-  /* Кнопка */
   .button {
     padding: 12px 24px;
   }
   .button_a {
     font-size: 17px;
   }
-
-  /* Футер */
   footer {
     flex-direction: column;
     margin: 80px auto 0 auto;
@@ -375,8 +363,6 @@ footer {
     margin-right: 0;
   }
 }
-
-/* ===== Дополнительная адаптация для совсем маленьких экранов ===== */
 @media (max-width: 500px) {
   .title {
     font-size: 20px;
