@@ -802,9 +802,7 @@ strong{
   width: 75px;
   object-fit: contain;
   transition: 0.7s;
-}
-.ornament {
-  margin-top: -100px;
+  margin-left: 35%;
 }
 .page-content .symbol-card h4 {
   font-family: "Playfair Display", "Georgia", serif;
