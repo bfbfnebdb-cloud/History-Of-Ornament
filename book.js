@@ -34,7 +34,7 @@ const PAGE_CONTENT = {
 </div>
 <div class="timeline-item">
 <span class="timeline-date">II тыс. до н. э.</span><br>
-<div class="image-block"><img class="book-image" id="stanok" src="img/stanok.jpg"></div>
+<div class="image-block" style="height: 200px;"><img class="book-image" id="stanok" src="img/stanok.jpg"></div>
 `,
 "2-3":`
 <div class="image-block"><img class="book-image" id="stanok-2" src="img/stanok-2.jpg"></div>
@@ -68,7 +68,7 @@ const PAGE_CONTENT = {
 </div>
 <div>
     <div class="book-image-block">
-      <div class="image-block">
+      <div class="image-block" style="height: 430px;">
         <img class="book-image" id="photo-1" src="img/5393306827660926756.jpg">
       </div>
     </div>
