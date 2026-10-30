@@ -15,6 +15,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+#berdo{
+  width: 15vh;
+  margin-left: 21vh;
+  margin-top: 8vh;
+}
+#samopryalka{
+  margin-left: 14.5vh;
+  width: 30vh;
+  margin-top: 9vh;
+}
+#photo-1{
+  margin-left: 17.5vh;
+  width: 22vh;
+  margin-top: 15vh;
+}
+#threads{
+  margin-left: 17.5vh;
+  width: 26vh;
+  margin-top: 7.5vh;
+}
+#stanok-2{
+  margin-left: 17.5vh;
+  width: 26vh;
+  margin-top: 9vh;
+  position: relative;
+  margin-bottom: 80px;
+}
+#stanok{
+  margin-left: 17.5vh;
+  width: 26vh;
+  margin-top: 9vh;
+}
 .emblem-hr{
   font-family: "Yarndings 12", system-ui;
   font-weight: 400;
@@ -1776,8 +1808,33 @@ strong{
   .symbol-of-ornament{
     width: 50px;
   }
+  #samopryalka{
+    margin-left: 10vh;
+    width: 25vh;
+  }
+  #berdo{
+    width: 12vh;
+    margin-left: 17vh;
+  }
+  #photo-1{
+    margin-left: 15vh;
+    width: 18vh;
+  }
+  #threads{
+    margin-left: 13vh;
+    width: 20vh;
+  }
+  #stanok-2{
+    margin-left: 13vh;
+    width: 20vh;
+  }
+  #stanok{
+    margin-left: 13vh;
+    width: 20vh;
+  }
   .ornament-image-block{
     margin-left: 15px;
+    width: 110px;
   }
   .left-book-text-after-image{
     margin-left: 25%;
