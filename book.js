@@ -37,6 +37,7 @@ const PAGE_CONTENT = {
 <div class="image-block" style="height: 200px;"><img class="book-image" id="stanok" src="img/stanok.jpg"></div>
 `,
 "2-3":`
+<h1>Приспособления для ткачества<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <div class="image-block"><img class="book-image" id="stanok-2" src="img/stanok-2.jpg"></div>
 <div class="fact-box">
 <strong>Горизонтальный станок</strong> — конструкция, появившаяся во II тысячелетии до н. э. и претерпевшая лишь незначительные изменения, сохранилась до наших дней как образец инженерного совершенства.
@@ -60,6 +61,7 @@ const PAGE_CONTENT = {
 </div>
 `,
 "2-5":`
+<h1>Подготовка материала<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <div class="highlight-box">
 <h4>Приспособления прядения:</h4>
   <div>
@@ -82,6 +84,7 @@ const PAGE_CONTENT = {
 <p class="drop-cat" style="margin-top: 21vh;">Во время наиболее трудоёмкой операции — заправки станка — каждая из нитей основы пропускается через узелки одного из <strong>нитов</strong>, сетчатых рамок, предназначенных для приподнимания либо опускания нитей основы.</p>
 `,
 "2-7": `
+<h1>Процесс ткачества<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <div class="two-col">
 <div class="col">
 <h4>Ниты</h4>
@@ -268,7 +271,7 @@ function buildMapSVG() {
 
 const BOOK_CONFIG = {
 1:{title:"Музеи Гомельской области",pages:2,pageNames:{1:"Введение",2:"Карта"},noSpine:true},
-2:{title:"История ткачества",pages:9,pageNames:{1:"Истоки",2:"Станки",3:"Материал",4:"Процесс",5:"Процесс",6:"Рушник"}},
+2:{title:"История ткачества",pages:9,pageNames:{1:"Истоки",2:"Станки",3:"Станки ч.2",4:"Материал",5:"Материал ч.2",6:"Процесс",7:"Процесс ч.2",8:"Процесс ч.3",9:"Рушник"}},
 3:{title:"Белорусский орнамент",pages:6,pageNames:{1:"Сущность",2:"Функции",3:"Типология",4:"Мотивы",5:"Символика",6:"Где используется орнамент сейчас?",}},
 };
 const allPages = [];
