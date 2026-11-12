@@ -236,7 +236,8 @@ const PAGE_CONTENT = {
 </div>
 <p>Так белорусский орнамент становится не просто украшением, а <em>философской системой</em>, воплощённой в нитях и красках, — гимном жизни, вплетённым в повседневный быт народа.</p>
 `,
-"3-6": `<h1>Орнамент сейчас<h2 class="emblem-hr">sdjqertiop</h2></h1>
+"3-6": `
+<h1>Орнамент сейчас<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Каждая линия и ромб в белорусском орнаменте когда-то нес в себе сакральный смысл: защиту, плодородие, связь с природой и предками.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Если раньше орнамент украшал фасады лишь этнографических музеев, то сегодня он выходит на улицы спальных районов. Белорусские муралисты и художники используют традиционные «рупы», «ромбы» и «кресты» как основу для масштабных уличных росписей.</p>
@@ -252,11 +253,19 @@ const PAGE_CONTENT = {
 <p style="margin-top: 45px;">Геометрическая строгость белорусского узора идеально ложится на архитектуру: строгие линии и ритмичные повторы превращают глухие бетонные стены в динамичные арт-объекты.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Сейчас орнамент стал использоваться <strong>повсеместно</strong>: в искусстве, в архитектуре, в декоре. Они дополняет друг друга.</p>`,
+"3-7":`
+<h1>Скачать вышиванку орнамента<h2 class="emblem-hr">sdjqertiop</h2></h1>
+<p class="drop-cap">Здесь вы можете открыть коллекцию традиционных белорусских вышиванок. Каждый узор несёт в себе многовековую историю и символику Полесья.</p>
+<div class="ornament-divider">◆ ◇ ◆</div>
+<div class="vyshyvanka-btn-wrapper">
+  <button type="button" class="vyshyvanka-btn" data-action="open-vyshyvanka">Скачать вышиванку</button>
+</div>
+`
 };
 
 const MUSEUMS = {
 vetka: {name:"Ветковский музей им. Ф. Г. Шклярова",location:"Ветковский район",text:`<p>Ветковский музей старообрядчества и белорусских традиций основан в 1978 году по инициативе коллекционера Фёдора Григорьевича Шклярова; экспозиция открыта в 1987 году.</p><p>Значительную часть коллекции составляют народные ткани — свыше <strong>1800 предметов</strong>. Здесь представлено самобытное <em>неглюбское ткачество</em> с плотным геометрическим орнаментом, браные и закладные рушники, пояса и андараки.</p><img class="museum-photo" src="img/vetka.png">`},
-homel: {name:"Филиал Ветковского музея",location:"г. Гомель",text:`<p>Гомельский филиал Ветковского музея продолжает линию головного собрания, знакомя посетителей с духовной и материальной культурой региона.</p><p>Текстильный раздел здесь один из самых выразительных: демонстрируются рушники и предметы одежды с браным и закладным ткачеством.</p><img class="museum-photo" src="img/homel.png">`},
+homel: {name:"Филиал Ветковского музея",location:"г. Гомель",panoramaLink:"https://your-panorama-link-here.com",text:`<p>Гомельский филиал Ветковского музея продолжает линию головного собрания, знакомя посетителей с духовной и материальной культурой региона.</p><p>Текстильный раздел здесь один из самых выразительных: демонстрируются рушники и предметы одежды с браным и закладным ткачеством.</p><img class="museum-photo" src="img/homel.png">`},
 yelsk: {name:"Краеведческий музей г. Ельска",location:"Ельский район",text:`<p>Краеведческий музей города Ельска хранит материалы по истории, природе и этнографии Ельского района белорусского Полесья.</p><p>Полесский текстиль занимает в экспозиции заметное место: собраны рушники, скатерти и элементы традиционного костюма.</p><img class="museum-photo" src="img/yelsk.png">`},
 kalinkavichy: {name:"Калинковичский краеведческий музей",location:"Калинковичский район",text:`<p>Калинковичский краеведческий музей посвящён истории, природе и народной культуре Калинковичского района.</p><p>Текстильная коллекция — одна из сильных сторон музея: это рушники, скатерти и народная одежда с браным и узорным ткачеством.</p><img class="museum-photo" src="img/kalinkovichy.png">`},
 naroulya: {name:"Наровлянский историко-этнографический музей",location:"Наровлянский район",text:`<p>Наровлянский историко-этнографический музей — многофункциональное учреждение, собрание которого охватывает историю, природу, археологию и этнографию Наровлянского района Полесья.</p><p>Особое место в его фондах занимает текстильное наследие — рушники, пояса и предметы народного костюма.</p><img class="museum-photo" src="img/narovla.png">`},
@@ -271,8 +280,8 @@ function buildMapSVG() {
 
 const BOOK_CONFIG = {
 1:{title:"Музеи Гомельской области",pages:2,pageNames:{1:"Введение",2:"Карта"},noSpine:true},
-2:{title:"История ткачества",pages:9,pageNames:{1:"Истоки",2:"Станки",3:"Станки ч.2",4:"Материал",5:"Материал ч.2",6:"Процесс",7:"Процесс ч.2",8:"Процесс ч.3",9:"Рушник"}},
-3:{title:"Белорусский орнамент",pages:6,pageNames:{1:"Сущность",2:"Функции",3:"Типология",4:"Мотивы",5:"Символика",6:"Где используется орнамент сейчас?",}},
+2:{title:"История ткачества",pages:9,pageNames:{1:"Истоки",2:"Станки ч.1",3:"Станки ч.2",4:"Материал ч.1",5:"Материал ч.2",6:"Процесс ч.1",7:"Процесс ч.2",8:"Процесс ч.3",9:"Рушник"}},
+3:{title:"Белорусский орнамент",pages:7,pageNames:{1:"Сущность",2:"Функции",3:"Типология",4:"Мотивы",5:"Символика",6:"Где используется орнамент сейчас?",7:"Скачать вышиванку"}},
 };
 const allPages = [];
 Object.keys(BOOK_CONFIG).forEach((topicId)=>{
@@ -736,6 +745,137 @@ window.addEventListener("resize", ()=>{
   if(document.readyState === "complete") startOpening();
   else window.addEventListener("load", startOpening);
 })();
+
+// ===== SVG вышиванок =====
+const VYSHYVANKA_SVGS = [
+  {
+    name: "Ромбический рушник",
+    desc: "Классический геометрический орнамент с ромбами плодородия",
+    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><path d="M100 30 L130 60 L100 90 L70 60 Z"/><path d="M100 45 L115 60 L100 75 L85 60 Z"/><path d="M40 100 L70 130 L40 160 L10 130 Z"/><path d="M160 100 L190 130 L160 160 L130 130 Z"/><path d="M100 110 L130 140 L100 170 L70 140 Z"/><path d="M100 125 L115 140 L100 155 L85 140 Z"/></g><g fill="#c0392b"><circle cx="100" cy="60" r="3"/><circle cx="40" cy="130" r="3"/><circle cx="160" cy="130" r="3"/><circle cx="100" cy="140" r="3"/></g></svg>`
+  },
+  {
+    name: "Солярный крест",
+    desc: "Древний символ солнца и четырёх сторон света",
+    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="35"/><path d="M100 50 L100 150 M50 100 L150 100"/><path d="M70 70 L130 130 M130 70 L70 130"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="8"/><circle cx="100" cy="50" r="4"/><circle cx="100" cy="150" r="4"/><circle cx="50" cy="100" r="4"/><circle cx="150" cy="100" r="4"/></g></svg>`
+  },
+  {
+    name: "Древо жизни",
+    desc: "Символ связи поколений и плодородия рода",
+    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><path d="M100 170 L100 60"/><path d="M100 60 L70 40 M100 60 L130 40"/><path d="M100 80 L60 65 M100 80 L140 65"/><path d="M100 100 L50 90 M100 100 L150 90"/></g><g fill="#c0392b"><circle cx="70" cy="40" r="5"/><circle cx="130" cy="40" r="5"/><circle cx="60" cy="65" r="4"/><circle cx="140" cy="65" r="4"/></g></svg>`
+  },
+  {
+    name: "Зигзаг воды",
+    desc: "Орнамент плодородия и жизненной энергии",
+    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><path d="M20 40 L40 20 L60 40 L80 20 L100 40 L120 20 L140 40 L160 20 L180 40"/><path d="M20 80 L40 60 L60 80 L80 60 L100 80 L120 60 L140 80 L160 60 L180 80"/><path d="M20 120 L40 100 L60 120 L80 100 L100 120 L120 100 L140 120 L160 100 L180 120"/></g><g fill="#c0392b"><circle cx="40" cy="20" r="3"/><circle cx="80" cy="20" r="3"/><circle cx="120" cy="20" r="3"/></g></svg>`
+  },
+  {
+    name: "Восьмиконечная розетка",
+    desc: "Солярный знак, символ гармонии вселенной",
+    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="20"/><path d="M100 40 L100 160 M40 100 L160 100"/><path d="M58 58 L142 142 M142 58 L58 142"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="6"/></g></svg>`
+  },
+  {
+    name: "Полесская сетка",
+    desc: "Ковровый орнамент с повторяющимися ромбами",
+    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="1.5"><path d="M0 50 L50 0 L100 50 L50 100 Z"/><path d="M100 50 L150 0 L200 50 L150 100 Z"/><path d="M0 150 L50 100 L100 150 L50 200 Z"/><path d="M100 150 L150 100 L200 150 L150 200 Z"/></g><g fill="#c0392b"><circle cx="50" cy="50" r="4"/><circle cx="150" cy="50" r="4"/><circle cx="50" cy="150" r="4"/><circle cx="150" cy="150" r="4"/></g></svg>`
+  }
+];
+
+// ===== Модальное окно вышиванок =====
+function buildVyshyvankaGallery(){
+  const gallery = document.getElementById("vyshyvankaGallery");
+  if(!gallery) return;
+  gallery.innerHTML = "";
+  VYSHYVANKA_SVGS.forEach((item, idx) => {
+    const card = document.createElement("div");
+    card.className = "vyshyvanka-card";
+    card.innerHTML = `
+      <div class="vyshyvanka-preview">${item.img}</div>
+      <h3>${item.name}</h3>
+      <p>${item.desc}</p>
+      <button type="button" class="vyshyvanka-download" data-download-idx="${idx}">⬇ Скачать схему</button>
+    `;
+    gallery.appendChild(card);
+  });
+}
+
+function downloadVyshyvanka(idx){
+  const item = VYSHYVANKA_SVGS[idx];
+  if(!item) return;
+  const svgBlob = new Blob([item.svg], {type: "image/svg+xml;charset=utf-8"});
+  const url = URL.createObjectURL(svgBlob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `vyshyvanka-${item.name.replace(/\s+/g, '-')}.svg`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function openVyshyvankaModal(){
+  buildVyshyvankaGallery();
+  const modal = document.getElementById("vyshyvankaModal");
+  if(modal) modal.classList.add("active");
+}
+
+function closeVyshyvankaModal(){
+  const modal = document.getElementById("vyshyvankaModal");
+  if(modal) modal.classList.remove("active");
+}
+
+// Делегирование событий для кнопки вышиванки
+document.addEventListener("click", function(e) {
+  const vyshyvankaBtn = e.target.closest('[data-action="open-vyshyvanka"]');
+  if (vyshyvankaBtn) {
+    e.preventDefault();
+    e.stopPropagation();
+    openVyshyvankaModal();
+    return;
+  }
+  const downloadBtn = e.target.closest('[data-download-idx]');
+  if (downloadBtn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const idx = parseInt(downloadBtn.getAttribute('data-download-idx'));
+    downloadVyshyvanka(idx);
+    return;
+  }
+  if (e.target.id === "vyshyvankaModalClose" || e.target.closest("#vyshyvankaModalClose")) {
+    e.preventDefault();
+    e.stopPropagation();
+    closeVyshyvankaModal();
+    return;
+  }
+  if (e.target.id === "vyshyvankaModal") {
+    closeVyshyvankaModal();
+    return;
+  }
+});
+
+function openMuseumModal(key){
+const museum = MUSEUMS[key];
+const body = document.getElementById("museumModalBody");
+body.innerHTML = `<h2>${museum.name}</h2><div class="museum-location">${museum.location}</div><div class="museum-ornament">◆ ◇ ◆</div>${museum.text}`;
+
+// Удаляем старую кнопку если есть
+const modalContent = body.parentElement;
+const oldBtn = modalContent.querySelector('.panorama-link-btn');
+if(oldBtn) oldBtn.remove();
+
+// Добавляем новую кнопку только если есть ссылка
+if (museum.panoramaLink) {
+    const btn = document.createElement('a');
+    btn.href = museum.panoramaLink;
+    btn.target = "_blank";
+    btn.className = "panorama-link-btn";
+    btn.title = "Открыть панораму 360°";
+    // Используем SVG иконку для более красивого вида
+    btn.innerHTML = `<img src="img/panorama.png" style="width: 60%; box-shadow: none;">`
+    modalContent.appendChild(btn);
+}
+
+document.getElementById("museumModal").classList.add("active");
+}
 
 buildTOC();
 renderSpread();

@@ -1,18 +1,14 @@
 const galleryImages = [
   'img/portret.jpg',
   'img/portret-2.png',
-  'img/portret-3.png',
-  'https://kirmash.by/wp-content/uploads/2021/03/belorusskij-ornament-4.jpg',
-  'https://kirmash.by/wp-content/uploads/2021/03/belorusskij-ornament-5.jpg'
+  'img/portret-3.png'
 ];
 
 // Массив подписей к изображениям (должен совпадать по индексу с galleryImages)
 const galleryCaptions = [
   'Портрет ткачихи из деревни Неглюбка (1975)',
   ' Зайцев Е. А. Портрет Анны Григорьевны Гриньковой. 1975.',
-  ' Зайцев Е. А. Ткачиха. 1975.',
-  'Белорусский орнамент — растительные узоры',
-  'Белорусский орнамент — символы и знаки'
+  ' Зайцев Е. А. Ткачиха. 1975.'
 ];
 
 let currentImageIndex = 0;

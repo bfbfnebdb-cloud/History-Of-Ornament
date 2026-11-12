@@ -885,397 +885,303 @@ a {
 }
 
 /* =========================================================
-   АДАПТИВ ДЛЯ ПЛАНШЕТОВ (до 900px)
+   АДАПТИВ: ЭКРАНЫ МЕНЬШЕ МОНИТОРОВ
+   Базовые стили для десктопа не изменены.
    ========================================================= */
-@media (max-width: 900px) {
+@media (max-width: 1199px) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #b22222 #ece7e4;
+  }
+
+  html::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: #ece7e4;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #b22222;
+    border-radius: 8px;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: #dc143c;
+  }
+
   body {
-    padding: 10px;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   }
 
   .body {
-    max-width: 100%;
-    padding: 8px;
+    width: min(1120px, calc(100% - 32px));
+    max-width: none;
+    margin: 12px auto 0 auto;
+    padding: 12px;
+  }
+
+  .nav,
+  .nav-img_and_p,
+  .footer-palace,
+  .authors-footer,
+  .why,
+  .tooltip-container {
+    min-width: 0;
   }
 
   .nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 20px;
-    gap: 12px;
-  }
-
-  .nav-img_and_p {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
+    padding: 14px 22px;
   }
 
   .nav .brand {
-    margin-left: 0;
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .nav p {
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .nav .author1,
-  .nav .author2 {
-    margin-right: 10px;
-  }
-
-  .title {
-    font-size: 28px;
-    margin: 50px 0 0 0;
-    white-space: normal;
+    font-size: clamp(16px, 1.8vw, 20px);
     line-height: 1.3;
-    padding: 0 15px;
+    overflow-wrap: break-word;
   }
 
-  .box {
-    width: 92%;
-    flex-direction: column;
-    padding: 30px 0;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .why {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .old-new-ornament {
-    display: none;
-  }
-
-  .why h2 {
-    font-size: 17px;
-    padding: 20px 15px;
-  }
-
-  .button {
-    padding: 14px 28px;
-  }
-
-  .button_a {
-    font-size: 18px;
-  }
-
-  footer {
-    flex-direction: column;
-    margin: 80px auto 0 auto;
-    padding: 20px;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .footer-palace {
-    width: 100%;
-    margin-right: 0;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .img-footer {
-    margin-left: 0;
-  }
-
-  .palace {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .authors-footer {
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .author1-footer,
-  .author2-footer,
-  .author3-footer {
-    font-size: 14px;
-  }
-
-  .author1-footer,
-  .author2-footer {
-    margin-right: 0;
-  }
-
-  .tooltip-container img {
-    max-width: 250px;
-    height: 280px;
-  }
-
-  .pre-box h2 {
-    font-size: 22px;
-  }
-
-  .pre-box .hidden-text p {
-    font-size: 15px !important;
-  }
-
-  .artist-card {
-    width: 90%;
-    max-width: 500px;
-    padding: 25px 20px;
-  }
-
-  .artist-card__name {
-    font-size: 20px;
-  }
-
-  /* Модалка на планшете */
-  .modal-arrow {
-    padding: 15px 20px;
-    font-size: 24px;
-  }
-
-  .modal-arrow-left {
-    left: 10px;
-  }
-
-  .modal-arrow-right {
-    right: 10px;
-  }
-
-  .modal-close {
-    top: -30px;
-    font-size: 32px;
-  }
-}
-
-/* =========================================================
-   АДАПТИВ ДЛЯ ТЕЛЕФОНОВ (до 600px)
-   ========================================================= */
-@media (max-width: 600px) {
-  body {
-    padding: 6px;
-  }
-
-  .body {
+  img {
     max-width: 100%;
-    padding: 6px;
-    margin-top: 6px;
-    border-radius: 10px;
   }
 
-  /* Навигация компактная */
-  .nav {
-    padding: 12px 14px;
-    gap: 10px;
-    border-radius: 10px;
-  }
-
-  .nav .brand {
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    margin-left: 0;
-    line-height: 1.3;
-    text-align: center;
-  }
-
-  .nav p {
-    font-size: 12px;
-  }
-
-  .nav .author1,
-  .nav .author2 {
-    margin-right: 6px;
-  }
-
-  .img-nav {
-    width: 22px;
-    height: 22px;
-  }
-
-  /* Заголовок */
   .title {
-    font-size: 22px;
-    margin: 35px 0 0 0;
-    white-space: normal;
-    line-height: 1.35;
+    width: auto;
+    max-width: 920px;
+    margin: clamp(44px, 7vw, 80px) auto 0 auto;
     padding: 0 12px;
-    letter-spacing: 0.3px;
+    font-size: clamp(26px, 3.2vw, 36px);
+    line-height: 1.28;
+    white-space: normal;
+    overflow: visible;
+    animation: none;
+    text-wrap: balance;
+    overflow-wrap: break-word;
   }
 
-  /* Блоки */
-  .box {
-    width: 100%;
-    gap: 16px;
-    padding: 20px 0;
-    margin-bottom: 30px;
+  main > div[style*="width:60%"] {
+    width: min(100%, 960px) !important;
+    margin: clamp(24px, 4vw, 40px) auto !important;
+    padding: clamp(18px, 2.5vw, 26px) clamp(18px, 3vw, 30px) !important;
   }
 
-  .why {
-    padding: 20px 14px;
-    border-radius: 14px;
+  main > div[style*="width:60%"] h2 {
+    font-size: clamp(17px, 2vw, 20px) !important;
+    line-height: 1.35;
+    overflow-wrap: break-word;
   }
 
-  .why h2 {
-    font-size: 15px;
-    padding: 16px 12px;
-    line-height: 1.45;
-  }
-
-  .hidden-text p {
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  /* Pre-box */
-  .pre-box {
-    padding: 24px 16px;
-    margin: 0 0 60px 0;
-    border-radius: 14px;
-  }
-
-  .pre-box h2 {
-    font-size: 18px;
-    padding-bottom: 10px;
-  }
-
-  .pre-box h2::after {
-    width: 50px;
-  }
-
-  .pre-box .hidden-text p {
-    font-size: 14px !important;
+  main > div[style*="width:60%"] .a2 {
+    font-size: 15px !important;
     line-height: 1.6 !important;
   }
 
-  /* Картинка-тултип */
+  .a2 a {
+    font-size: inherit;
+    overflow-wrap: anywhere;
+  }
+
+  .pre-box {
+    width: 100%;
+    max-width: 960px;
+    min-height: 0;
+    margin: clamp(36px, 6vw, 64px) auto !important;
+    padding: clamp(24px, 3.5vw, 40px) clamp(20px, 3.5vw, 40px);
+  }
+
+  .pre-box h2 {
+    max-width: 100%;
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.35;
+    overflow-wrap: break-word;
+  }
+
+  .pre-box .hidden-text p {
+    font-size: clamp(15px, 1.6vw, 17px) !important;
+    line-height: 1.65 !important;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 0;
+    gap: clamp(16px, 2vw, 24px);
+    margin-bottom: clamp(32px, 4vw, 48px);
+  }
+
+  .why {
+    padding: clamp(20px, 2.5vw, 28px) clamp(14px, 2vw, 20px);
+  }
+
+  .why h2 {
+    padding: 16px 12px;
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.4;
+    overflow-wrap: break-word;
+  }
+
+  .why:hover .hidden-text {
+    max-height: 420px;
+  }
+
+  .pre-box:hover .hidden-text {
+    max-height: 800px;
+  }
+
+  .hidden-text p {
+    overflow-wrap: break-word;
+  }
+
   .tooltip-container img {
-    max-width: 220px;
+    max-width: 190px;
     height: auto;
-    border-radius: 12px;
   }
 
-  .tooltip-text {
+  /* Подпись к портрету на небольших экранах всегда видна и не перекрывает карточки */
+  .tooltip-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tooltip-text,
+  .tooltip-container:hover .tooltip-text,
+  .tooltip-container:active .tooltip-text {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 12px;
     font-size: 12px;
-    padding: 10px 14px;
-    max-width: 220px;
-    bottom: calc(100% + 12px);
+    line-height: 1.45;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
   }
 
-  /* Карточка художника */
+  .tooltip-text::after {
+    display: none;
+  }
+
+  .tooltip-container:hover img {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(178, 34, 34, 0.15);
+    filter: sepia(0.15) contrast(1.05);
+  }
+
   .artist-card {
-    width: 95%;
-    padding: 20px 16px;
-    margin-bottom: 40px;
-    border-radius: 14px;
+    width: min(100%, 620px);
+    margin-bottom: clamp(36px, 5vw, 56px);
+    padding: clamp(22px, 3vw, 30px) clamp(18px, 3vw, 32px);
   }
 
   .artist-card__name {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: clamp(18px, 2.2vw, 22px);
+    overflow-wrap: break-word;
   }
 
   .artist-card__title {
-    font-size: 13px;
+    font-size: clamp(13px, 1.4vw, 14px);
+    overflow-wrap: break-word;
   }
 
-  .artist-card__divider {
-    margin-bottom: 14px;
-  }
-
-  /* Кнопка */
   .button {
-    padding: 14px 24px;
-    width: 100%;
-    max-width: 300px;
+    max-width: 100%;
+    margin: 8px auto 0 auto;
+    padding: 14px 28px;
     justify-content: center;
-    border-radius: 8px;
+    text-align: center;
   }
 
   .button_a {
-    font-size: 16px;
-    letter-spacing: 0.5px;
+    font-size: clamp(16px, 1.8vw, 20px);
+    line-height: 1.3;
   }
 
-  /* Футер */
   footer {
-    flex-direction: column;
-    margin: 50px auto 0 auto;
-    padding: 18px 14px;
-    gap: 16px;
-    text-align: center;
-    border-radius: 10px;
+    margin-top: clamp(56px, 8vw, 110px);
+    padding: 20px 24px;
+    gap: 20px;
   }
 
   .footer-palace {
-    width: 100%;
-    margin-right: 0;
-    flex-direction: column;
-    gap: 8px;
+    flex: 1 1 auto;
+    width: auto;
+    margin-right: 20px;
   }
 
   .img-footer {
-    width: 44px;
-    height: 44px;
+    flex: 0 0 auto;
     margin-left: 0;
   }
 
   .palace {
-    font-size: 14px;
+    font-size: clamp(14px, 1.6vw, 18px);
     line-height: 1.4;
+    overflow-wrap: break-word;
   }
 
   .authors-footer {
-    flex-direction: column;
-    gap: 6px;
-    width: 100%;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 18px;
   }
 
   .author1-footer,
   .author2-footer,
   .author3-footer {
-    font-size: 12px;
+    margin-right: 0;
+    font-size: clamp(12px, 1.4vw, 16px);
     line-height: 1.4;
   }
 
-  .author1-footer,
-  .author2-footer {
-    margin-right: 0;
-  }
-
-  /* Модалка на телефоне */
-  .modal {
-    padding: 0;
-  }
-
+  /* Модальное окно: стрелки и закрытие всегда внутри экрана */
   .modal-content {
-    width: 100%;
-    padding: 50px 10px 20px;
-    height: 100dvh;
-    justify-content: center;
+    width: min(100%, 900px);
+    max-height: 100%;
+    padding: 56px 16px 18px;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #b22222 rgba(255, 255, 255, 0.14);
   }
 
-  #modalImage {
-    max-height: 60dvh;
+  .modal-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.14);
     border-radius: 8px;
   }
 
+  .modal-content::-webkit-scrollbar-thumb {
+    background: #b22222;
+    border-radius: 8px;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #dc143c;
+  }
+
   .modal-close {
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    padding: 0;
+    top: 8px;
+    right: 8px;
+  }
+
+  #modalImage {
+    width: auto;
+    max-width: 100%;
+    max-height: min(68vh, 720px);
+    max-height: min(68dvh, 720px);
   }
 
   .modal-arrow {
-    padding: 10px 14px;
-    font-size: 20px;
-    min-width: 44px;
-    min-height: 44px;
+    padding: 14px 18px;
+    font-size: 24px;
     border-radius: 50%;
   }
 
@@ -1287,30 +1193,501 @@ a {
     right: 8px;
   }
 
-  .modal-counter {
-    font-size: 14px;
-    padding: 8px 18px;
-    margin-top: 12px;
+  .modal-caption {
+    max-width: 100%;
+    margin-top: 14px;
+    font-size: 15px;
+    overflow-wrap: break-word;
   }
 
-  .modal-caption {
-    font-size: 13px;
-    padding: 10px 14px;
-    margin-top: 10px;
-    max-width: 100%;
-    line-height: 1.45;
+  .modal-counter {
+    margin-top: 12px;
+    font-size: 16px;
   }
 }
 
 /* =========================================================
-   МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 400px)
+   ПЛАНШЕТЫ: ДВЕ КОЛОНКИ, ПОРТРЕТ НАД КАРТОЧКАМИ
    ========================================================= */
-@media (max-width: 400px) {
-  body {
-    padding: 4px;
+@media (max-width: 1023px) {
+  .body {
+    width: calc(100% - 28px);
+    padding: 10px;
+  }
+
+  .nav {
+    padding: 14px 18px;
+  }
+
+  .nav-img_and_p {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .nav .brand {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+    gap: 20px;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .box > .why {
+    width: 100%;
+    max-width: none;
+  }
+
+  .box > .tooltip-container {
+    grid-column: 1 / -1;
+    order: -1;
+    width: 100%;
+    max-width: 320px;
+    justify-self: center;
+    padding: 4px 0 12px;
+  }
+
+  .neglubka > .box:nth-of-type(2) > .why:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .tooltip-container img {
+    max-width: 240px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-palace {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-right: 0;
+    gap: 12px;
+  }
+
+  .authors-footer {
+    width: 100%;
+    justify-content: center;
+    gap: 8px 22px;
+  }
+}
+
+/* =========================================================
+   БОЛЬШИЕ ТЕЛЕФОНЫ / УЗКИЕ ПЛАНШЕТЫ: ОДНА КОЛОНКА
+   ========================================================= */
+@media (max-width: 767px) {
+  body,
+  body::before {
+    background-attachment: scroll;
   }
 
   .body {
+    width: calc(100% - 20px);
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 16px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
+  .nav-img_and_p {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .nav .brand {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.4px;
+  }
+
+  .title {
+    max-width: 560px;
+    margin-top: 36px;
+    padding: 0 8px;
+    font-size: clamp(22px, 5.4vw, 28px);
+    line-height: 1.32;
+  }
+
+  main > div[style*="width:60%"] {
+    width: 100% !important;
+    margin: 24px auto !important;
+    padding: 18px 16px !important;
+  }
+
+  main > div[style*="width:60%"] h2 {
+    font-size: 17px !important;
+  }
+
+  main > div[style*="width:60%"] .a2 {
+    font-size: 14px !important;
+  }
+
+  .pre-box {
+    margin: 32px auto !important;
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .pre-box h2 {
+    font-size: 20px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 560px;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .box > .tooltip-container {
+    order: 0;
+    grid-column: auto;
+    max-width: 300px;
+    padding: 0;
+    align-self: center;
+  }
+
+  .neglubka > .box:nth-of-type(2) > .why:last-child {
+    grid-column: auto;
+  }
+
+  .why {
+    width: 100%;
+    max-width: none;
+    flex: 0 0 auto;
+    padding: 18px 14px;
+    border-radius: 14px;
+  }
+
+  .why h2 {
+    margin: 0 auto;
+    padding: 14px 12px;
+    font-size: 16px;
+  }
+
+  /* На узких экранах описания видны сразу, без hover */
+  .why .hidden-text,
+  .why:hover .hidden-text,
+  .why:active .hidden-text {
+    max-height: none;
+    margin-top: 12px;
+    padding: 12px 10px 10px;
+    opacity: 1;
+    overflow: visible;
+  }
+
+  .pre-box .hidden-text,
+  .pre-box:hover .hidden-text,
+  .pre-box:active .hidden-text {
+    max-height: none;
+    margin-top: 12px;
+    padding: 16px 12px 10px;
+    opacity: 1;
+    overflow: visible;
+  }
+
+  .hidden-text p {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .pre-box .hidden-text p {
+    font-size: 15px !important;
+  }
+
+  .tooltip-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tooltip-container img {
+    max-width: 240px;
+    border-radius: 12px;
+  }
+
+  .tooltip-text,
+  .tooltip-container:hover .tooltip-text,
+  .tooltip-container:active .tooltip-text {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.45;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .tooltip-text::after {
+    display: none;
+  }
+
+  .artist-card {
+    width: 100%;
+    max-width: 560px;
+    margin-bottom: 36px;
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .artist-card__name {
+    font-size: 19px;
+  }
+
+  .artist-card__title {
+    font-size: 13px;
+  }
+
+  .button {
+    width: min(100%, 340px);
+    padding: 14px 22px;
+    border-radius: 8px;
+  }
+
+  .button_a {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding: 20px 16px;
+    gap: 16px;
+    border-radius: 10px;
+  }
+
+  .footer-palace {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .img-footer {
+    width: 46px;
+    height: 46px;
+    margin-right: 0;
+  }
+
+  .palace {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .authors-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .author1-footer,
+  .author2-footer,
+  .author3-footer {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .modal-content {
+    width: 100%;
+    padding: 56px 10px 16px;
+  }
+
+  #modalImage {
+    max-height: 58vh;
+    max-height: 58dvh;
+    border-radius: 8px;
+  }
+
+  .modal-close {
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    font-size: 28px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+
+  .modal-arrow {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 20px;
+  }
+
+  .modal-arrow-left {
+    left: 6px;
+  }
+
+  .modal-arrow-right {
+    right: 6px;
+  }
+
+  .modal-caption {
+    margin-top: 12px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .modal-counter {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   ТЕЛЕФОНЫ
+   ========================================================= */
+@media (max-width: 480px) {
+  .body {
+    width: calc(100% - 12px);
+    margin-top: 6px;
+    padding: 6px;
+  }
+
+  .nav {
+    padding: 12px 14px;
+  }
+
+  .nav .brand {
+    font-size: 15px;
+  }
+
+  .img-nav {
+    width: 24px;
+    height: 24px;
+  }
+
+  .title {
+    margin-top: 28px;
+    font-size: 22px;
+  }
+
+  main > div[style*="width:60%"] {
+    margin: 20px auto !important;
+    padding: 16px 14px !important;
+  }
+
+  main > div[style*="width:60%"] h2 {
+    font-size: 16px !important;
+  }
+
+  main > div[style*="width:60%"] .a2 {
+    font-size: 13px !important;
+  }
+
+  .pre-box {
+    margin: 28px auto !important;
+    padding: 20px 14px;
+  }
+
+  .pre-box h2 {
+    font-size: 18px;
+  }
+
+  .pre-box .hidden-text p {
+    font-size: 14px !important;
+  }
+
+  .box {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .why {
+    padding: 16px 12px;
+  }
+
+  .why h2 {
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+
+  .hidden-text p {
+    font-size: 13px;
+  }
+
+  .tooltip-container img {
+    max-width: 220px;
+  }
+
+  .artist-card {
+    margin-bottom: 32px;
+    padding: 20px 14px;
+  }
+
+  .artist-card__name {
+    font-size: 18px;
+  }
+
+  .artist-card__title {
+    font-size: 12px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 18px;
+  }
+
+  .button_a {
+    font-size: 15px;
+  }
+
+  footer {
+    margin-top: 44px;
+    padding: 18px 12px;
+  }
+
+  .palace {
+    font-size: 14px;
+  }
+
+  .author1-footer,
+  .author2-footer,
+  .author3-footer {
+    font-size: 12px;
+  }
+
+  #modalImage {
+    max-height: 55vh;
+    max-height: 55dvh;
+  }
+}
+
+/* =========================================================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+   ========================================================= */
+@media (max-width: 360px) {
+  .body {
+    width: calc(100% - 8px);
     padding: 4px;
   }
 
@@ -1320,95 +1697,40 @@ a {
 
   .nav .brand {
     font-size: 14px;
-  }
-
-  .nav p {
-    font-size: 11px;
+    letter-spacing: 0.2px;
   }
 
   .title {
-    font-size: 18px;
-    margin: 25px 0 0 0;
+    margin-top: 24px;
+    font-size: 20px;
   }
 
-  .box {
-    gap: 14px;
-    padding: 16px 0;
+  .pre-box {
+    padding: 18px 12px;
   }
 
-  .why {
-    padding: 16px 12px;
+  .pre-box h2 {
+    font-size: 17px;
   }
 
   .why h2 {
     font-size: 14px;
-    padding: 14px 10px;
-  }
-
-  .pre-box {
-    padding: 20px 14px;
-    margin-bottom: 50px;
-  }
-
-  .pre-box h2 {
-    font-size: 16px;
-  }
-
-  .pre-box .hidden-text p {
-    font-size: 13px !important;
   }
 
   .tooltip-container img {
-    max-width: 180px;
-  }
-
-  .tooltip-text {
-    font-size: 11px;
-    padding: 8px 12px;
-    max-width: 180px;
-  }
-
-  .artist-card {
-    padding: 18px 14px;
+    max-width: 190px;
   }
 
   .artist-card__name {
-    font-size: 16px;
-  }
-
-  .artist-card__title {
-    font-size: 12px;
-  }
-
-  .button {
-    padding: 12px 20px;
+    font-size: 17px;
   }
 
   .button_a {
     font-size: 14px;
   }
 
-  footer {
-    padding: 14px 12px;
-    margin-top: 40px;
-  }
-
-  .palace {
-    font-size: 13px;
-  }
-
-  .author1-footer,
-  .author2-footer,
-  .author3-footer {
-    font-size: 11px;
-  }
-
   .modal-content {
-    padding: 45px 6px 15px;
-  }
-
-  #modalImage {
-    max-height: 55dvh;
+    padding: 52px 6px 12px;
   }
 
   .modal-arrow {
@@ -1418,7 +1740,7 @@ a {
 
   .modal-caption {
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 8px 10px;
   }
 
   .modal-counter {
@@ -1428,65 +1750,81 @@ a {
 }
 
 /* =========================================================
-   ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ ТЕЛЕФОНА
+   НИЗКИЕ ЭКРАНЫ / ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ
    ========================================================= */
 @media (max-height: 500px) and (orientation: landscape) {
   .title {
-    margin: 20px 0 0 0;
+    margin-top: 24px;
     font-size: 22px;
   }
 
-  .box {
-    gap: 14px;
-    padding: 15px 0;
-    margin-bottom: 20px;
+  .pre-box {
+    margin-top: 28px !important;
+    margin-bottom: 28px !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
-  .pre-box {
-    margin-bottom: 40px;
-    padding: 20px 16px;
+  .box {
+    margin-bottom: 24px;
   }
 
   footer {
-    margin-top: 30px;
+    margin-top: 36px;
   }
 
   .modal-content {
-    padding: 10px;
+    padding-top: 52px;
+    padding-bottom: 12px;
   }
 
   #modalImage {
-    max-height: 75dvh;
+    max-height: max(120px, calc(100vh - 180px));
+    max-height: max(120px, calc(100dvh - 180px));
   }
 
   .modal-caption {
-    font-size: 13px;
     margin-top: 8px;
+    font-size: 12px;
   }
 
   .modal-counter {
     margin-top: 8px;
+    font-size: 13px;
   }
 
   .modal-close {
-    top: 5px;
-    right: 5px;
+    top: 6px;
+    right: 6px;
   }
 }
 
 /* =========================================================
-   УЛУЧШЕНИЯ ДЛЯ TOUCH-УСТРОЙСТВ
+   TOUCH-УСТРОЙСТВА: БЕЗ ЗАВИСИМОСТИ ОТ HOVER
    ========================================================= */
-@media (hover: none) and (pointer: coarse) {
+@media (hover: none), (pointer: coarse) {
+  body,
+  body::before {
+    background-attachment: scroll;
+  }
 
-  /* На тач-устройствах убираем hover-эффекты, заменяем на active */
   .why:hover {
     transform: none;
+    border-color: rgba(178, 34, 34, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   }
 
+  .why:hover::before {
+    transform: scaleX(0);
+  }
+
+  .why:hover h2 {
+    color: #2c1810;
+    transform: none;
+  }
+
   .why:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
     border-color: rgba(220, 20, 60, 0.4);
     box-shadow: 0 10px 30px rgba(178, 34, 34, 0.15);
   }
@@ -1499,10 +1837,18 @@ a {
     color: #b22222;
   }
 
+  .why .hidden-text,
+  .why:hover .hidden-text,
   .why:active .hidden-text {
-    max-height: 250px;
+    max-height: none;
+    margin-top: 12px;
+    padding: 12px 10px 10px;
     opacity: 1;
-    padding: 0 5px 5px 5px;
+    overflow: visible;
+  }
+
+  .hidden-text p {
+    margin-top: 0;
   }
 
   .pre-box:hover {
@@ -1510,21 +1856,35 @@ a {
   }
 
   .pre-box:active {
-    transform: scale(0.99);
+    transform: scale(0.995);
   }
 
+  .pre-box .hidden-text,
+  .pre-box:hover .hidden-text,
   .pre-box:active .hidden-text {
-    max-height: 600px;
+    max-height: none;
+    margin-top: 12px;
+    padding: 16px 12px 10px;
     opacity: 1;
-    padding: 20px 16px 10px 16px;
+    overflow: visible;
   }
 
   .artist-card:hover {
     transform: none;
+    border-color: rgba(178, 34, 34, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .artist-card:hover .artist-card__name {
+    color: #2c1810;
+  }
+
+  .artist-card:hover .artist-card__divider {
+    width: 40px;
   }
 
   .artist-card:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
     border-color: rgba(220, 20, 60, 0.4);
   }
 
@@ -1536,20 +1896,63 @@ a {
     width: 70px;
   }
 
+  .tooltip-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .tooltip-container:hover img {
     transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(178, 34, 34, 0.15);
+    filter: sepia(0.15) contrast(1.05);
   }
 
   .tooltip-container:active img {
-    transform: scale(0.97);
+    transform: scale(0.98);
     box-shadow: 0 15px 35px rgba(178, 34, 34, 0.25);
   }
 
-  /* Показываем тултип при тапе */
+  .tooltip-text,
+  .tooltip-container:hover .tooltip-text,
   .tooltip-container:active .tooltip-text {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.45;
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .tooltip-text::after {
+    display: none;
+  }
+
+  .logo:hover {
+    transform: none;
+  }
+
+  .modal-close:hover {
+    color: #ffffff;
+    transform: none;
+  }
+
+  .modal-close:active {
+    transform: scale(0.95);
+  }
+
+  .modal-arrow:hover {
+    background: linear-gradient(135deg, rgba(178, 34, 34, 0.9) 0%, rgba(220, 20, 60, 0.9) 100%);
+    transform: translateY(-50%);
+    box-shadow: none;
+  }
+
+  .modal-arrow:active {
+    transform: translateY(-50%) scale(0.95);
   }
 }
 
