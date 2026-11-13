@@ -1240,8 +1240,9 @@ a {
   }
 
   .box > .why {
-    width: 100%;
+    width: 80%;
     max-width: none;
+    margin: auto;
   }
 
   .box > .tooltip-container {

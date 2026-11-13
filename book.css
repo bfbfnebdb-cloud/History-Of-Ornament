@@ -2537,7 +2537,6 @@ strong {
     bottom: 0;
     background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
     padding: 10px 6px;
-    z-index: 100;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
     margin-top: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -2640,6 +2639,11 @@ strong {
   body {
     scrollbar-width: thin;
     scrollbar-color: #c0392b rgba(192, 57, 43, 0.05);
+  }
+
+  .panorama-link-btn{
+    height: 9% !important;
+    width: 13% !important;
   }
 }
 

@@ -869,8 +869,7 @@ if (museum.panoramaLink) {
     btn.target = "_blank";
     btn.className = "panorama-link-btn";
     btn.title = "Открыть панораму 360°";
-    // Используем SVG иконку для более красивого вида
-    btn.innerHTML = `<img src="img/panorama.png" style="width: 60%; box-shadow: none;">`
+    btn.innerHTML = `<a href="https://katsiarins81.github.io/pano-museum"><img src="img/panorama.png" style="width: 60%; box-shadow: none; margin-top: 24%;"></a>`
     modalContent.appendChild(btn);
 }
 
