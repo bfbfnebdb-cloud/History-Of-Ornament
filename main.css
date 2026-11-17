@@ -728,7 +728,7 @@ footer {
 }
 
 .artist-card:hover .hidden-text {
-  max-height: 400px;
+  max-height: 700px;
   opacity: 1;
   padding: 15px;
   margin-top: 15px;
