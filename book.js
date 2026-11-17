@@ -256,24 +256,6 @@ const PAGE_CONTENT = {
 "3-7":`
 <h1>Скачать орнамент для вышиванки<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Здесь вы можете открыть коллекцию традиционных схем(орнамента) для белорусских вышиванок. Каждый узор несёт в себе многовековую историю и символику Полесья.</p>
-<div class="ornament-divider">◆ ◇ ◆</div>
-
-<div class="ornament-slider-wrapper" id="ornamentSlider">
-  <div class="ornament-slider-header">
-    <h3 class="slider-main-title">Коллекция орнаментов</h3>
-    <p class="slider-subtitle">◆ Листайте, чтобы рассмотреть узоры ◆</p>
-  </div>
-  <div class="ornament-slider-viewport">
-    <button class="ornament-slider-arrow prev" id="sliderPrev" aria-label="Предыдущий">‹</button>
-    <button class="ornament-slider-arrow next" id="sliderNext" aria-label="Следующий">›</button>
-    <div class="ornament-slider-track" id="sliderTrack"></div>
-  </div>
-  <div class="ornament-slider-dots" id="sliderDots"></div>
-  <div class="ornament-slider-progress">
-    <div class="ornament-slider-progress-bar" id="sliderProgress"></div>
-  </div>
-</div>
-
 <div class="vyshyvanka-btn-wrapper">
 <button type="button" class="vyshyvanka-btn" data-action="open-vyshyvanka">Скачать орнамент</button>
 </div>

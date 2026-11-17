@@ -923,10 +923,8 @@ strong {
 
 .symbol-of-ornament {
   width: 100px;
-  /* width: 75px; */
   object-fit: contain;
   transition: 0.7s;
-  /* margin-left: 35%; */
 }
 
 .page-content .symbol-card h4 {
@@ -2346,6 +2344,7 @@ ul.type-list{
 
   .symbol-of-ornament {
     width: 50px;
+    margin-left: 12vw;
   }
 
   #samopryalka {
@@ -2572,9 +2571,6 @@ ul.type-list{
 
   .map-container .map-subtitle {
     font-size: clamp(11px, 3vw, 13px);
-  }
-   .cls-1{
-    
   }
 
   .controls {
