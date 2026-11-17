@@ -749,66 +749,6 @@ window.addEventListener("resize", ()=>{
 // ===== SVG вышиванок =====
 const VYSHYVANKA_SVGS = [
     {
-        name: "Ромб с отростками",
-        desc: "Знак плодородия, изобилия плодов земных",
-        src: "img/ornament1.jpg" 
-    },
-    {
-        name: "Символ Земли",
-        desc: "Идея расцвета природы и жизни",
-        src: "img/ornament-2.jpg" 
-    },
-    {
-        name: "Образ русалки",
-        desc: "Трагичная, неразделенная любовь девушки",
-        src: "img/ornament-3.jpg"
-    },
-    {
-        name: "Образ Матери",
-        desc: "Символ материнства, плодородия и защиты рода",
-        src: "img/ornament-4.jpg"
-    },
-    {
-        name: "Купальские мотивы",
-        desc: "Использовадся для праздника Купалы",
-        src: "img/ornament-5.jpg"
-    },
-    {
-        name: "Мать-Родительница и Святое Древо",
-        desc: "Связь поколений, древо жизни и материнская сила",
-        src: "img/ornament-6.jpg"
-    },
-    {
-        name: "Жытняя Баба",
-        desc: "Еще один важный символ урожая",
-        src: "img/ornament-7.jpg"
-    },
-    {
-        name: "Любовь в расцвете",
-        desc: "Зрелая, гармоничная любовь и семейное счастье",
-        src: "img/ornament-8.jpg"
-    },
-    {
-        name: "Любовь, которая начиналась",
-        desc: "Зарождение чувств, надежда и первые любовные переживания",
-        src: "img/ornament-9.jpg"
-    },
-    {
-        name: "Любовь без взаимности",
-        desc: "Неразделенная любовь, тоска и одиночество",
-        src: "img/ornament-10.jpg"
-    },
-    {
-        name: "Параскева-Пятница с венчальными коронами",
-        desc: "Опекунша женщин и матерей",
-        src: "img/ornament-11.jpg"
-    },
-    {
-        name: "Радуница",
-        desc: "Праздник поминовения усопших, связь с предками и память рода",
-        src: "img/ornament-12.jpg"
-    },
-    {
         name: "Восьмиконечная звезда",
         desc: "Символ человека",
         src: "img/ornament-13.jpg"
@@ -837,7 +777,67 @@ const VYSHYVANKA_SVGS = [
         name: "Ромб с лучами",
         desc: "Солнечный символ, источник жизни, энергии и плодородия",
         src: "img/ornament-18.jpg"
-    }
+    },
+    {
+        name: "Ромб с отростками",
+        desc: "Знак плодородия, изобилия плодов земных",
+        src: "img/ornament1.jpg" 
+    },
+    {
+        name: "Символ Земли",
+        desc: "Идея расцвета природы и жизни",
+        src: "img/ornament-2.jpg" 
+    },
+    {
+        name: "Купальские мотивы",
+        desc: "Использовадся для праздника Купалы",
+        src: "img/ornament-5.jpg"
+    },
+    {
+        name: "Любовь в расцвете",
+        desc: "Зрелая, гармоничная любовь и семейное счастье",
+        src: "img/ornament-8.jpg"
+    },
+    {
+        name: "Любовь, которая начиналась",
+        desc: "Зарождение чувств, надежда и первые любовные переживания",
+        src: "img/ornament-9.jpg"
+    },
+    {
+        name: "Любовь без взаимности",
+        desc: "Неразделенная любовь, тоска и одиночество",
+        src: "img/ornament-10.jpg"
+    },
+    {
+        name: "Образ русалки",
+        desc: "Трагичная, неразделенная любовь девушки",
+        src: "img/ornament-3.jpg"
+    },
+    {
+        name: "Образ Матери",
+        desc: "Символ материнства, плодородия и защиты рода",
+        src: "img/ornament-4.jpg"
+    },
+    {
+        name: "Мать-Родительница и Святое Древо",
+        desc: "Связь поколений, древо жизни и материнская сила",
+        src: "img/ornament-6.jpg"
+    },
+    {
+        name: "Жытняя Баба",
+        desc: "Еще один важный символ урожая",
+        src: "img/ornament-7.jpg"
+    },
+    {
+        name: "Параскева-Пятница с венчальными коронами",
+        desc: "Опекунша женщин и матерей",
+        src: "img/ornament-11.jpg"
+    },
+    {
+        name: "Радуница",
+        desc: "Праздник поминовения усопших, связь с предками и память рода",
+        src: "img/ornament-12.jpg"
+    },
 ];
 
 // ===== Модальное окно вышиванок =====
@@ -959,7 +959,7 @@ if (museum.panoramaLink) {
     btn.target = "_blank";
     btn.className = "panorama-link-btn";
     btn.title = "Открыть панораму 360°";
-    btn.innerHTML = `<a href="https://katsiarins81.github.io/pano-museum"><img src="img/panorama.png" style="width: 60%; box-shadow: none; margin-top: 24%;"></a>`
+    btn.innerHTML = `<a href="https://katsiarins81.github.io/pano-museum" target="_blang"><img src="img/panorama.png" style="width: 60%; box-shadow: none; margin-top: 24%;"></a>`
     modalContent.appendChild(btn);
 }
 
