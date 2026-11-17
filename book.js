@@ -749,7 +749,7 @@ window.addEventListener("resize", ()=>{
 // ===== SVG вышиванок =====
 const VYSHYVANKA_SVGS = [
     {
-        name: "ромб с отростками",
+        name: "Ромб с отростками",
         desc: "Знак плодородия, изобилия плодов земных",
         // Укажите здесь путь к вашей картинке
         src: "img/ornament1.jpg" 
