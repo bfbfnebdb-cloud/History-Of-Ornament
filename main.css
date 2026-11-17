@@ -632,7 +632,7 @@ footer {
   border-radius: 16px;
   background: transparent;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
   position: relative;
@@ -703,6 +703,35 @@ footer {
 
 .artist-card:hover .artist-card__divider {
   width: 70px;
+}
+
+/* ===== ARTIST CARD: СКРЫТЫЙ ТЕКСТ ===== */
+.artist-card .hidden-text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 0 15px;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 0;
+  width: 100%;
+}
+
+.artist-card .hidden-text p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.artist-card:hover .hidden-text {
+  max-height: 400px;
+  opacity: 1;
+  padding: 15px;
+  margin-top: 15px;
 }
 
 /* ===== МОДАЛЬНОЕ ОКНО ===== */
@@ -885,9 +914,8 @@ a {
 }
 
 /* =========================================================
-   АДАПТИВ: ЭКРАНЫ МЕНЬШЕ МОНИТОРОВ
-   Базовые стили для десктопа не изменены.
-   ========================================================= */
+АДАПТИВ: ЭКРАНЫ МЕНЬШЕ МОНИТОРОВ
+========================================================= */
 @media (max-width: 1199px) {
   html {
     scrollbar-width: thin;
@@ -960,19 +988,19 @@ a {
     overflow-wrap: break-word;
   }
 
-  main > div[style*="width:60%"] {
+  main>div[style*="width:60%"] {
     width: min(100%, 960px) !important;
     margin: clamp(24px, 4vw, 40px) auto !important;
     padding: clamp(18px, 2.5vw, 26px) clamp(18px, 3vw, 30px) !important;
   }
 
-  main > div[style*="width:60%"] h2 {
+  main>div[style*="width:60%"] h2 {
     font-size: clamp(17px, 2vw, 20px) !important;
     line-height: 1.35;
     overflow-wrap: break-word;
   }
 
-  main > div[style*="width:60%"] .a2 {
+  main>div[style*="width:60%"] .a2 {
     font-size: 15px !important;
     line-height: 1.6 !important;
   }
@@ -1038,7 +1066,6 @@ a {
     height: auto;
   }
 
-  /* Подпись к портрету на небольших экранах всегда видна и не перекрывает карточки */
   .tooltip-container {
     flex-direction: column;
     gap: 12px;
@@ -1084,6 +1111,10 @@ a {
   .artist-card__title {
     font-size: clamp(13px, 1.4vw, 14px);
     overflow-wrap: break-word;
+  }
+
+  .artist-card:hover .hidden-text {
+    max-height: 500px;
   }
 
   .button {
@@ -1137,7 +1168,6 @@ a {
     line-height: 1.4;
   }
 
-  /* Модальное окно: стрелки и закрытие всегда внутри экрана */
   .modal-content {
     width: min(100%, 900px);
     max-height: 100%;
@@ -1207,8 +1237,8 @@ a {
 }
 
 /* =========================================================
-   ПЛАНШЕТЫ: ДВЕ КОЛОНКИ, ПОРТРЕТ НАД КАРТОЧКАМИ
-   ========================================================= */
+ПЛАНШЕТЫ
+========================================================= */
 @media (max-width: 1023px) {
   .body {
     width: calc(100% - 28px);
@@ -1239,13 +1269,13 @@ a {
     align-items: stretch;
   }
 
-  .box > .why {
+  .box>.why {
     width: 80%;
     max-width: none;
     margin: auto;
   }
 
-  .box > .tooltip-container {
+  .box>.tooltip-container {
     grid-column: 1 / -1;
     order: -1;
     width: 100%;
@@ -1254,7 +1284,7 @@ a {
     padding: 4px 0 12px;
   }
 
-  .neglubka > .box:nth-of-type(2) > .why:last-child {
+  .neglubka>.box:nth-of-type(2)>.why:last-child {
     grid-column: 1 / -1;
   }
 
@@ -1285,9 +1315,10 @@ a {
 }
 
 /* =========================================================
-   БОЛЬШИЕ ТЕЛЕФОНЫ / УЗКИЕ ПЛАНШЕТЫ: ОДНА КОЛОНКА
-   ========================================================= */
+БОЛЬШИЕ ТЕЛЕФОНЫ / УЗКИЕ ПЛАНШЕТЫ
+========================================================= */
 @media (max-width: 767px) {
+
   body,
   body::before {
     background-attachment: scroll;
@@ -1330,17 +1361,17 @@ a {
     line-height: 1.32;
   }
 
-  main > div[style*="width:60%"] {
+  main>div[style*="width:60%"] {
     width: 100% !important;
     margin: 24px auto !important;
     padding: 18px 16px !important;
   }
 
-  main > div[style*="width:60%"] h2 {
+  main>div[style*="width:60%"] h2 {
     font-size: 17px !important;
   }
 
-  main > div[style*="width:60%"] .a2 {
+  main>div[style*="width:60%"] .a2 {
     font-size: 14px !important;
   }
 
@@ -1363,7 +1394,7 @@ a {
     margin-bottom: 28px;
   }
 
-  .box > .tooltip-container {
+  .box>.tooltip-container {
     order: 0;
     grid-column: auto;
     max-width: 300px;
@@ -1371,7 +1402,7 @@ a {
     align-self: center;
   }
 
-  .neglubka > .box:nth-of-type(2) > .why:last-child {
+  .neglubka>.box:nth-of-type(2)>.why:last-child {
     grid-column: auto;
   }
 
@@ -1389,7 +1420,6 @@ a {
     font-size: 16px;
   }
 
-  /* На узких экранах описания видны сразу, без hover */
   .why .hidden-text,
   .why:hover .hidden-text,
   .why:active .hidden-text {
@@ -1464,6 +1494,23 @@ a {
 
   .artist-card__title {
     font-size: 13px;
+  }
+
+  /* На узких экранах скрытый текст artist-card всегда виден */
+  .artist-card .hidden-text,
+  .artist-card:hover .hidden-text,
+  .artist-card:active .hidden-text {
+    max-height: none;
+    opacity: 1;
+    margin-top: 15px;
+    padding: 15px;
+    overflow: visible;
+  }
+
+  .artist-card .hidden-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 0;
   }
 
   .button {
@@ -1564,8 +1611,8 @@ a {
 }
 
 /* =========================================================
-   ТЕЛЕФОНЫ
-   ========================================================= */
+ТЕЛЕФОНЫ
+========================================================= */
 @media (max-width: 480px) {
   .body {
     width: calc(100% - 12px);
@@ -1591,16 +1638,16 @@ a {
     font-size: 22px;
   }
 
-  main > div[style*="width:60%"] {
+  main>div[style*="width:60%"] {
     margin: 20px auto !important;
     padding: 16px 14px !important;
   }
 
-  main > div[style*="width:60%"] h2 {
+  main>div[style*="width:60%"] h2 {
     font-size: 16px !important;
   }
 
-  main > div[style*="width:60%"] .a2 {
+  main>div[style*="width:60%"] .a2 {
     font-size: 13px !important;
   }
 
@@ -1652,6 +1699,10 @@ a {
     font-size: 12px;
   }
 
+  .artist-card .hidden-text p {
+    font-size: 13px;
+  }
+
   .button {
     width: 100%;
     max-width: 320px;
@@ -1684,8 +1735,8 @@ a {
 }
 
 /* =========================================================
-   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
-   ========================================================= */
+МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+========================================================= */
 @media (max-width: 360px) {
   .body {
     width: calc(100% - 8px);
@@ -1726,6 +1777,10 @@ a {
     font-size: 17px;
   }
 
+  .artist-card .hidden-text p {
+    font-size: 12px;
+  }
+
   .button_a {
     font-size: 14px;
   }
@@ -1751,8 +1806,8 @@ a {
 }
 
 /* =========================================================
-   НИЗКИЕ ЭКРАНЫ / ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ
-   ========================================================= */
+НИЗКИЕ ЭКРАНЫ / ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ
+========================================================= */
 @media (max-height: 500px) and (orientation: landscape) {
   .title {
     margin-top: 24px;
@@ -1801,9 +1856,11 @@ a {
 }
 
 /* =========================================================
-   TOUCH-УСТРОЙСТВА: БЕЗ ЗАВИСИМОСТИ ОТ HOVER
-   ========================================================= */
-@media (hover: none), (pointer: coarse) {
+TOUCH-УСТРОЙСТВА
+========================================================= */
+@media (hover: none),
+(pointer: coarse) {
+
   body,
   body::before {
     background-attachment: scroll;
@@ -1897,6 +1954,21 @@ a {
     width: 70px;
   }
 
+  /* На touch-устройствах скрытый текст artist-card всегда виден */
+  .artist-card .hidden-text,
+  .artist-card:hover .hidden-text,
+  .artist-card:active .hidden-text {
+    max-height: none;
+    opacity: 1;
+    margin-top: 15px;
+    padding: 15px;
+    overflow: visible;
+  }
+
+  .artist-card .hidden-text p {
+    margin-top: 0;
+  }
+
   .tooltip-container {
     flex-direction: column;
     gap: 12px;
@@ -1957,7 +2029,6 @@ a {
   }
 }
 
-/* Отключаем анимации для пользователей, предпочитающих reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
   *,
