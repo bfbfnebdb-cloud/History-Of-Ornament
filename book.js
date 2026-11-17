@@ -748,68 +748,63 @@ window.addEventListener("resize", ()=>{
 
 // ===== SVG вышиванок =====
 const VYSHYVANKA_SVGS = [
-  {
-    name: "Ромбический рушник",
-    desc: "Классический геометрический орнамент с ромбами плодородия",
-    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><path d="M100 30 L130 60 L100 90 L70 60 Z"/><path d="M100 45 L115 60 L100 75 L85 60 Z"/><path d="M40 100 L70 130 L40 160 L10 130 Z"/><path d="M160 100 L190 130 L160 160 L130 130 Z"/><path d="M100 110 L130 140 L100 170 L70 140 Z"/><path d="M100 125 L115 140 L100 155 L85 140 Z"/></g><g fill="#c0392b"><circle cx="100" cy="60" r="3"/><circle cx="40" cy="130" r="3"/><circle cx="160" cy="130" r="3"/><circle cx="100" cy="140" r="3"/></g></svg>`
-  },
-  {
-    name: "Солярный крест",
-    desc: "Древний символ солнца и четырёх сторон света",
-    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="35"/><path d="M100 50 L100 150 M50 100 L150 100"/><path d="M70 70 L130 130 M130 70 L70 130"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="8"/><circle cx="100" cy="50" r="4"/><circle cx="100" cy="150" r="4"/><circle cx="50" cy="100" r="4"/><circle cx="150" cy="100" r="4"/></g></svg>`
-  },
-  {
-    name: "Древо жизни",
-    desc: "Символ связи поколений и плодородия рода",
-    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><path d="M100 170 L100 60"/><path d="M100 60 L70 40 M100 60 L130 40"/><path d="M100 80 L60 65 M100 80 L140 65"/><path d="M100 100 L50 90 M100 100 L150 90"/></g><g fill="#c0392b"><circle cx="70" cy="40" r="5"/><circle cx="130" cy="40" r="5"/><circle cx="60" cy="65" r="4"/><circle cx="140" cy="65" r="4"/></g></svg>`
-  },
-  {
-    name: "Зигзаг воды",
-    desc: "Орнамент плодородия и жизненной энергии",
-    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><path d="M20 40 L40 20 L60 40 L80 20 L100 40 L120 20 L140 40 L160 20 L180 40"/><path d="M20 80 L40 60 L60 80 L80 60 L100 80 L120 60 L140 80 L160 60 L180 80"/><path d="M20 120 L40 100 L60 120 L80 100 L100 120 L120 100 L140 120 L160 100 L180 120"/></g><g fill="#c0392b"><circle cx="40" cy="20" r="3"/><circle cx="80" cy="20" r="3"/><circle cx="120" cy="20" r="3"/></g></svg>`
-  },
-  {
-    name: "Восьмиконечная розетка",
-    desc: "Солярный знак, символ гармонии вселенной",
-    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="20"/><path d="M100 40 L100 160 M40 100 L160 100"/><path d="M58 58 L142 142 M142 58 L58 142"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="6"/></g></svg>`
-  },
-  {
-    name: "Полесская сетка",
-    desc: "Ковровый орнамент с повторяющимися ромбами",
-    img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="1.5"><path d="M0 50 L50 0 L100 50 L50 100 Z"/><path d="M100 50 L150 0 L200 50 L150 100 Z"/><path d="M0 150 L50 100 L100 150 L50 200 Z"/><path d="M100 150 L150 100 L200 150 L150 200 Z"/></g><g fill="#c0392b"><circle cx="50" cy="50" r="4"/><circle cx="150" cy="50" r="4"/><circle cx="50" cy="150" r="4"/><circle cx="150" cy="150" r="4"/></g></svg>`
-  }
+{
+name: "Ромбический рушник",
+desc: "Классический геометрический орнамент с ромбами плодородия",
+img: `<img src="img/ornament1.jpg">`,
+svg: `<img src="img/ornament1.jpg">`
+},
+{
+name: "Солярный крест",
+desc: "Древний символ солнца и четырёх сторон света",
+img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="35"/><path d="M100 50 L100 150 M50 100 L150 100"/><path d="M70 70 L130 130 M130 70 L70 130"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="8"/><circle cx="100" cy="50" r="4"/><circle cx="100" cy="150" r="4"/><circle cx="50" cy="100" r="4"/><circle cx="150" cy="100" r="4"/></g></svg>`,
+svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="35"/><path d="M100 50 L100 150 M50 100 L150 100"/><path d="M70 70 L130 130 M130 70 L70 130"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="8"/><circle cx="100" cy="50" r="4"/><circle cx="100" cy="150" r="4"/><circle cx="50" cy="100" r="4"/><circle cx="150" cy="100" r="4"/></g></svg>`
+},
+{
+name: "Древо жизни",
+desc: "Символ связи поколений и плодородия рода",
+img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><path d="M100 170 L100 60"/><path d="M100 60 L70 40 M100 60 L130 40"/><path d="M100 80 L60 65 M100 80 L140 65"/><path d="M100 100 L50 90 M100 100 L150 90"/></g><g fill="#c0392b"><circle cx="70" cy="40" r="5"/><circle cx="130" cy="40" r="5"/><circle cx="60" cy="65" r="4"/><circle cx="140" cy="65" r="4"/></g></svg>`,
+svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><path d="M100 170 L100 60"/><path d="M100 60 L70 40 M100 60 L130 40"/><path d="M100 80 L60 65 M100 80 L140 65"/><path d="M100 100 L50 90 M100 100 L150 90"/></g><g fill="#c0392b"><circle cx="70" cy="40" r="5"/><circle cx="130" cy="40" r="5"/><circle cx="60" cy="65" r="4"/><circle cx="140" cy="65" r="4"/></g></svg>`
+},
+{
+name: "Зигзаг воды",
+desc: "Орнамент плодородия и жизненной энергии",
+// ИСПРАВЛЕНО: imaeg → image
+img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><path d="M20 40 L40 20 L60 40 L80 20 L100 40 L120 20 L140 40 L160 20 L180 40"/><path d="M20 80 L40 60 L60 80 L80 60 L100 80 L120 60 L140 80 L160 60 L180 80"/><path d="M20 120 L40 100 L60 120 L80 100 L100 120 L120 100 L140 120 L160 100 L180 120"/></g><g fill="#c0392b"><circle cx="40" cy="20" r="3"/><circle cx="80" cy="20" r="3"/><circle cx="120" cy="20" r="3"/></g></svg>`,
+svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2.5"><path d="M20 40 L40 20 L60 40 L80 20 L100 40 L120 20 L140 40 L160 20 L180 40"/><path d="M20 80 L40 60 L60 80 L80 60 L100 80 L120 60 L140 80 L160 60 L180 80"/><path d="M20 120 L40 100 L60 120 L80 100 L100 120 L120 100 L140 120 L160 100 L180 120"/></g><g fill="#c0392b"><circle cx="40" cy="20" r="3"/><circle cx="80" cy="20" r="3"/><circle cx="120" cy="20" r="3"/></g></svg>`
+},
+{
+name: "Восьмиконечная розетка",
+desc: "Солярный знак, символ гармонии вселенной",
+img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="20"/><path d="M100 40 L100 160 M40 100 L160 100"/><path d="M58 58 L142 142 M142 58 L58 142"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="6"/></g></svg>`,
+svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="2"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="20"/><path d="M100 40 L100 160 M40 100 L160 100"/><path d="M58 58 L142 142 M142 58 L58 142"/></g><g fill="#c0392b"><circle cx="100" cy="100" r="6"/></g></svg>`
+},
+{
+name: "Полесская сетка",
+desc: "Ковровый орнамент с повторяющимися ромбами",
+img: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="1.5"><path d="M0 50 L50 0 L100 50 L50 100 Z"/><path d="M100 50 L150 0 L200 50 L150 100 Z"/><path d="M0 150 L50 100 L100 150 L50 200 Z"/><path d="M100 150 L150 100 L200 150 L150 200 Z"/></g><g fill="#c0392b"><circle cx="50" cy="50" r="4"/><circle cx="150" cy="50" r="4"/><circle cx="50" cy="150" r="4"/><circle cx="150" cy="150" r="4"/></g></svg>`,
+svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#fdfbf5"/><g fill="none" stroke="#c0392b" stroke-width="1.5"><path d="M0 50 L50 0 L100 50 L50 100 Z"/><path d="M100 50 L150 0 L200 50 L150 100 Z"/><path d="M0 150 L50 100 L100 150 L50 200 Z"/><path d="M100 150 L150 100 L200 150 L150 200 Z"/></g><g fill="#c0392b"><circle cx="50" cy="50" r="4"/><circle cx="150" cy="50" r="4"/><circle cx="50" cy="150" r="4"/><circle cx="150" cy="150" r="4"/></g></svg>`
+}
 ];
 
 // ===== Модальное окно вышиванок =====
 function buildVyshyvankaGallery(){
-  const gallery = document.getElementById("vyshyvankaGallery");
-  if(!gallery) return;
-  gallery.innerHTML = "";
-  VYSHYVANKA_SVGS.forEach((item, idx) => {
-    const card = document.createElement("div");
-    card.className = "vyshyvanka-card";
-    card.innerHTML = `
-      <div class="vyshyvanka-preview">${item.img}</div>
-      <h3>${item.name}</h3>
-      <p>${item.desc}</p>
-      <button type="button" class="vyshyvanka-download" data-download-idx="${idx}">⬇ Скачать схему</button>
-    `;
-    gallery.appendChild(card);
-  });
-}
-
-function downloadVyshyvanka(idx){
-  const item = VYSHYVANKA_SVGS[idx];
-  if(!item) return;
-  const svgBlob = new Blob([item.svg], {type: "image/svg+xml;charset=utf-8"});
-  const url = URL.createObjectURL(svgBlob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `vyshyvanka-${item.name.replace(/\s+/g, '-')}.svg`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+const gallery = document.getElementById("vyshyvankaGallery");
+if(!gallery) return;
+gallery.innerHTML = "";
+VYSHYVANKA_SVGS.forEach((item, idx) => {
+const card = document.createElement("div");
+card.className = "vyshyvanka-card";
+// ИСПРАВЛЕНО: используем img || image для превью
+const previewContent = item.svg || item.image || '';
+card.innerHTML = `
+<div class="vyshyvanka-preview">${previewContent}</div>
+<h3>${item.name}</h3>
+<p>${item.desc}</p>
+<button type="button" class="vyshyvanka-download" data-download-idx="${idx}">⬇ Скачать схему</button>
+`;
+gallery.appendChild(card);
+});
 }
 
 function openVyshyvankaModal(){
