@@ -254,7 +254,7 @@ const PAGE_CONTENT = {
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Сейчас орнамент стал использоваться <strong>повсеместно</strong>: в искусстве, в архитектуре, в декоре. Они дополняет друг друга.</p>`,
 "3-7":`
-<h1>Скачать вышиванку орнамента<h2 class="emblem-hr">sdjqertiop</h2></h1>
+<h1>Скачать орнамент для вышиванки<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Здесь вы можете открыть коллекцию традиционных белорусских вышиванок. Каждый узор несёт в себе многовековую историю и символику Полесья.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
 <div class="vyshyvanka-btn-wrapper">
