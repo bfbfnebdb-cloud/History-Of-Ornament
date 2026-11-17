@@ -758,27 +758,27 @@ const VYSHYVANKA_SVGS = [
         name: "Солярный крест",
         desc: "Древний символ солнца и четырёх сторон света",
         // Если нет отдельной картинки, можно использовать заглушку или путь к svg
-        src: "img/solar-cross.jpg" 
+        src: "img/ornament-2.jpg" 
     },
     {
         name: "Древо жизни",
         desc: "Символ связи поколений и плодородия рода",
-        src: "img/tree-of-life.jpg"
+        src: "img/ornament-3.jpg"
     },
     {
         name: "Зигзаг воды",
         desc: "Орнамент плодородия и жизненной энергии",
-        src: "img/water-zigzag.jpg"
+        src: "img/ornament-4.jpg"
     },
     {
         name: "Восьмиконечная розетка",
         desc: "Солярный знак, символ гармонии вселенной",
-        src: "img/rosette.jpg"
+        src: "img/ornament-5.jpg"
     },
     {
         name: "Полесская сетка",
         desc: "Ковровый орнамент с повторяющимися ромбами",
-        src: "img/net-pattern.jpg"
+        src: "img/ornament-6.jpg"
     }
 ];
 
