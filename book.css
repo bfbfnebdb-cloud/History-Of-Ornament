@@ -1299,7 +1299,7 @@ strong {
 }
 
 .museum-modal-content {
-  background: linear-gradient(135deg, #fffbf3 0%, #fdf5e6 100%);
+  background: white;
   border: 2px solid #c0392b;
   border-radius: 8px;
   max-width: 600px;
