@@ -257,8 +257,25 @@ const PAGE_CONTENT = {
 <h1>Скачать орнамент для вышиванки<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Здесь вы можете открыть коллекцию традиционных схем(орнамента) для белорусских вышиванок. Каждый узор несёт в себе многовековую историю и символику Полесья.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
+
+<div class="ornament-slider-wrapper" id="ornamentSlider">
+  <div class="ornament-slider-header">
+    <h3 class="slider-main-title">Коллекция орнаментов</h3>
+    <p class="slider-subtitle">◆ Листайте, чтобы рассмотреть узоры ◆</p>
+  </div>
+  <div class="ornament-slider-viewport">
+    <button class="ornament-slider-arrow prev" id="sliderPrev" aria-label="Предыдущий">‹</button>
+    <button class="ornament-slider-arrow next" id="sliderNext" aria-label="Следующий">›</button>
+    <div class="ornament-slider-track" id="sliderTrack"></div>
+  </div>
+  <div class="ornament-slider-dots" id="sliderDots"></div>
+  <div class="ornament-slider-progress">
+    <div class="ornament-slider-progress-bar" id="sliderProgress"></div>
+  </div>
+</div>
+
 <div class="vyshyvanka-btn-wrapper">
-  <button type="button" class="vyshyvanka-btn" data-action="open-vyshyvanka">Скачать орнамент</button>
+<button type="button" class="vyshyvanka-btn" data-action="open-vyshyvanka">Скачать орнамент</button>
 </div>
 `
 };
@@ -968,3 +985,92 @@ document.getElementById("museumModal").classList.add("active");
 
 buildTOC();
 renderSpread();
+
+function initOrnamentSlider() {
+  const wrapper = document.getElementById('ornamentSlider');
+  if (!wrapper || wrapper.dataset.initialized === '1') return;
+  wrapper.dataset.initialized = '1';
+
+  const track    = document.getElementById('sliderTrack');
+  const dotsWrap = document.getElementById('sliderDots');
+  const prevBtn  = document.getElementById('sliderPrev');
+  const nextBtn  = document.getElementById('sliderNext');
+  const progress = document.getElementById('sliderProgress');
+  const slides   = VYSHYVANKA_SVGS;
+
+  if (!track || !slides || !slides.length) return;
+
+  let current = 0;
+
+  slides.forEach((item, idx) => {
+    const slide = document.createElement('div');
+    slide.className = 'ornament-slide';
+    slide.innerHTML = `
+      <div class="ornament-slide-image">
+        <img src="${item.src}" alt="${item.name}" loading="lazy">
+      </div>
+      <div class="ornament-slide-info">
+        <div class="ornament-slide-counter">
+          <span class="current-num">${String(idx + 1).padStart(2, '0')}</span>
+          <span>/ ${String(slides.length).padStart(2, '0')}</span>
+        </div>
+        <h4 class="ornament-slide-title">${item.name}</h4>
+        <p class="ornament-slide-desc">${item.desc}</p>
+      </div>
+    `;
+    track.appendChild(slide);
+
+    const dot = document.createElement('button');
+    dot.className = 'ornament-slider-dot' + (idx === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Слайд ${idx + 1}`);
+    dot.addEventListener('click', () => goTo(idx));
+    dotsWrap.appendChild(dot);
+  });
+
+  function update() {
+    track.style.transform = `translateX(-${current * 100}%)`;
+    progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === slides.length - 1;
+    dotsWrap.querySelectorAll('.ornament-slider-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(slides.length - 1, idx));
+    update();
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  // Свайпы
+  let touchStartX = 0, touchStartTime = 0;
+  wrapper.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartTime = Date.now();
+  }, { passive: true });
+  wrapper.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dt = Date.now() - touchStartTime;
+    if (Math.abs(dx) > 40 && dt < 600) {
+      if (dx < 0) goTo(current + 1);
+      else        goTo(current - 1);
+    }
+  }, { passive: true });
+
+  update();
+}
+
+
+<!-- 3. В функции renderSpread() добавить вызов initOrnamentSlider() в самом конце: -->
+
+async function renderSpread(){
+  if(isMobileView()) await renderMobilePage(currentIndex);
+  else await renderDesktopSpread();
+  updateIndicator();
+  updateButtons();
+  updateSidebarState();
+  initOrnamentSlider(); // ← ДОБАВИТЬ ЭТУ СТРОКУ
+}
