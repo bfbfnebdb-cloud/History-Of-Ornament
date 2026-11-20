@@ -1,74 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Нить судьбы: от женских рук до музейных витрин</title>
-<link rel="stylesheet" href="book.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нить судьбы: Музеи ткачества Гомельщины</title>
+    <link rel="stylesheet" href="book.css">
 </head>
 <body>
+
 <div class="workspace">
-  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Меню"><span></span><span></span><span></span></button>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-inner">
-      <h2>Содержание</h2>
-      <div class="sidebar-topics" id="toc"></div>
-    </div>
-  </aside>
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  
-  <div class="book-area">
-    <div class="book" id="book">
-      <div class="book-cover" id="bookCover">
-        <div class="cover cover-left"><div class="cover-inner"><div class="cover-emblem">❖</div><div class="cover-title">ИСТОРИЯ<br>ОРНАМЕНТА</div><div class="cover-ornament"></div></div></div>
-        <div class="cover cover-right"><div class="cover-inner"><div class="cover-emblem">❖</div><div class="cover-ornament"></div></div></div>
-      </div>
-      <div class="book-base">
-        <div class="base-left" id="baseLeft"></div>
-        <div class="base-right" id="baseRight"></div>
-      </div>
-      <div class="book-spine"></div>
-      <div class="sheet left-sheet" id="leftSheet">
-        <div class="face front" id="leftFront"></div>
-        <div class="face back" id="leftBack"></div>
-      </div>
-      <div class="sheet right-sheet" id="rightSheet">
-        <div class="face front" id="rightFront"></div>
-        <div class="face back" id="rightBack"></div>
-      </div>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner">
+            <h2>Содержание</h2>
+            <div class="sidebar-topics" id="toc"></div>
+        </div>
     </div>
     
-    <div class="mobile-book" id="mobileBook">
-      <div class="m-base" id="mBase"></div>
-      <div class="m-sheet" id="mSheet">
-        <div class="m-face front" id="mFront"></div>
-        <div class="m-face back" id="mBack"></div>
-      </div>
+    <!-- Mobile Overlay & Toggle -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Main Book Area -->
+    <div class="book-area">
+        
+        <!-- Desktop Book View -->
+        <div class="book" id="book">
+            <div class="book-base">
+                <div class="base-left" id="baseLeft"></div>
+                <div class="base-right" id="baseRight"></div>
+                <div class="book-spine"></div>
+            </div>
+            
+            <!-- Sheets for flipping animation -->
+            <div class="sheet left-sheet" id="leftSheet">
+                <div class="face front" id="leftFront"></div>
+                <div class="face back" id="leftBack"></div>
+            </div>
+            <div class="sheet right-sheet" id="rightSheet">
+                <div class="face front" id="rightFront"></div>
+                <div class="face back" id="rightBack"></div>
+            </div>
+
+            <div class="book-cover" id="bookCover">
+                <div class="cover cover-left">
+                    <div class="cover-inner"></div>
+                </div>
+                <div class="cover cover-right">
+                    <div class="cover-inner">
+                        <div class="cover-emblem">❖</div>
+                        <div class="cover-title">Нить судьбы</div>
+                        <div class="cover-ornament"></div>
+                        <div style="font-family:'Playfair Display'; color:#d4af37; font-size:14px; letter-spacing:2px; margin-top:10px;">МУЗЕИ ГОМЕЛЬЩИНЫ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Book View -->
+        <div class="mobile-book" id="mobileBook">
+            <div class="m-base" id="mBase"></div>
+            <div class="m-sheet" id="mSheet">
+                <div class="m-face front" id="mFront"></div>
+                <div class="m-face back" id="mBack"></div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="nav-btn" id="prevBtn">← Назад</button>
+            <div class="page-indicator" id="indicator"></div>
+            <button class="nav-btn" id="nextBtn">Вперёд →</button>
+        </div>
+
     </div>
-    
-    <div class="controls">
-      <button class="nav-btn" id="prevBtn">← Назад</button>
-      <div class="page-indicator" id="indicator"></div>
-      <button class="nav-btn" id="nextBtn">Вперёд →</button>
-    </div>
-  </div>
 </div>
 
+<!-- Map Modal Button (Top Right) -->
+<button class="map-modal-btn" id="openMapBtn" title="Открыть карту музеев">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+    </svg>
+    Карта
+</button>
+
+<!-- Map Modal -->
+<div class="museum-modal" id="mapModal">
+    <div class="museum-modal-content map-modal-content">
+        <button class="museum-modal-close" id="closeMapBtn">×</button>
+        <div id="mapModalBody"></div>
+    </div>
+</div>
+
+<!-- Museum Details Modal -->
 <div class="museum-modal" id="museumModal">
-  <div class="museum-modal-content">
-    <button class="museum-modal-close" id="museumModalClose">×</button>
-    <div id="museumModalBody"></div>
-  </div>
+    <div class="museum-modal-content">
+        <button class="museum-modal-close" id="museumModalClose">×</button>
+        <div id="museumModalBody"></div>
+    </div>
 </div>
+
+<!-- Vyshyvanka Modal -->
 <div class="vyshyvanka-modal" id="vyshyvankaModal">
-  <div class="vyshyvanka-modal-content">
-    <button class="vyshyvanka-modal-close" id="vyshyvankaModalClose" type="button" aria-label="Закрыть">×</button>
-    <h2>Орнамент для белорусских вышиванок</h2>
-    <p class="vm-subtitle">Коллекция традиционных узоров Беларуси</p>
-    <div class="vm-ornament">◆ ◇ ◆ ◇ ◆</div>
-    <div class="vyshyvanka-gallery" id="vyshyvankaGallery"></div>
-  </div>
+    <div class="vyshyvanka-modal-content">
+        <button class="vyshyvanka-modal-close" id="vyshyvankaModalClose">×</button>
+        <h2>Орнамент для белорусских вышиванок</h2>
+        <div class="vm-subtitle">Коллекция традиционных узоров Беларуси</div>
+        <div class="vm-ornament">◆ ◇ ◆ ◇ ◆</div>
+        <div class="vyshyvanka-gallery" id="vyshyvankaGallery"></div>
+    </div>
 </div>
+
 <script src="book.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ const PAGE_CONTENT = {
 <p>В музеях Ветки, Гомеля, Ельска, Калинковичей, Наровли, Октябрьского, Речицы и Хойник собрано более <strong>тысяч предметов</strong> народного текстиля. Каждый из них — не просто ткань, а закодированное послание предков: в геометрических ромбах и розетках прочитывается древняя символика, в переплетении нитей — обереговая магия, в цветовых сочетаниях — характер полесской земли.</p>
 <div class="highlight-box">
 <h4>Обратите внимание</h4>
-<p style="margin:0;text-indent:0">На следующей странице представлена <strong>карта Гомельской области</strong> с музеями. Нажмите на район, чтобы узнать подробности о его собрании.</p>
+<p style="margin:0;text-indent:0">Нажмите на кнопку <strong>"Карта"</strong> в правом верхнем углу, чтобы увидеть расположение музеев на карте области.</p>
 </div>
 <p>Неглюбское ткачество, браные и закладные рушники, полесский геометрический орнамент — всё это живое наследие, которое бережно сохраняется в музейных фондах и передаётся новым поколениям исследователей и мастеров.</p>
 `,
@@ -42,19 +42,18 @@ const PAGE_CONTENT = {
 <div class="fact-box">
 <strong>Горизонтальный станок</strong> — конструкция, появившаяся во II тысячелетии до н. э. и претерпевшая лишь незначительные изменения, сохранилась до наших дней как образец инженерного совершенства.
 </div>
-
 `,
 "2-4": `
 <h1>Подготовка материала<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Основным сырьём для изготовления тканей в домашних условиях у белорусов издавна был лён. В конце лета его выдёргивали из земли вместе с корнями и расстилали на земле «мокнуть».</p>
-  <div>
-    <div class="book-image-block">
-      <div class="image-block">
-        <img class="book-image" id="threads" src="img/threads.jpg">
-      </div>
-    </div>
-    <p class="drop-cap" style="margin-top: 23vh;">По прошествии одного-полутора месяцев стебли собирали, оббивали головки с семенами при помощи валька — <em>«праніка»</em>, <em>«пральніка»</em>, — после чего высушивали и мяли на мялке — <em>«мяліцы»</em>, <em>«церніцы»</em>.</p></div>
-  </div>
+<div>
+<div class="book-image-block">
+<div class="image-block">
+<img class="book-image" id="threads" src="img/threads.jpg">
+</div>
+</div>
+<p class="drop-cap" style="margin-top: 23vh;">По прошествии одного-полутора месяцев стебли собирали, оббивали головки с семенами при помощи валька — <em>«праніка»</em>, <em>«пральніка»</em>, — после чего высушивали и мяли на мялке — <em>«мяліцы»</em>, <em>«церніцы»</em>.</p></div>
+</div>
 <p>Чтобы очистить волокно от мелких кусочков костры, использовали похожее на меч или лопату деревянное <strong>трепало</strong> — <em>«трапло»</em>, <em>«трапушку»</em>, — которым терпеливо выбивали из льна все лишние частицы.</p>
 <div class="definition">
 <span class="term">Кужель («кужаль»)</span>
@@ -64,22 +63,22 @@ const PAGE_CONTENT = {
 <h1>Подготовка материала<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <div class="highlight-box">
 <h4>Приспособления прядения:</h4>
-  <div>
-    <p text-indent:0"><strong>Прялка</strong> (<em>«прасніца»</em>), <strong>Скальня</strong>, <strong>веретено</strong> и <strong>самопрялка</strong> (<em>«калаўрот»</em>). Для лучшего скручивания нитей пряха смачивала волокно слюной, отчего пряжа становилась влажной и требовала просушки — для этого применяли <strong>мотовило</strong> (<em>«вітушка»</em>).</p>
-  </div>
+<div>
+<p text-indent:0"><strong>Прялка</strong> (<em>«прасніца»</em>), <strong>Скальня</strong>, <strong>веретено</strong> и <strong>самопрялка</strong> (<em>«калаўрот»</em>). Для лучшего скручивания нитей пряха смачивала волокно слюной, отчего пряжа становилась влажной и требовала просушки — для этого применяли <strong>мотовило</strong> (<em>«вітушка»</em>).</p>
+</div>
 </div>
 <div>
-    <div class="book-image-block">
-      <div class="image-block" style="height: 430px;">
-        <img class="book-image" id="photo-1" src="img/5393306827660926756.jpg">
-      </div>
-    </div>
+<div class="book-image-block">
+<div class="image-block" style="height: 430px;">
+<img class="book-image" id="photo-1" src="img/5393306827660926756.jpg">
+</div>
+</div>
 `,
 "2-6": `
 <h1>Процесс ткачества<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Создание ткани на «кроснах» — ручном горизонтальном ткацком станке — это переплетение бесцветных продольных нитей основы и цветных поперечных уточных нитей.</p>
 <div class="image-block">
-  <img class="book-image" src="img/berdo.jpg" id="berdo">
+<img class="book-image" src="img/berdo.jpg" id="berdo">
 </div>
 <p class="drop-cat" style="margin-top: 21vh;">Во время наиболее трудоёмкой операции — заправки станка — каждая из нитей основы пропускается через узелки одного из <strong>нитов</strong>, сетчатых рамок, предназначенных для приподнимания либо опускания нитей основы.</p>
 `,
@@ -94,22 +93,22 @@ const PAGE_CONTENT = {
 <h4>Зев</h4>
 <p>Пространство между поднятыми и опущенными нитями, в которое пробрасывается челнок с уточной нитью.</p>
 <div class="image-block">
-  <img class="book-image" src="img/samopryalka.jpg" id="samopryalka">
+<img class="book-image" src="img/samopryalka.jpg" id="samopryalka">
 </div>
 </div>
 </div>
 <p style="margin-top: 28vh;">Заправка кросен производится <strong>вдвоём</strong> и требует высокого мастерства.</p>
 `,
 "2-8": `<div class="important-note">
-  <div>
-  <h1>Процесс ткачества<h2 class="emblem-hr">sdjqertiop</h2></h1>
-  <blockquote>Собственно ткать или, как говорили в старину, «затыкать кросны», — намного проще.</blockquote>
-  <p>Ткачиха ногой нажимает на педали — <em>«поножи»</em>. При этом одна часть нитов опускается, другая поднимается, а в образовавшийся между нитями основы <strong>зев</strong> пробрасывается челнок с уточной нитью. Бердо плотно прибивает новый ряд утка к предыдущему.</p>
-  <p>Именно в момент ткачества рождался орнамент — тот самый, что превращал обычное льняное полотно в послание рода, в оберег, в молитву, вплетённую в нити.</p>
-  </div>
-  <p>Каждое движение ткачихи было выверено поколениями: ритм педалей, бросок челнока, удар берда — всё складывалось в неспешную, почти священную работу, в которой время казалось остановившимся.</p>
-  </div>
-    `,
+<div>
+<h1>Процесс ткачества<h2 class="emblem-hr">sdjqertiop</h2></h1>
+<blockquote>Собственно ткать или, как говорили в старину, «затыкать кросны», — намного проще.</blockquote>
+<p>Ткачиха ногой нажимает на педали — <em>«поножи»</em>. При этом одна часть нитов опускается, другая поднимается, а в образовавшийся между нитями основы <strong>зев</strong> пробрасывается челнок с уточной нитью. Бердо плотно прибивает новый ряд утка к предыдущему.</p>
+<p>Именно в момент ткачества рождался орнамент — тот самый, что превращал обычное льняное полотно в послание рода, в оберег, в молитву, вплетённую в нити.</p>
+</div>
+<p>Каждое движение ткачихи было выверено поколениями: ритм педалей, бросок челнока, удар берда — всё складывалось в неспешную, почти священную работу, в которой время казалось остановившимся.</p>
+</div>
+`,
 "2-9": `
 <h1>Белорусский рушник<h2 class="emblem-hr">sdjqertiop</h2></h1>
 <p class="drop-cap">Богато украшенное полотенце — рушник — служило не только для бытовых нужд, но и было непременным атрибутом многих обрядов. Рушник сопровождал человека всю жизнь: от первого вздоха до последнего приюта.</p>
@@ -117,10 +116,10 @@ const PAGE_CONTENT = {
 <p>«Баба» — повитуха — принимала младенца, обернув руки куском нового полотна, чтобы тот «не жил с голыми руками». В знак траура вывешивали рушник с узкими полосами узора — каймами. Во время бедствий, засухи, эпидемий всем селом ткали особое льняное полотенце — <strong>«обыденник»</strong>, которое должно было умилостивить высшие силы.</p>
 <blockquote>Самыми нарядными, щедро украшенными и яркими были свадебные рушники.</blockquote>
 <div class="image-block">
-  <img class="book-image" style="width: 23%; margin-left: 15%;" src="img/rushnik-1.jpg">
+<img class="book-image" style="width: 23%; margin-left: 15%;" src="img/rushnik-1.jpg">
 </div>
 <div class="image-block">
-  <img class="book-image" style="width: 23%; margin-left: 23%;" src="img/rushnik-2.jpg">
+<img class="book-image" style="width: 23%; margin-left: 23%;" src="img/rushnik-2.jpg">
 </div>
 <div class="highlight-box">
 <h4 style="margin-top: 65px;">Символика</h4>
@@ -186,16 +185,13 @@ const PAGE_CONTENT = {
 <p>Земля, плодородие, засеянное поле</p>
 </div>
 </div>
-
 <div class="symbol-card">
 <div class="ornament">
 <h4>Крест</h4>
 <p>Четыре стороны света, солярный цикл</p>
 </div>
 </div>
-
 <div class="symbol-card">
-
 <div class="ornament">
 <h4>Спираль</h4>
 <p id="spiral">Движение времени, развитие жизни</p>
@@ -203,9 +199,9 @@ const PAGE_CONTENT = {
 </div>
 </div>
 <div>
-  <div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/romb.png"></div>
-  <div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/cross.jpg"></div>
-  <div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/spiral.png"></div>
+<div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/romb.png"></div>
+<div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/cross.jpg"></div>
+<div class="image-block ornament-image-block"><img class="symbol-of-ornament" src="img/spiral.png"></div>
 </div>
 `,
 "3-5": `
@@ -242,13 +238,13 @@ const PAGE_CONTENT = {
 <div class="ornament-divider">◆ ◇ ◆</div>
 <p>Если раньше орнамент украшал фасады лишь этнографических музеев, то сегодня он выходит на улицы спальных районов. Белорусские муралисты и художники используют традиционные «рупы», «ромбы» и «кресты» как основу для масштабных уличных росписей.</p>
 <div class="image-block">
-  <img class="book-image" style="width: 20%; margin-left: 5%;" src="img/5363878433303241690.jpg">
+<img class="book-image" style="width: 20%; margin-left: 5%;" src="img/5363878433303241690.jpg">
 </div>
 <div class="image-block">
-  <img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241692.jpg">
+<img class="book-image" style="width: 20%; margin-left: 7%;" src="img/5363878433303241692.jpg">
 </div>
 <div class="image-block">
-  <img class="book-image" style="width: 20%; margin-left: 9%;" src="img/5363878433303241689.jpg">
+<img class="book-image" style="width: 20%; margin-left: 9%;" src="img/5363878433303241689.jpg">
 </div>
 <p style="margin-top: 45px;">Геометрическая строгость белорусского узора идеально ложится на архитектуру: строгие линии и ритмичные повторы превращают глухие бетонные стены в динамичные арт-объекты.</p>
 <div class="ornament-divider">◆ ◇ ◆</div>
@@ -261,7 +257,6 @@ const PAGE_CONTENT = {
 </div>
 `
 };
-
 const MUSEUMS = {
 vetka: {name:"Ветковский музей им. Ф. Г. Шклярова",location:"Ветковский район",text:`<p>Ветковский музей старообрядчества и белорусских традиций основан в 1978 году по инициативе коллекционера Фёдора Григорьевича Шклярова; экспозиция открыта в 1987 году.</p><p>Значительную часть коллекции составляют народные ткани — свыше <strong>1800 предметов</strong>. Здесь представлено самобытное <em>неглюбское ткачество</em> с плотным геометрическим орнаментом, браные и закладные рушники, пояса и андараки.</p><img class="museum-photo" src="img/vetka.png">`},
 homel: {name:"Филиал Ветковского музея",location:"г. Гомель",panoramaLink:"https://your-panorama-link-here.com",text:`<p>Гомельский филиал Ветковского музея продолжает линию головного собрания, знакомя посетителей с духовной и материальной культурой региона.</p><p>Текстильный раздел здесь один из самых выразительных: демонстрируются рушники и предметы одежды с браным и закладным ткачеством.</p><img class="museum-photo" src="img/homel.png">`},
@@ -284,775 +279,709 @@ const BOOK_CONFIG = {
 };
 const allPages = [];
 Object.keys(BOOK_CONFIG).forEach((topicId)=>{
-  const topic = BOOK_CONFIG[topicId];
-  for(let p=1; p<=topic.pages; p++){
-    const customName = topic.pageNames && topic.pageNames[p];
-    allPages.push({
-      topic: String(topicId), page: p, key: `${topicId}-${p}`,
-      title: customName ? `${topic.title} — ${customName}` : `${topic.title} — Стр. ${p}`,
-      customName: customName || null,
-      noSpine: topic.noSpine || false
-    });
-  }
+const topic = BOOK_CONFIG[topicId];
+for(let p=1; p<=topic.pages; p++){
+const customName = topic.pageNames && topic.pageNames[p];
+allPages.push({
+topic: String(topicId), page: p, key: `${topicId}-${p}`,
+title: customName ? `${topic.title} — ${customName}` : `${topic.title} — Стр. ${p}`,
+customName: customName || null,
+noSpine: topic.noSpine || false
 });
-
+}
+});
 let currentIndex = 0;
 let isAnimating = false;
 const pageCache = {};
-
 function loadPage(pageData){
-  if(pageCache[pageData.key] !== undefined) return Promise.resolve(pageCache[pageData.key]);
-  let html = PAGE_CONTENT[pageData.key] || `<h1>${pageData.title}</h1><p>Содержимое в разработке.</p>`;
-  pageCache[pageData.key] = html;
-  return Promise.resolve(html);
+if(pageCache[pageData.key] !== undefined) return Promise.resolve(pageCache[pageData.key]);
+let html = PAGE_CONTENT[pageData.key] || `<h1>${pageData.title}</h1><p>Содержимое в разработке.</p>`;
+pageCache[pageData.key] = html;
+return Promise.resolve(html);
 }
-
 function buildTOC(){
-  const toc = document.getElementById("toc");
-  if(!toc) return;
-  const topicKeys = Object.keys(BOOK_CONFIG);
-  topicKeys.forEach((topicId, idx)=>{
-    const topic = BOOK_CONFIG[topicId];
-    const item = document.createElement("div");
-    item.className = "topic-item";
-    const title = document.createElement("div");
-    title.className = "topic-title";
-    title.innerHTML = `<span class="topic-label">${topic.title}</span>`;
-    item.appendChild(title);
-    const list = document.createElement("ul");
-    list.className = "pages-list";
-    const topicPages = allPages.filter(p=>p.topic===String(topicId));
-    topicPages.forEach(pg=>{
-      const li = document.createElement("li");
-      li.textContent = pg.customName || `Страница ${pg.page}`;
-      li.dataset.index = String(allPages.indexOf(pg));
-      li.addEventListener("click", async (e)=>{
-        e.stopPropagation();
-        const targetIndex = parseInt(li.dataset.index);
-        await animatedJumpToPage(targetIndex);
-        if(window.innerWidth <= 900) closeSidebar();
-      });
-      list.appendChild(li);
-    });
-    item.appendChild(list);
-    toc.appendChild(item);
-    if(idx < topicKeys.length - 1){
-      const divider = document.createElement("div");
-      divider.className = "topic-divider";
-      toc.appendChild(divider);
-    }
-  });
+const toc = document.getElementById("toc");
+if(!toc) return;
+const topicKeys = Object.keys(BOOK_CONFIG);
+topicKeys.forEach((topicId, idx)=>{
+const topic = BOOK_CONFIG[topicId];
+const item = document.createElement("div");
+item.className = "topic-item";
+const title = document.createElement("div");
+title.className = "topic-title";
+title.innerHTML = `<span class="topic-label">${topic.title}</span>`;
+item.appendChild(title);
+const list = document.createElement("ul");
+list.className = "pages-list";
+const topicPages = allPages.filter(p=>p.topic===String(topicId));
+topicPages.forEach(pg=>{
+const li = document.createElement("li");
+li.textContent = pg.customName || `Страница ${pg.page}`;
+li.dataset.index = String(allPages.indexOf(pg));
+li.addEventListener("click", async (e)=>{
+e.stopPropagation();
+const targetIndex = parseInt(li.dataset.index);
+await animatedJumpToPage(targetIndex);
+if(window.innerWidth <= 900) closeSidebar();
+});
+list.appendChild(li);
+});
+item.appendChild(list);
+toc.appendChild(item);
+if(idx < topicKeys.length - 1){
+const divider = document.createElement("div");
+divider.className = "topic-divider";
+toc.appendChild(divider);
 }
-
+});
+}
 function setPageContent(el, html, pageNumber){
-  if(!el) return;
-  if(html === "MAP"){
-    el.innerHTML = `<div class="map-container"><h1>Карта музеев</h1><p class="map-subtitle">Нажмите на район</p>${buildMapSVG()}</div>${pageNumber?`<div class="page-number">— ${pageNumber} —</div>`:""}`;
-    bindMapRegions(el);
-  } else {
-    el.innerHTML = html + (pageNumber ? `<div class="page-number">— ${pageNumber} —</div>` : "");
-  }
+if(!el) return;
+if(html === "MAP"){
+// Map content is now handled by the modal button, but we keep a placeholder or redirect if needed
+el.innerHTML = `<div style="text-align:center; padding-top:40%;"><h1>Карта музеев</h1><p>Нажмите кнопку "Карта" в правом верхнем углу экрана.</p></div>${pageNumber?`<div class="page-number">— ${pageNumber} —</div>`:""}`;
+} else {
+el.innerHTML = html + (pageNumber ? `<div class="page-number">— ${pageNumber} —</div>` : "");
 }
-
+}
 function bindMapRegions(container){
-  container.querySelectorAll(".region").forEach(r=>{
-    r.addEventListener("click", (e)=>{
-      e.stopPropagation();
-      const key = r.dataset.museum;
-      if(key && MUSEUMS[key]) openMuseumModal(key);
-    });
-  });
-}
-
-function openMuseumModal(key){
-  const museum = MUSEUMS[key];
-  const body = document.getElementById("museumModalBody");
-  body.innerHTML = `<h2>${museum.name}</h2><div class="museum-location">${museum.location}</div><div class="museum-ornament">◆ ◇ ◆</div>${museum.text}`;
-  document.getElementById("museumModal").classList.add("active");
-}
-function closeMuseumModal(){
-  document.getElementById("museumModal").classList.remove("active");
-}
-document.getElementById("museumModalClose").addEventListener("click", closeMuseumModal);
-document.getElementById("museumModal").addEventListener("click", (e)=>{
-  if(e.target.id === "museumModal") closeMuseumModal();
+container.querySelectorAll(".region").forEach(r=>{
+r.addEventListener("click", (e)=>{
+e.stopPropagation();
+const key = r.dataset.museum;
+if(key && MUSEUMS[key]) openMuseumModal(key);
 });
-
-function isMobileView(){
-  return window.matchMedia("(max-width:560px)").matches;
-}
-
-function updateSidebarState(){
-  document.querySelectorAll(".pages-list li").forEach(li=>{
-    const idx = parseInt(li.dataset.index);
-    const isActive = isMobileView()
-      ? idx === currentIndex
-      : idx === currentIndex || idx === currentIndex + 1;
-    li.classList.toggle("active", isActive);
-  });
-}
-
-function canGoForward(){
-  return currentIndex + (isMobileView() ? 1 : 2) < allPages.length;
-}
-function canGoBackward(){
-  return currentIndex > 0;
-}
-
-function updateButtons(){
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-  if(prevBtn) prevBtn.disabled = !canGoBackward();
-  if(nextBtn) nextBtn.disabled = !canGoForward();
-}
-
-function updateIndicator(){
-  const indicator = document.getElementById("indicator");
-  if(!indicator) return;
-  if(isMobileView()){
-    indicator.textContent = `Страница ${currentIndex+1} из ${allPages.length}`;
-  } else {
-    const rightPage = allPages[currentIndex+1];
-    indicator.textContent = `Страницы ${currentIndex+1}${rightPage ? "–"+(currentIndex+2) : ""} из ${allPages.length}`;
-  }
-}
-
-function shouldHideSpine(){
-  if(isMobileView()) return false;
-  const leftPage = allPages[currentIndex];
-  const rightPage = allPages[currentIndex+1];
-  if(leftPage && rightPage && leftPage.noSpine && rightPage.noSpine && leftPage.topic === rightPage.topic) return true;
-  return false;
-}
-
-function updateSpineVisibility(){
-  const bookEl = document.getElementById("book");
-  if(!bookEl) return;
-  if(shouldHideSpine()) bookEl.classList.add("no-spine");
-  else bookEl.classList.remove("no-spine");
-}
-
-async function renderDesktopSpread(){
-  const leftPage = allPages[currentIndex];
-  const rightPage = allPages[currentIndex+1];
-  const baseLeft = document.getElementById("baseLeft");
-  const baseRight = document.getElementById("baseRight");
-  const leftFront = document.getElementById("leftFront");
-  const rightFront = document.getElementById("rightFront");
-  const [leftHTML, rightHTML] = await Promise.all([
-    leftPage ? loadPage(leftPage) : Promise.resolve(""),
-    rightPage ? loadPage(rightPage) : Promise.resolve("")
-  ]);
-  setPageContent(baseLeft, leftHTML, currentIndex+1);
-  if(rightPage) setPageContent(baseRight, rightHTML, currentIndex+2);
-  else if(baseRight) baseRight.innerHTML = '<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
-  setPageContent(leftFront, leftHTML, currentIndex+1);
-  if(rightPage) setPageContent(rightFront, rightHTML, currentIndex+2);
-  else if(rightFront) rightFront.innerHTML = '<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
-  updateSpineVisibility();
-}
-
-async function renderMobilePage(pageIdx){
-  const page = allPages[pageIdx];
-  const mBase = document.getElementById("mBase");
-  const mFront = document.getElementById("mFront");
-  const html = page ? await loadPage(page) : "";
-  setPageContent(mBase, html, pageIdx+1);
-  setPageContent(mFront, html, pageIdx+1);
-}
-
-async function renderSpread(){
-  if(isMobileView()) await renderMobilePage(currentIndex);
-  else await renderDesktopSpread();
-  updateIndicator();
-  updateButtons();
-  updateSidebarState();
-}
-
-const DESKTOP_FLIP_MS = 480;
-const MOBILE_FLIP_MS = 520;
-
-async function animateDesktopFlip(direction){
-  const leftSheet = document.getElementById("leftSheet");
-  const rightSheet = document.getElementById("rightSheet");
-  const leftBack = document.getElementById("leftBack");
-  const rightBack = document.getElementById("rightBack");
-  leftSheet.classList.remove("flipping");
-  rightSheet.classList.remove("flipping");
-  void leftSheet.offsetWidth;
-  if(direction === "right"){
-    const nextIndex = currentIndex + 2;
-    const nextLeftPage = allPages[nextIndex];
-    const preload = nextLeftPage ? loadPage(nextLeftPage) : Promise.resolve("");
-    leftSheet.style.opacity = "0";
-    rightSheet.style.opacity = "1";
-    rightSheet.classList.add("flipping");
-    const html = await preload;
-    if(nextLeftPage) setPageContent(rightBack, html, nextIndex+1);
-    else if(rightBack) rightBack.innerHTML = "";
-    await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
-    currentIndex = nextIndex < allPages.length ? nextIndex : currentIndex;
-    rightSheet.classList.remove("flipping");
-    leftSheet.style.opacity = "1";
-    rightSheet.style.opacity = "1";
-  } else {
-    const prevIndex = Math.max(0, currentIndex - 2);
-    const prevRightPage = allPages[prevIndex+1];
-    const preload = prevRightPage ? loadPage(prevRightPage) : Promise.resolve("");
-    rightSheet.style.opacity = "0";
-    leftSheet.style.opacity = "1";
-    leftSheet.classList.add("flipping");
-    const html = await preload;
-    if(prevRightPage) setPageContent(leftBack, html, prevIndex+2);
-    else if(leftBack) leftBack.innerHTML = "";
-    await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
-    currentIndex = prevIndex;
-    leftSheet.classList.remove("flipping");
-    leftSheet.style.opacity = "1";
-    rightSheet.style.opacity = "1";
-  }
-  await renderSpread();
-}
-
-async function animateMobileFlip(direction){
-  const mSheet = document.getElementById("mSheet");
-  const mBase = document.getElementById("mBase");
-  const mFront = document.getElementById("mFront");
-  const mBack = document.getElementById("mBack");
-
-  if(direction === "right"){
-    const nextIndex = currentIndex + 1;
-    const nextPage = allPages[nextIndex];
-    const nextHTML = nextPage ? await loadPage(nextPage) : "";
-
-    setPageContent(mBack, nextHTML, nextIndex+1);
-
-    mSheet.classList.remove("flip-backward");
-    mSheet.style.transform = "";
-    void mSheet.offsetWidth;
-    mSheet.classList.add("flip-forward");
-
-    await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS + 20));
-
-    currentIndex = nextIndex;
-    mSheet.classList.remove("flip-forward");
-    mSheet.style.transform = "";
-    setPageContent(mFront, nextHTML, nextIndex+1);
-    setPageContent(mBase, nextHTML, nextIndex+1);
-  } else {
-    const prevIndex = currentIndex - 1;
-    const prevPage = allPages[prevIndex];
-    const prevHTML = prevPage ? await loadPage(prevPage) : "";
-
-    setPageContent(mBack, prevHTML, prevIndex+1);
-
-    mSheet.classList.remove("flip-forward");
-    mSheet.style.transform = "";
-    void mSheet.offsetWidth;
-    mSheet.classList.add("flip-backward");
-
-    await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS + 20));
-
-    currentIndex = prevIndex;
-    mSheet.classList.remove("flip-backward");
-    mSheet.style.transform = "";
-    setPageContent(mFront, prevHTML, prevIndex+1);
-    setPageContent(mBase, prevHTML, prevIndex+1);
-  }
-  await renderSpread();
-}
-
-async function animateFlip(direction){
-  if(isAnimating) return;
-  if(direction === "right" && !canGoForward()) return;
-  if(direction === "left" && !canGoBackward()) return;
-  isAnimating = true;
-  if(isMobileView()) await animateMobileFlip(direction);
-  else await animateDesktopFlip(direction);
-  isAnimating = false;
-}
-
-async function animatedJumpToPage(targetIndex){
-  if(isAnimating) return;
-  if(targetIndex < 0 || targetIndex >= allPages.length) return;
-  const mobile = isMobileView();
-  const effectiveTarget = mobile ? targetIndex : (targetIndex % 2 === 0 ? targetIndex : targetIndex - 1);
-  if(effectiveTarget === currentIndex) return;
-  isAnimating = true;
-  const direction = effectiveTarget > currentIndex ? "right" : "left";
-
-  if(mobile){
-    const mSheet = document.getElementById("mSheet");
-    const mFront = document.getElementById("mFront");
-    const mBack = document.getElementById("mBack");
-    const targetPage = allPages[effectiveTarget];
-    const targetHTML = targetPage ? await loadPage(targetPage) : "";
-
-    if(direction === "right"){
-      setPageContent(mBack, targetHTML, effectiveTarget+1);
-      mSheet.classList.remove("flip-backward");
-      mSheet.style.transform = "";
-      void mSheet.offsetWidth;
-      mSheet.classList.add("flip-forward");
-      await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS+20));
-      mSheet.classList.remove("flip-forward");
-      mSheet.style.transform = "";
-    } else {
-      setPageContent(mBack, targetHTML, effectiveTarget+1);
-      mSheet.classList.remove("flip-forward");
-      mSheet.style.transform = "";
-      void mSheet.offsetWidth;
-      mSheet.classList.add("flip-backward");
-      await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS+20));
-      mSheet.classList.remove("flip-backward");
-      mSheet.style.transform = "";
-    }
-    currentIndex = effectiveTarget;
-    setPageContent(mFront, targetHTML, effectiveTarget+1);
-    setPageContent(document.getElementById("mBase"), targetHTML, effectiveTarget+1);
-  } else {
-    const leftSheet = document.getElementById("leftSheet");
-    const rightSheet = document.getElementById("rightSheet");
-    const leftBack = document.getElementById("leftBack");
-    const rightBack = document.getElementById("rightBack");
-    leftSheet.classList.remove("flipping");
-    rightSheet.classList.remove("flipping");
-    void leftSheet.offsetWidth;
-    const targetPage = allPages[effectiveTarget];
-    const targetRightPage = allPages[effectiveTarget+1];
-    const [targetHTML, targetRightHTML] = await Promise.all([
-      targetPage ? loadPage(targetPage) : Promise.resolve(""),
-      targetRightPage ? loadPage(targetRightPage) : Promise.resolve("")
-    ]);
-    if(direction === "right"){
-      if(targetPage) setPageContent(rightBack, targetHTML, effectiveTarget+1);
-      else if(rightBack) rightBack.innerHTML = "";
-      leftSheet.style.opacity = "0";
-      rightSheet.style.opacity = "1";
-      rightSheet.classList.add("flipping");
-      await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
-      rightSheet.classList.remove("flipping");
-      leftSheet.style.opacity = "1";
-      rightSheet.style.opacity = "1";
-    } else {
-      if(targetRightPage) setPageContent(leftBack, targetRightHTML, effectiveTarget+2);
-      else if(leftBack) leftBack.innerHTML = "";
-      rightSheet.style.opacity = "0";
-      leftSheet.style.opacity = "1";
-      leftSheet.classList.add("flipping");
-      await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
-      leftSheet.classList.remove("flipping");
-      leftSheet.style.opacity = "1";
-      rightSheet.style.opacity = "1";
-    }
-    currentIndex = effectiveTarget;
-  }
-  await renderSpread();
-  isAnimating = false;
-}
-
-document.getElementById("prevBtn").addEventListener("click", async ()=>{
-  if(canGoBackward() && !isAnimating) await animateFlip("left");
 });
-document.getElementById("nextBtn").addEventListener("click", async ()=>{
-  if(canGoForward() && !isAnimating) await animateFlip("right");
-});
-
-document.addEventListener("keydown", (e)=>{
-  if(e.key === "ArrowLeft") document.getElementById("prevBtn").click();
-  if(e.key === "ArrowRight") document.getElementById("nextBtn").click();
-  if(e.key === "Escape"){
-    closeSidebar();
-    closeMuseumModal();
-  }
-});
-
-let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
-const mobileBookEl = document.getElementById("mobileBook");
-if(mobileBookEl){
-  mobileBookEl.addEventListener("touchstart", (e)=>{
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-    touchStartTime = Date.now();
-  }, {passive:true});
-  mobileBookEl.addEventListener("touchend", (e)=>{
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    const dy = e.changedTouches[0].clientY - touchStartY;
-    const dt = Date.now() - touchStartTime;
-    const absDx = Math.abs(dx), absDy = Math.abs(dy);
-    if(absDx > 40 && absDx > absDy * 1.5 && dt < 600){
-      if(dx < 0 && canGoForward() && !isAnimating) animateFlip("right");
-      else if(dx > 0 && canGoBackward() && !isAnimating) animateFlip("left");
-    }
-  }, {passive:true});
 }
-
-const sidebarToggle = document.getElementById("sidebarToggle");
-const sidebar = document.getElementById("sidebar");
-const sidebarOverlay = document.getElementById("sidebarOverlay");
-function openSidebar(){
-  sidebar.classList.add("open");
-  sidebarToggle.classList.add("active");
-  sidebarOverlay.classList.add("visible");
-}
-function closeSidebar(){
-  sidebar.classList.remove("open");
-  sidebarToggle.classList.remove("active");
-  sidebarOverlay.classList.remove("visible");
-}
-sidebarToggle.addEventListener("click", ()=>{
-  if(sidebar.classList.contains("open")) closeSidebar();
-  else openSidebar();
-});
-sidebarOverlay.addEventListener("click", closeSidebar);
-
-let resizeTimer;
-window.addEventListener("resize", ()=>{
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(()=>{
-    renderSpread();
-    if(window.innerWidth > 900) closeSidebar();
-  }, 200);
-});
-
-(function initCoverAnimation(){
-  if(window.matchMedia("(max-width:560px)").matches){
-    const cover = document.getElementById("bookCover");
-    const book = document.getElementById("book");
-    if(cover) cover.classList.add("done");
-    if(book) book.classList.add("cover-opened");
-    return;
-  }
-  const cover = document.getElementById("bookCover");
-  const book = document.getElementById("book");
-  if(!cover || !book) return;
-  book.classList.add("cover-closed");
-  function startOpening(){
-    setTimeout(()=>cover.classList.add("phase-appear"), 100);
-    setTimeout(()=>cover.classList.add("phase-breathe"), 600);
-    setTimeout(()=>{
-      cover.classList.remove("phase-breathe");
-      cover.classList.add("phase-open");
-    }, 1000);
-    setTimeout(()=>{
-      book.classList.remove("cover-closed");
-      book.classList.add("cover-opened");
-    }, 1900);
-    setTimeout(()=>cover.classList.add("phase-fade"), 2200);
-    setTimeout(()=>cover.classList.add("done"), 2700);
-  }
-  if(document.readyState === "complete") startOpening();
-  else window.addEventListener("load", startOpening);
-})();
-
-// ===== SVG вышиванок =====
-const VYSHYVANKA_SVGS = [
-    {
-        name: "Восьмиконечная звезда",
-        desc: "Символ человека",
-        src: "img/ornament-13.jpg"
-    },
-    {
-        name: "Символ любовной песни",
-        desc: "Гармония чувств, поэзия любви и душевное единение",
-        src: "img/ornament-14.jpg"
-    },
-    {
-        name: "Звезда человека на небе",
-        desc: "Судьба, предназначение и связь человека с космосом",
-        src: "img/ornament-15.jpg"
-    },
-    {
-        name: "Луна бережет детей от ночных страхов",
-        desc: "Защитный символ для детей, оберег от темных сил и ночных кошмаров",
-        src: "img/ornament-16.jpg"
-    },
-    {
-        name: "Огонь лечит от простуды и немочи",
-        desc: "Целительная сила огня, очищение и укрепление здоровья",
-        src: "img/ornament-17.jpg"
-    },
-    {
-        name: "Ромб с лучами",
-        desc: "Солнечный символ, источник жизни, энергии и плодородия",
-        src: "img/ornament-18.jpg"
-    },
-    {
-        name: "Ромб с отростками",
-        desc: "Знак плодородия, изобилия плодов земных",
-        src: "img/ornament1.jpg" 
-    },
-    {
-        name: "Символ Земли",
-        desc: "Идея расцвета природы и жизни",
-        src: "img/ornament-2.jpg" 
-    },
-    {
-        name: "Купальские мотивы",
-        desc: "Использовадся для праздника Купалы",
-        src: "img/ornament-5.jpg"
-    },
-    {
-        name: "Любовь в расцвете",
-        desc: "Зрелая, гармоничная любовь и семейное счастье",
-        src: "img/ornament-8.jpg"
-    },
-    {
-        name: "Любовь, которая начиналась",
-        desc: "Зарождение чувств, надежда и первые любовные переживания",
-        src: "img/ornament-9.jpg"
-    },
-    {
-        name: "Любовь без взаимности",
-        desc: "Неразделенная любовь, тоска и одиночество",
-        src: "img/ornament-10.jpg"
-    },
-    {
-        name: "Образ русалки",
-        desc: "Трагичная, неразделенная любовь девушки",
-        src: "img/ornament-3.jpg"
-    },
-    {
-        name: "Образ Матери",
-        desc: "Символ материнства, плодородия и защиты рода",
-        src: "img/ornament-4.jpg"
-    },
-    {
-        name: "Мать-Родительница и Святое Древо",
-        desc: "Связь поколений, древо жизни и материнская сила",
-        src: "img/ornament-6.jpg"
-    },
-    {
-        name: "Жытняя Баба",
-        desc: "Еще один важный символ урожая",
-        src: "img/ornament-7.jpg"
-    },
-    {
-        name: "Параскева-Пятница с венчальными коронами",
-        desc: "Опекунша женщин и матерей",
-        src: "img/ornament-11.jpg"
-    },
-    {
-        name: "Радуница",
-        desc: "Праздник поминовения усопших, связь с предками и память рода",
-        src: "img/ornament-12.jpg"
-    },
-];
-
-// ===== Модальное окно вышиванок =====
-function buildVyshyvankaGallery(){
-    const gallery = document.getElementById("vyshyvankaGallery");
-    if(!gallery) return;
-    gallery.innerHTML = "";
-    
-    VYSHYVANKA_SVGS.forEach((item, idx) => {
-        const card = document.createElement("div");
-        card.className = "vyshyvanka-card";
-        
-        // Используем реальную картинку для превью
-        // Если картинки нет, покажем текст-заглушку, чтобы верстка не ломалась
-        const previewHtml = item.src 
-            ? `<img src="${item.src}" alt="${item.name}" style="width:100%; height:100%; object-fit:contain;">` 
-            : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#999;">Нет изображения</div>`;
-
-        card.innerHTML = `
-            <div class="vyshyvanka-preview">${previewHtml}</div>
-            <h3>${item.name}</h3>
-            <p>${item.desc}</p>
-            <button type="button" class="vyshyvanka-download" data-download-idx="${idx}">⬇ Скачать схему</button>
-        `;
-        gallery.appendChild(card);
-    });
-}
-
-function openVyshyvankaModal(){
-    buildVyshyvankaGallery();
-    const modal = document.getElementById("vyshyvankaModal");
-    if(modal) modal.classList.add("active");
-}
-
-function closeVyshyvankaModal(){
-    const modal = document.getElementById("vyshyvankaModal");
-    if(modal) modal.classList.remove("active");
-}
-
-async function downloadVyshyvanka(idx) {
-    const item = VYSHYVANKA_SVGS[idx];
-    if (!item || !item.src) return;
-
-    try {
-        // 1. Загружаем изображение как blob (бинарные данные)
-        const response = await fetch(item.src);
-        const blob = await response.blob();
-        
-        // 2. Создаем временную ссылку на этот blob
-        const url = window.URL.createObjectURL(blob);
-        
-        // 3. Создаем временный элемент ссылки для скачивания
-        const a = document.createElement('a');
-        a.style.display = 'none';
-        a.href = url;
-        
-        // 4. Формируем имя файла (берем расширение из src или ставим jpg по умолчанию)
-        const extension = item.src.split('.').pop() || 'jpg';
-        const safeName = item.name.replace(/[^a-zа-яё0-9]/gi, '_'); // Убираем спецсимволы из имени
-        a.download = `${safeName}.${extension}`;
-        
-        // 5. Добавляем в DOM, кликаем и удаляем
-        document.body.appendChild(a);
-        a.click();
-        
-        // Очистка
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-    } catch (error) {
-        console.error("Ошибка при скачивании:", error);
-        alert("Не удалось скачать изображение. Проверьте путь к файлу.");
-    }
-}
-
-document.addEventListener("click", function(e) {
-    const vyshyvankaBtn = e.target.closest('[data-action="open-vyshyvanka"]');
-    if (vyshyvankaBtn) {
-        e.preventDefault();
-        e.stopPropagation();
-        openVyshyvankaModal();
-        return;
-    }
-    
-    const downloadBtn = e.target.closest('[data-download-idx]');
-    if (downloadBtn) {
-        e.preventDefault();
-        e.stopPropagation();
-        const idx = parseInt(downloadBtn.getAttribute('data-download-idx'));
-        downloadVyshyvanka(idx); // Вызываем новую функцию
-        return;
-    }
-    
-    if (e.target.id === "vyshyvankaModalClose" || e.target.closest("#vyshyvankaModalClose")) {
-        e.preventDefault();
-        e.stopPropagation();
-        closeVyshyvankaModal();
-        return;
-    }
-    if (e.target.id === "vyshyvankaModal") {
-        closeVyshyvankaModal();
-        return;
-    }
-});
-
 function openMuseumModal(key){
 const museum = MUSEUMS[key];
 const body = document.getElementById("museumModalBody");
 body.innerHTML = `<h2>${museum.name}</h2><div class="museum-location">${museum.location}</div><div class="museum-ornament">◆ ◇ ◆</div>${museum.text}`;
-
 // Удаляем старую кнопку если есть
 const modalContent = body.parentElement;
 const oldBtn = modalContent.querySelector('.panorama-link-btn');
 if(oldBtn) oldBtn.remove();
-
 // Добавляем новую кнопку только если есть ссылка
 if (museum.panoramaLink) {
-    const btn = document.createElement('a');
-    btn.href = museum.panoramaLink;
-    btn.target = "_blank";
-    btn.className = "panorama-link-btn";
-    btn.title = "Открыть панораму 360°";
-    btn.innerHTML = `<a href="https://katsiarins81.github.io/pano-museum" target="_blang"><img src="img/panorama.png" style="width: 60%; box-shadow: none; margin-top: 24%;"></a>`
-    modalContent.appendChild(btn);
+const btn = document.createElement('a');
+btn.href = museum.panoramaLink;
+btn.target = "_blank";
+btn.className = "panorama-link-btn";
+btn.title = "Открыть панораму 360°";
+btn.innerHTML = `<a href="https://katsiarins81.github.io/pano-museum" target="_blang"><img src="img/panorama.png" style="width: 60%; box-shadow: none; margin-top: 24%;"></a>`
+modalContent.appendChild(btn);
 }
-
 document.getElementById("museumModal").classList.add("active");
 }
+function closeMuseumModal(){
+document.getElementById("museumModal").classList.remove("active");
+}
+document.getElementById("museumModalClose").addEventListener("click", closeMuseumModal);
+document.getElementById("museumModal").addEventListener("click", (e)=>{
+if(e.target.id === "museumModal") closeMuseumModal();
+});
 
+// --- MAP MODAL FUNCTIONS ---
+function openMapModal() {
+    const mapBody = document.getElementById("mapModalBody");
+    // Inject map HTML into the modal
+    mapBody.innerHTML = `<div class="map-container"><h1>Карта музеев</h1><p class="map-subtitle">Нажмите на район</p>${buildMapSVG()}</div>`;
+    bindMapRegions(mapBody);
+    document.getElementById("mapModal").classList.add("active");
+}
+
+function closeMapModal() {
+    document.getElementById("mapModal").classList.remove("active");
+}
+
+document.getElementById("openMapBtn").addEventListener("click", openMapModal);
+document.getElementById("closeMapBtn").addEventListener("click", closeMapModal);
+document.getElementById("mapModal").addEventListener("click", (e) => {
+    if (e.target.id === "mapModal") closeMapModal();
+});
+// ---------------------------
+
+function isMobileView(){
+return window.matchMedia("(max-width:560px)").matches;
+}
+function updateSidebarState(){
+document.querySelectorAll(".pages-list li").forEach(li=>{
+const idx = parseInt(li.dataset.index);
+const isActive = isMobileView()
+? idx === currentIndex
+: idx === currentIndex || idx === currentIndex + 1;
+li.classList.toggle("active", isActive);
+});
+}
+function canGoForward(){
+return currentIndex + (isMobileView() ? 1 : 2) < allPages.length;
+}
+function canGoBackward(){
+return currentIndex > 0;
+}
+function updateButtons(){
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+if(prevBtn) prevBtn.disabled = !canGoBackward();
+if(nextBtn) nextBtn.disabled = !canGoForward();
+}
+function updateIndicator(){
+const indicator = document.getElementById("indicator");
+if(!indicator) return;
+if(isMobileView()){
+indicator.textContent = `Страница ${currentIndex+1} из ${allPages.length}`;
+} else {
+const rightPage = allPages[currentIndex+1];
+indicator.textContent = `Страницы ${currentIndex+1}${rightPage ? "–"+(currentIndex+2) : ""} из ${allPages.length}`;
+}
+}
+function shouldHideSpine(){
+if(isMobileView()) return false;
+const leftPage = allPages[currentIndex];
+const rightPage = allPages[currentIndex+1];
+if(leftPage && rightPage && leftPage.noSpine && rightPage.noSpine && leftPage.topic === rightPage.topic) return true;
+return false;
+}
+function updateSpineVisibility(){
+const bookEl = document.getElementById("book");
+if(!bookEl) return;
+if(shouldHideSpine()) bookEl.classList.add("no-spine");
+else bookEl.classList.remove("no-spine");
+}
+async function renderDesktopSpread(){
+const leftPage = allPages[currentIndex];
+const rightPage = allPages[currentIndex+1];
+const baseLeft = document.getElementById("baseLeft");
+const baseRight = document.getElementById("baseRight");
+const leftFront = document.getElementById("leftFront");
+const rightFront = document.getElementById("rightFront");
+const [leftHTML, rightHTML] = await Promise.all([
+leftPage ? loadPage(leftPage) : Promise.resolve(""),
+rightPage ? loadPage(rightPage) : Promise.resolve("")
+]);
+setPageContent(baseLeft, leftHTML, currentIndex+1);
+if(rightPage) setPageContent(baseRight, rightHTML, currentIndex+2);
+else if(baseRight) baseRight.innerHTML = '<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
+setPageContent(leftFront, leftHTML, currentIndex+1);
+if(rightPage) setPageContent(rightFront, rightHTML, currentIndex+2);
+else if(rightFront) rightFront.innerHTML = '<div style="text-align:center;color:#7f8c8d;padding-top:40%;font-style:italic;">~ Конец книги ~</div>';
+updateSpineVisibility();
+}
+async function renderMobilePage(pageIdx){
+const page = allPages[pageIdx];
+const mBase = document.getElementById("mBase");
+const mFront = document.getElementById("mFront");
+const html = page ? await loadPage(page) : "";
+setPageContent(mBase, html, pageIdx+1);
+setPageContent(mFront, html, pageIdx+1);
+}
+async function renderSpread(){
+if(isMobileView()) await renderMobilePage(currentIndex);
+else await renderDesktopSpread();
+updateIndicator();
+updateButtons();
+updateSidebarState();
+initOrnamentSlider(); // ← ДОБАВИТЬ ЭТУ СТРОКУ
+}
+const DESKTOP_FLIP_MS = 480;
+const MOBILE_FLIP_MS = 520;
+async function animateDesktopFlip(direction){
+const leftSheet = document.getElementById("leftSheet");
+const rightSheet = document.getElementById("rightSheet");
+const leftBack = document.getElementById("leftBack");
+const rightBack = document.getElementById("rightBack");
+leftSheet.classList.remove("flipping");
+rightSheet.classList.remove("flipping");
+void leftSheet.offsetWidth;
+if(direction === "right"){
+const nextIndex = currentIndex + 2;
+const nextLeftPage = allPages[nextIndex];
+const preload = nextLeftPage ? loadPage(nextLeftPage) : Promise.resolve("");
+leftSheet.style.opacity = "0";
+rightSheet.style.opacity = "1";
+rightSheet.classList.add("flipping");
+const html = await preload;
+if(nextLeftPage) setPageContent(rightBack, html, nextIndex+1);
+else if(rightBack) rightBack.innerHTML = "";
+await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+currentIndex = nextIndex < allPages.length ? nextIndex : currentIndex;
+rightSheet.classList.remove("flipping");
+leftSheet.style.opacity = "1";
+rightSheet.style.opacity = "1";
+} else {
+const prevIndex = Math.max(0, currentIndex - 2);
+const prevRightPage = allPages[prevIndex+1];
+const preload = prevRightPage ? loadPage(prevRightPage) : Promise.resolve("");
+rightSheet.style.opacity = "0";
+leftSheet.style.opacity = "1";
+leftSheet.classList.add("flipping");
+const html = await preload;
+if(prevRightPage) setPageContent(leftBack, html, prevIndex+2);
+else if(leftBack) leftBack.innerHTML = "";
+await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+currentIndex = prevIndex;
+leftSheet.classList.remove("flipping");
+leftSheet.style.opacity = "1";
+rightSheet.style.opacity = "1";
+}
+await renderSpread();
+}
+async function animateMobileFlip(direction){
+const mSheet = document.getElementById("mSheet");
+const mBase = document.getElementById("mBase");
+const mFront = document.getElementById("mFront");
+const mBack = document.getElementById("mBack");
+if(direction === "right"){
+const nextIndex = currentIndex + 1;
+const nextPage = allPages[nextIndex];
+const nextHTML = nextPage ? await loadPage(nextPage) : "";
+setPageContent(mBack, nextHTML, nextIndex+1);
+mSheet.classList.remove("flip-backward");
+mSheet.style.transform = "";
+void mSheet.offsetWidth;
+mSheet.classList.add("flip-forward");
+await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS + 20));
+currentIndex = nextIndex;
+mSheet.classList.remove("flip-forward");
+mSheet.style.transform = "";
+setPageContent(mFront, nextHTML, nextIndex+1);
+setPageContent(mBase, nextHTML, nextIndex+1);
+} else {
+const prevIndex = currentIndex - 1;
+const prevPage = allPages[prevIndex];
+const prevHTML = prevPage ? await loadPage(prevPage) : "";
+setPageContent(mBack, prevHTML, prevIndex+1);
+mSheet.classList.remove("flip-forward");
+mSheet.style.transform = "";
+void mSheet.offsetWidth;
+mSheet.classList.add("flip-backward");
+await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS + 20));
+currentIndex = prevIndex;
+mSheet.classList.remove("flip-backward");
+mSheet.style.transform = "";
+setPageContent(mFront, prevHTML, prevIndex+1);
+setPageContent(mBase, prevHTML, prevIndex+1);
+}
+await renderSpread();
+}
+async function animateFlip(direction){
+if(isAnimating) return;
+if(direction === "right" && !canGoForward()) return;
+if(direction === "left" && !canGoBackward()) return;
+isAnimating = true;
+if(isMobileView()) await animateMobileFlip(direction);
+else await animateDesktopFlip(direction);
+isAnimating = false;
+}
+async function animatedJumpToPage(targetIndex){
+if(isAnimating) return;
+if(targetIndex < 0 || targetIndex >= allPages.length) return;
+const mobile = isMobileView();
+const effectiveTarget = mobile ? targetIndex : (targetIndex % 2 === 0 ? targetIndex : targetIndex - 1);
+if(effectiveTarget === currentIndex) return;
+isAnimating = true;
+const direction = effectiveTarget > currentIndex ? "right" : "left";
+if(mobile){
+const mSheet = document.getElementById("mSheet");
+const mFront = document.getElementById("mFront");
+const mBack = document.getElementById("mBack");
+const targetPage = allPages[effectiveTarget];
+const targetHTML = targetPage ? await loadPage(targetPage) : "";
+if(direction === "right"){
+setPageContent(mBack, targetHTML, effectiveTarget+1);
+mSheet.classList.remove("flip-backward");
+mSheet.style.transform = "";
+void mSheet.offsetWidth;
+mSheet.classList.add("flip-forward");
+await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS+20));
+mSheet.classList.remove("flip-forward");
+mSheet.style.transform = "";
+} else {
+setPageContent(mBack, targetHTML, effectiveTarget+1);
+mSheet.classList.remove("flip-forward");
+mSheet.style.transform = "";
+void mSheet.offsetWidth;
+mSheet.classList.add("flip-backward");
+await new Promise(r=>setTimeout(r, MOBILE_FLIP_MS+20));
+mSheet.classList.remove("flip-backward");
+mSheet.style.transform = "";
+}
+currentIndex = effectiveTarget;
+setPageContent(mFront, targetHTML, effectiveTarget+1);
+setPageContent(document.getElementById("mBase"), targetHTML, effectiveTarget+1);
+} else {
+const leftSheet = document.getElementById("leftSheet");
+const rightSheet = document.getElementById("rightSheet");
+const leftBack = document.getElementById("leftBack");
+const rightBack = document.getElementById("rightBack");
+leftSheet.classList.remove("flipping");
+rightSheet.classList.remove("flipping");
+void leftSheet.offsetWidth;
+const targetPage = allPages[effectiveTarget];
+const targetRightPage = allPages[effectiveTarget+1];
+const [targetHTML, targetRightHTML] = await Promise.all([
+targetPage ? loadPage(targetPage) : Promise.resolve(""),
+targetRightPage ? loadPage(targetRightPage) : Promise.resolve("")
+]);
+if(direction === "right"){
+if(targetPage) setPageContent(rightBack, targetHTML, effectiveTarget+1);
+else if(rightBack) rightBack.innerHTML = "";
+leftSheet.style.opacity = "0";
+rightSheet.style.opacity = "1";
+rightSheet.classList.add("flipping");
+await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+rightSheet.classList.remove("flipping");
+leftSheet.style.opacity = "1";
+rightSheet.style.opacity = "1";
+} else {
+if(targetRightPage) setPageContent(leftBack, targetRightHTML, effectiveTarget+2);
+else if(leftBack) leftBack.innerHTML = "";
+rightSheet.style.opacity = "0";
+leftSheet.style.opacity = "1";
+leftSheet.classList.add("flipping");
+await new Promise(r=>setTimeout(r, DESKTOP_FLIP_MS+20));
+leftSheet.classList.remove("flipping");
+leftSheet.style.opacity = "1";
+rightSheet.style.opacity = "1";
+}
+currentIndex = effectiveTarget;
+}
+await renderSpread();
+isAnimating = false;
+}
+document.getElementById("prevBtn").addEventListener("click", async ()=>{
+if(canGoBackward() && !isAnimating) await animateFlip("left");
+});
+document.getElementById("nextBtn").addEventListener("click", async ()=>{
+if(canGoForward() && !isAnimating) await animateFlip("right");
+});
+document.addEventListener("keydown", (e)=>{
+if(e.key === "ArrowLeft") document.getElementById("prevBtn").click();
+if(e.key === "ArrowRight") document.getElementById("nextBtn").click();
+if(e.key === "Escape"){
+closeSidebar();
+closeMuseumModal();
+closeMapModal(); // Close map modal on Escape
+}
+});
+let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
+const mobileBookEl = document.getElementById("mobileBook");
+if(mobileBookEl){
+mobileBookEl.addEventListener("touchstart", (e)=>{
+touchStartX = e.touches[0].clientX;
+touchStartY = e.touches[0].clientY;
+touchStartTime = Date.now();
+}, {passive:true});
+mobileBookEl.addEventListener("touchend", (e)=>{
+const dx = e.changedTouches[0].clientX - touchStartX;
+const dy = e.changedTouches[0].clientY - touchStartY;
+const dt = Date.now() - touchStartTime;
+const absDx = Math.abs(dx), absDy = Math.abs(dy);
+if(absDx > 40 && absDx > absDy * 1.5 && dt < 600){
+if(dx < 0 && canGoForward() && !isAnimating) animateFlip("right");
+else if(dx > 0 && canGoBackward() && !isAnimating) animateFlip("left");
+}
+}, {passive:true});
+}
+const sidebarToggle = document.getElementById("sidebarToggle");
+const sidebar = document.getElementById("sidebar");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
+function openSidebar(){
+sidebar.classList.add("open");
+sidebarToggle.classList.add("active");
+sidebarOverlay.classList.add("visible");
+}
+function closeSidebar(){
+sidebar.classList.remove("open");
+sidebarToggle.classList.remove("active");
+sidebarOverlay.classList.remove("visible");
+}
+sidebarToggle.addEventListener("click", ()=>{
+if(sidebar.classList.contains("open")) closeSidebar();
+else openSidebar();
+});
+sidebarOverlay.addEventListener("click", closeSidebar);
+let resizeTimer;
+window.addEventListener("resize", ()=>{
+clearTimeout(resizeTimer);
+resizeTimer = setTimeout(()=>{
+renderSpread();
+if(window.innerWidth > 900) closeSidebar();
+}, 200);
+});
+(function initCoverAnimation(){
+if(window.matchMedia("(max-width:560px)").matches){
+const cover = document.getElementById("bookCover");
+const book = document.getElementById("book");
+if(cover) cover.classList.add("done");
+if(book) book.classList.add("cover-opened");
+return;
+}
+const cover = document.getElementById("bookCover");
+const book = document.getElementById("book");
+if(!cover || !book) return;
+book.classList.add("cover-closed");
+function startOpening(){
+setTimeout(()=>cover.classList.add("phase-appear"), 100);
+setTimeout(()=>cover.classList.add("phase-breathe"), 600);
+setTimeout(()=>{
+cover.classList.remove("phase-breathe");
+cover.classList.add("phase-open");
+}, 1000);
+setTimeout(()=>{
+book.classList.remove("cover-closed");
+book.classList.add("cover-opened");
+}, 1900);
+setTimeout(()=>cover.classList.add("phase-fade"), 2200);
+setTimeout(()=>cover.classList.add("done"), 2700);
+}
+if(document.readyState === "complete") startOpening();
+else window.addEventListener("load", startOpening);
+})();
+// ===== SVG вышиванок =====
+const VYSHYVANKA_SVGS = [
+{
+name: "Восьмиконечная звезда",
+desc: "Символ человека",
+src: "img/ornament-13.jpg"
+},
+{
+name: "Символ любовной песни",
+desc: "Гармония чувств, поэзия любви и душевное единение",
+src: "img/ornament-14.jpg"
+},
+{
+name: "Звезда человека на небе",
+desc: "Судьба, предназначение и связь человека с космосом",
+src: "img/ornament-15.jpg"
+},
+{
+name: "Луна бережет детей от ночных страхов",
+desc: "Защитный символ для детей, оберег от темных сил и ночных кошмаров",
+src: "img/ornament-16.jpg"
+},
+{
+name: "Огонь лечит от простуды и немочи",
+desc: "Целительная сила огня, очищение и укрепление здоровья",
+src: "img/ornament-17.jpg"
+},
+{
+name: "Ромб с лучами",
+desc: "Солнечный символ, источник жизни, энергии и плодородия",
+src: "img/ornament-18.jpg"
+},
+{
+name: "Ромб с отростками",
+desc: "Знак плодородия, изобилия плодов земных",
+src: "img/ornament1.jpg"
+},
+{
+name: "Символ Земли",
+desc: "Идея расцвета природы и жизни",
+src: "img/ornament-2.jpg"
+},
+{
+name: "Купальские мотивы",
+desc: "Использовадся для праздника Купалы",
+src: "img/ornament-5.jpg"
+},
+{
+name: "Любовь в расцвете",
+desc: "Зрелая, гармоничная любовь и семейное счастье",
+src: "img/ornament-8.jpg"
+},
+{
+name: "Любовь, которая начиналась",
+desc: "Зарождение чувств, надежда и первые любовные переживания",
+src: "img/ornament-9.jpg"
+},
+{
+name: "Любовь без взаимности",
+desc: "Неразделенная любовь, тоска и одиночество",
+src: "img/ornament-10.jpg"
+},
+{
+name: "Образ русалки",
+desc: "Трагичная, неразделенная любовь девушки",
+src: "img/ornament-3.jpg"
+},
+{
+name: "Образ Матери",
+desc: "Символ материнства, плодородия и защиты рода",
+src: "img/ornament-4.jpg"
+},
+{
+name: "Мать-Родительница и Святое Древо",
+desc: "Связь поколений, древо жизни и материнская сила",
+src: "img/ornament-6.jpg"
+},
+{
+name: "Жытняя Баба",
+desc: "Еще один важный символ урожая",
+src: "img/ornament-7.jpg"
+},
+{
+name: "Параскева-Пятница с венчальными коронами",
+desc: "Опекунша женщин и матерей",
+src: "img/ornament-11.jpg"
+},
+{
+name: "Радуница",
+desc: "Праздник поминовения усопших, связь с предками и память рода",
+src: "img/ornament-12.jpg"
+},
+];
+// ===== Модальное окно вышиванок =====
+function buildVyshyvankaGallery(){
+const gallery = document.getElementById("vyshyvankaGallery");
+if(!gallery) return;
+gallery.innerHTML = "";
+VYSHYVANKA_SVGS.forEach((item, idx) => {
+const card = document.createElement("div");
+card.className = "vyshyvanka-card";
+// Используем реальную картинку для превью
+// Если картинки нет, покажем текст-заглушку, чтобы верстка не ломалась
+const previewHtml = item.src
+? `<img src="${item.src}" alt="${item.name}" style="width:100%; height:100%; object-fit:contain;">`
+: `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#999;">Нет изображения</div>`;
+card.innerHTML = `
+<div class="vyshyvanka-preview">${previewHtml}</div>
+<h3>${item.name}</h3>
+<p>${item.desc}</p>
+<button type="button" class="vyshyvanka-download" data-download-idx="${idx}">⬇ Скачать схему</button>
+`;
+gallery.appendChild(card);
+});
+}
+function openVyshyvankaModal(){
+buildVyshyvankaGallery();
+const modal = document.getElementById("vyshyvankaModal");
+if(modal) modal.classList.add("active");
+}
+function closeVyshyvankaModal(){
+const modal = document.getElementById("vyshyvankaModal");
+if(modal) modal.classList.remove("active");
+}
+async function downloadVyshyvanka(idx) {
+const item = VYSHYVANKA_SVGS[idx];
+if (!item || !item.src) return;
+try {
+// 1. Загружаем изображение как blob (бинарные данные)
+const response = await fetch(item.src);
+const blob = await response.blob();
+// 2. Создаем временную ссылку на этот blob
+const url = window.URL.createObjectURL(blob);
+// 3. Создаем временный элемент ссылки для скачивания
+const a = document.createElement('a');
+a.style.display = 'none';
+a.href = url;
+// 4. Формируем имя файла (берем расширение из src или ставим jpg по умолчанию)
+const extension = item.src.split('.').pop() || 'jpg';
+const safeName = item.name.replace(/[^a-zа-яё0-9]/gi, '_'); // Убираем спецсимволы из имени
+a.download = `${safeName}.${extension}`;
+// 5. Добавляем в DOM, кликаем и удаляем
+document.body.appendChild(a);
+a.click();
+// Очистка
+window.URL.revokeObjectURL(url);
+document.body.removeChild(a);
+} catch (error) {
+console.error("Ошибка при скачивании:", error);
+alert("Не удалось скачать изображение. Проверьте путь к файлу.");
+}
+}
+document.addEventListener("click", function(e) {
+const vyshyvankaBtn = e.target.closest('[data-action="open-vyshyvanka"]');
+if (vyshyvankaBtn) {
+e.preventDefault();
+e.stopPropagation();
+openVyshyvankaModal();
+return;
+}
+const downloadBtn = e.target.closest('[data-download-idx]');
+if (downloadBtn) {
+e.preventDefault();
+e.stopPropagation();
+const idx = parseInt(downloadBtn.getAttribute('data-download-idx'));
+downloadVyshyvanka(idx); // Вызываем новую функцию
+return;
+}
+if (e.target.id === "vyshyvankaModalClose" || e.target.closest("#vyshyvankaModalClose")) {
+e.preventDefault();
+e.stopPropagation();
+closeVyshyvankaModal();
+return;
+}
+if (e.target.id === "vyshyvankaModal") {
+closeVyshyvankaModal();
+return;
+}
+});
+function initOrnamentSlider() {
+const wrapper = document.getElementById('ornamentSlider');
+if (!wrapper || wrapper.dataset.initialized === '1') return;
+wrapper.dataset.initialized = '1';
+const track    = document.getElementById('sliderTrack');
+const dotsWrap = document.getElementById('sliderDots');
+const prevBtn  = document.getElementById('sliderPrev');
+const nextBtn  = document.getElementById('sliderNext');
+const progress = document.getElementById('sliderProgress');
+const slides   = VYSHYVANKA_SVGS;
+if (!track || !slides || !slides.length) return;
+let current = 0;
+slides.forEach((item, idx) => {
+const slide = document.createElement('div');
+slide.className = 'ornament-slide';
+slide.innerHTML = `
+<div class="ornament-slide-image">
+<img src="${item.src}" alt="${item.name}" loading="lazy">
+</div>
+<div class="ornament-slide-info">
+<div class="ornament-slide-counter">
+<span class="current-num">${String(idx + 1).padStart(2, '0')}</span>
+<span>/ ${String(slides.length).padStart(2, '0')}</span>
+</div>
+<h4 class="ornament-slide-title">${item.name}</h4>
+<p class="ornament-slide-desc">${item.desc}</p>
+</div>
+`;
+track.appendChild(slide);
+const dot = document.createElement('button');
+dot.className = 'ornament-slider-dot' + (idx === 0 ? ' active' : '');
+dot.setAttribute('aria-label', `Слайд ${idx + 1}`);
+dot.addEventListener('click', () => goTo(idx));
+dotsWrap.appendChild(dot);
+});
+function update() {
+track.style.transform = `translateX(-${current * 100}%)`;
+progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+prevBtn.disabled = current === 0;
+nextBtn.disabled = current === slides.length - 1;
+dotsWrap.querySelectorAll('.ornament-slider-dot').forEach((d, i) => {
+d.classList.toggle('active', i === current);
+});
+}
+function goTo(idx) {
+current = Math.max(0, Math.min(slides.length - 1, idx));
+update();
+}
+prevBtn.addEventListener('click', () => goTo(current - 1));
+nextBtn.addEventListener('click', () => goTo(current + 1));
+// Свайпы
+let touchStartX = 0, touchStartTime = 0;
+wrapper.addEventListener('touchstart', (e) => {
+touchStartX = e.touches[0].clientX;
+touchStartTime = Date.now();
+}, { passive: true });
+wrapper.addEventListener('touchend', (e) => {
+const dx = e.changedTouches[0].clientX - touchStartX;
+const dt = Date.now() - touchStartTime;
+if (Math.abs(dx) > 40 && dt < 600) {
+if (dx < 0) goTo(current + 1);
+else        goTo(current - 1);
+}
+}, { passive: true });
+update();
+}
 buildTOC();
 renderSpread();
-
-function initOrnamentSlider() {
-  const wrapper = document.getElementById('ornamentSlider');
-  if (!wrapper || wrapper.dataset.initialized === '1') return;
-  wrapper.dataset.initialized = '1';
-
-  const track    = document.getElementById('sliderTrack');
-  const dotsWrap = document.getElementById('sliderDots');
-  const prevBtn  = document.getElementById('sliderPrev');
-  const nextBtn  = document.getElementById('sliderNext');
-  const progress = document.getElementById('sliderProgress');
-  const slides   = VYSHYVANKA_SVGS;
-
-  if (!track || !slides || !slides.length) return;
-
-  let current = 0;
-
-  slides.forEach((item, idx) => {
-    const slide = document.createElement('div');
-    slide.className = 'ornament-slide';
-    slide.innerHTML = `
-      <div class="ornament-slide-image">
-        <img src="${item.src}" alt="${item.name}" loading="lazy">
-      </div>
-      <div class="ornament-slide-info">
-        <div class="ornament-slide-counter">
-          <span class="current-num">${String(idx + 1).padStart(2, '0')}</span>
-          <span>/ ${String(slides.length).padStart(2, '0')}</span>
-        </div>
-        <h4 class="ornament-slide-title">${item.name}</h4>
-        <p class="ornament-slide-desc">${item.desc}</p>
-      </div>
-    `;
-    track.appendChild(slide);
-
-    const dot = document.createElement('button');
-    dot.className = 'ornament-slider-dot' + (idx === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Слайд ${idx + 1}`);
-    dot.addEventListener('click', () => goTo(idx));
-    dotsWrap.appendChild(dot);
-  });
-
-  function update() {
-    track.style.transform = `translateX(-${current * 100}%)`;
-    progress.style.width = `${((current + 1) / slides.length) * 100}%`;
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current === slides.length - 1;
-    dotsWrap.querySelectorAll('.ornament-slider-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === current);
-    });
-  }
-
-  function goTo(idx) {
-    current = Math.max(0, Math.min(slides.length - 1, idx));
-    update();
-  }
-
-  prevBtn.addEventListener('click', () => goTo(current - 1));
-  nextBtn.addEventListener('click', () => goTo(current + 1));
-
-  // Свайпы
-  let touchStartX = 0, touchStartTime = 0;
-  wrapper.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    touchStartTime = Date.now();
-  }, { passive: true });
-  wrapper.addEventListener('touchend', (e) => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    const dt = Date.now() - touchStartTime;
-    if (Math.abs(dx) > 40 && dt < 600) {
-      if (dx < 0) goTo(current + 1);
-      else        goTo(current - 1);
-    }
-  }, { passive: true });
-
-  update();
-}
-
-
-<!-- 3. В функции renderSpread() добавить вызов initOrnamentSlider() в самом конце: -->
-
-async function renderSpread(){
-  if(isMobileView()) await renderMobilePage(currentIndex);
-  else await renderDesktopSpread();
-  updateIndicator();
-  updateButtons();
-  updateSidebarState();
-  initOrnamentSlider(); // ← ДОБАВИТЬ ЭТУ СТРОКУ
-}
